@@ -1,0 +1,179 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+
+\title{Learning Journal}
+\author{Emily Hunt }
+\date{August 2019}
+
+\begin{document}
+
+\maketitle
+\begin{FlushLeft}
+
+\section{OverLeaf}
+
+\subsection{Objective: Create a section}
+\textbf{Time Stamp} 10:52am 12 August\\
+\textbf{Actions:}In the source tab enter
+\verb|\section{section title goes here}|\\
+\textbf{Results:} The numbered section was created successfully.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} For unnumbered sections, include an asterisk before the \verb|{section title}|. For a subsection, replace \verb|\section| with \verb|\subsection|.
+
+\subsection{Objective: Bold some text}
+\textbf{Time Stamp:} 11:00am  12 August\\
+\textbf{Actions:}  In the source tab enter \verb|\textbf{text you wish to bold goes here}|.\\
+\textbf{Results:} The text was put into bold successfully.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} To underline text replace \verb|\textbf| with \verb|\underline|, and use \verb|\textit| for italics.
+
+\subsection{Objective: Create a line break in a block of text.}
+\textbf{Time Stamp:} 11:10am  12 August\\
+\textbf{Actions:} Insert \verb|\\| at the end of the line I want the space at.\\
+\textbf{Results:} The text was placed on a new line.\\
+\textbf{Errors:} At first using the two back slashes prompted the error - Underfull /hbox (badness 10000) in paragraph at lines 15-19.\\
+\textbf{Solutions/Notes:} I removed the \verb|\\| and instead inserted an extra space between the lines in the source tab using the enter key. This seemed to work successfully and removed the error. I then went back later a tried again with the two back slashes and this no longer produced an error so I reinserted them where I wanted the line breaks.
+
+\subsection{Objective: Align text to the left.}
+\textbf{Time Stamp:} 11:20am 12 August\\
+\textbf{Actions:} I inserted \verb|\usepackage[document]{ragged2e}| at the top of the document.\\
+\textbf{Results:} This aligned the entire text the left.\\
+\textbf{Errors:}I received a note in the log the command had changed. \\
+\textbf{Solutions/Notes:} I put \verb|\usepackage{ragged2e}| at the top of the document and placed \verb|\begin{FlushLeft}| at the start of the text I wanted to align and \verb|\end{FlushLeft}| at the end of the document, and this seemed to work sucessfully and remove the error.
+
+\subsection{Objective: Include Code in the Text.}
+\textbf{Time Stamp:} 11:35 12 August\\
+\textbf{Actions:} I wanted to allow some parts of the code to be seen in the text so I could properly note my actions, and just including them would execute the command. I started by using the listings package, so included\\ \verb|\usepackage{listings}| at the top of the document, and put \verb|\begin{lstlisting}| before the code I wanted to be visisble and \verb|\end{lstlisting}| after.\\
+\textbf{Results:} This worked successfully.\\
+\textbf{Errors:} However, while not an error, it placed the code on a new line and in a larger font which made the document difficult to read.\\
+\textbf{Solutions/Notes:} I then tried using \verb|\begin{verbatim}| and \verb|\end{verbatim}| around the code I wanted, but this had a similar look to using the listings package. Then, I tried the \verb|\verb| code, and this had the effect I desired.
+
+\subsection{Objective: Create an Bullet List}
+\textbf{Time Stamp:} 3:00pm 12 August\\
+\textbf{Actions:} I put \verb|\begin{itemize}| at the beginning of the list I wanted to create, \verb|\item| for every bullet point, and \verb|\end{itemize}| at the end of the list. \\
+\textbf{Results:} This worked successfully.\\
+\textbf{Errors:} No errors.\\
+\textbf{Solutions/Notes:} For an ordered list change \verb|{itemize}| to \verb|{enumerate}|
+
+\subsection{Objective: Sync my Learning Journal on Overleaf to GitHub}
+\textbf{Time Stamp:} 8:00pm 12 August\\
+\textbf{Actions:} I went to the Menu Tab, clicked on GitHub under sync, clicked 'Link to GitHub', signed into my GitHub account and authorised OverLeaf.\\
+\textbf{Results:} My GitHub and OverLeaf accounts were linked.\\
+\textbf{Errors:} Going back the menu and clicking GitHub, it says the document is not linked to a GitHub repository, and that I need to create one. I would like to link it to my existing repository created in class.\\ 
+\textbf{Solutions/Notes:} I need to work out how to put it into my existing repository.
+
+\subsection{Objective: Insert a clickable link}
+\textbf{Time Stamp:} 8:10pm 12 August\\
+\textbf{Actions:} Add \verb|\usepackage{hyperref}| to the preamble. To insert the link, include in the source, \verb|\url{link goes here}|.\\
+\textbf{Results:} A link was successfully created.\\
+\textbf{Errors:} None\\
+\textbf{Solutions/Notes:}
+
+\subsection{Objective: Download a .tex file}
+\textbf{Time Stamp:} 12:00pm 13 August\\
+\textbf{Actions:} Go to the menu at the top left hand corner of the page, and under download, click source. This will download it as a zipped file. Unzip the file after downloading to access the .tex file.\\
+\textbf{Results:} File was downloaded and opened successfully.\\
+\textbf{Errors:} None\\
+\textbf{Solutions/Notes:}
+
+\subsection{Error: Overfull hbox (**pts too wide) in paragraph at lines **}
+\textbf{Errors:} This error keeps appearing down the left hand side of the document where the lines are shown.   \\
+\textbf{Solutions/Notes:} I need to attempt a solution, which I can find from \url{https://www.overleaf.com/learn/latex/Errors/Underfull_%5Chbox}
+
+\subsection{Objective: Put Text On a New Page}
+\textbf{Time Stamp:} 9:30 pm 13 August\\
+\textbf{Actions:} Insert \verb|\pagebreak| in the source code before the line I want to appear on a new page .\\
+\textbf{Results:} The text appeared on the next page as intended.\\
+\textbf{Errors:} None\\
+\textbf{Solutions/Notes:}
+
+\pagebreak
+
+\section{GitHub}
+
+\subsection{Objective: Commit a File}
+\textbf{Time Stamp:} 9.00 pm 12 August\\
+\textbf{Actions:} Go into the repository into which I want to commit the file. Click upload files, and then drag and drop the file into the box. Enter information about the changes made in both description boxes. Click commit changes.
+\textbf{Results:} File was successfully committed to GitHub.\\
+\textbf{Errors:} None\\
+\textbf{Solutions/Notes:}
+
+
+\section{Data Carpentry}
+
+\subsection{Introduction}
+\subsubsection*{Have I Used Spreadsheets in My Research?}
+So far throughout my time at university, I have not used a spreadsheet in my research.
+\subsubsection*{Have I Done Something that Made Me Frustrated or Sad?}
+I have definitely done things that are frustrating, like not being able to find references I have used and accidentally leaving some out in my final submission. Also, formatting bibliographies and my research can be a frustrating process.
+
+\subsection{Formatting Tables in Spreadsheets}
+\subsubsection*{Activity 1: What is Wrong with the Messy Data and How Can It Be Fixed}
+Mozambique 
+\begin{itemize}
+\item The absence of an observation is indicated in a number of different ways e.g. -99, -999 or cells are left blank. This could be addressed by choosing one and using it consistently
+\item In the Dwelling table, there are a number of differences in spellings and identifications between the observations e.g. mabati-sloping v mabatisloping. One should be chosen and consistently used.
+\item In the Dwelling table, the yellow fill of the cell to indicate the inclusion of the barn will not be able to processed by the computer during analysis. Potentially the ownership of a barn could be included as a separate variable.
+\item In the Livestock table, the livestock-owned-and-numbers column contains two variables. To address this, it could be split into observations for each individual animal, as exemplified in the example.
+\item In the water use column of the Plots table, the data switches between ‘no’ and ‘yes’ and Y and N. One should be chosen and consistently used.
+\item Also in the water use column of the Plots table, there is an extra comment for key-id 2. This should either be entirely removed, or separate columns set up for the different seasons.
+\end{itemize}
+Tanzania
+\begin{itemize}
+\item Similarly to the in the Mozambique Dwelling table, the use of an asterisk to indicate the inclusion of a cowshed is not an appropriate way to label the data. Cowsheds could be treated as a separate variable.
+\item This is also the case in the Livestock table, where key-id 3 has ‘yes/no*’ in the Look after cows column. Either yes or no should be chosen, or an observation committed completely.
+\item In the Livestock table, the data for key-id 5 is recorded with yes and no, as opposed to the numerical data primarily used for the other responses. This should be changed into quantitative data.
+\item There are a lot of blank cells in the Livestock table. A single indicator of a lack of response should be decided upon and used consistently.
+\end{itemize}
+Generally
+\begin{itemize}
+\item The data set for Tanzania is missing data on Plots.
+\item Headers that have more than one word switch between having a space between them and an underscore.A single format for the headings should be consistently used.
+\item The two tables recording Livestock are set up differently. Also, one table records responses for poultry as either yes or no, while the other records them numerically.These issues could be addressed by fixing the Mozambique Livestock take as previously discussed.
+\item Across the two countries, the key-ids consist of the numbers 1-10. When the two country’s data is merged, they would be understood to be the same people. To address this, Tanzania’s could be changed to 11-20.
+\item Livestock data for key-id 10 is missing from both tables.
+\item All of the data should be placed into a single table
+\end{itemize}
+\subsubsection*{Activity 2: What types of metadata should be recorded with this project?}
+\begin{itemize}
+\item What does NULL indicate (was the question not asked, did the respondent not want to answer etc.) 
+\item Definitions of the different variables. For example, what consistutes a mudduab wall type, or what is the basic definition of a room.
+\item What were the exact questions asked in the survey to gather the responses.
+\end{itemize}
+
+\subsection{Formatting Problems}
+No activities
+\subsubsection*{Examples of Problem Data in my Discipline (Film Studies) }
+\textbf{Problem 1:Data Spread Across Numerous Data Sets}\\
+Data Sets: \url{https://www.imdb.com/interfaces/} and \url{https://archive.ics.uci.edu/ml/datasets/Movie}\\
+The IMDb data is split into a number of datasets, each with different headers. For instance, the title.akas.tsv.gz data set has columns for the title, region for the version of the title and language of the title, whereas the title.basics.tsv.gz data set includes columns for the type/format of the title, primary title and original title.\\
+This is similarly the case with the University of California Irvine Movie Data Set, which has various data sets for ‘People’, ‘Casts’, ‘Actors’, ‘Remakes’ and ‘Studios’. Additionally, in the various data sets, there are a number of columns that contain two variables. For example, in the Remakes data set, in the title and priortitle columns, there is a ’T:’ in front of every entry to indicate it is a film title.\\
+Though discussed vary vaguely, data from the IMDb database was used for\\
+\begin{itemize}
+\item Sehwan Oh, Hyunmi Baek and JoongHo Ahn (2017) Predictive value of video-sharing behavior: sharing of movie trailers and box-office revenue, \textit{Internet Research}, 27:3, 691-708, DOI 10.1108/IntR-01-2016-0005.
+\end{itemize}
+
+\textbf{Problem 2: Null Values}\\
+Data Sets: \url{http://www.cinemetrics.lv/database.php}\\
+In the Cinemetrics Database, there are a number of cells left blank in a number of the entries and it is unclear why these cells have been left blank (e.g. is the data unavailable or is there its not applicable?). Additionally, there are a number of repeated entries (such as for the film \textit{Insidious The Last Key}). With the database containing the average lengths of shots in films, a potential problem in the raw data is that it is susceptible to human error, as the length of a shot is manually measured by a viewer using a software that works like a stopwatch.\\
+This misidentification of null values is also present in the previously mentioned University of California Irvine Movie Data Set. Incomplete data is identified in a variety of ways, including cells being left blank, and question marks.\\ 
+The data from the Cinemetrics database appears in
+\begin{itemize}
+    \item James E. Cutting, Kaitlin L. Brunick and Jordan DeLong (2012) On Shot Lengths and Film Acts: A Revised View, \textit{Projections}, 6:1, 142-145, DOI: 10.3167/proj.2012.060106
+    \item Lev Manovich (2013) Visualizing Vertov, \textit{Russian Journal of Communication},5:1, 44-55, DOI: 10.1080/19409419.2013.775546
+\end{itemize}
+
+\subsection{Dates as Data}
+\subsubsection*{Activity 1}
+
+\subsection{Quality Assurance}
+\subsubsection*{Activity 1}
+
+\subsection{Exporting Data}
+\subsubsection*{Activity 1}
+
+\end{FlushLeft}
+
+\end{document}
