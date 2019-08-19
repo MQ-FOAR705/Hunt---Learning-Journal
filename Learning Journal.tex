@@ -3,7 +3,7 @@
 \usepackage{ragged2e}
 \usepackage{hyperref}
 
-\title{Learning Journal}
+\title{LEARNING JOURNAL}
 \author{Emily Hunt }
 \date{August 2019}
 
@@ -14,37 +14,37 @@
 
 \section{OverLeaf}
 
-\subsection{Objective: Create a section}
+\subsection{Objective: Create a Section}
 \textbf{Time Stamp} 10:52am 12 August\\
-\textbf{Actions:}In the source tab enter
+\textbf{Actions:} In the source tab enter
 \verb|\section{section title goes here}|\\
 \textbf{Results:} The numbered section was created successfully.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} For unnumbered sections, include an asterisk before the \verb|{section title}|. For a subsection, replace \verb|\section| with \verb|\subsection|.
 
-\subsection{Objective: Bold some text}
+\subsection{Objective: Bold Some Text}
 \textbf{Time Stamp:} 11:00am  12 August\\
-\textbf{Actions:}  In the source tab enter \verb|\textbf{text you wish to bold goes here}|.\\
+\textbf{Actions:} In the source tab enter \verb|\textbf{text you wish to bold goes here}|.\\
 \textbf{Results:} The text was put into bold successfully.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} To underline text replace \verb|\textbf| with \verb|\underline|, and use \verb|\textit| for italics.
 
-\subsection{Objective: Create a line break in a block of text.}
+\subsection{Objective: Create a Line Break in a Block of Text}
 \textbf{Time Stamp:} 11:10am  12 August\\
 \textbf{Actions:} Insert \verb|\\| at the end of the line I want the space at.\\
 \textbf{Results:} The text was placed on a new line.\\
 \textbf{Errors:} At first using the two back slashes prompted the error - Underfull /hbox (badness 10000) in paragraph at lines 15-19.\\
 \textbf{Solutions/Notes:} I removed the \verb|\\| and instead inserted an extra space between the lines in the source tab using the enter key. This seemed to work successfully and removed the error. I then went back later a tried again with the two back slashes and this no longer produced an error so I reinserted them where I wanted the line breaks.
 
-\subsection{Objective: Align text to the left.}
+\subsection{Objective: Align Text to the Left}
 \textbf{Time Stamp:} 11:20am 12 August\\
 \textbf{Actions:} I inserted \verb|\usepackage[document]{ragged2e}| at the top of the document.\\
 \textbf{Results:} This aligned the entire text the left.\\
-\textbf{Errors:}I received a note in the log the command had changed. \\
+\textbf{Errors:} I received a note in the log the command had changed. \\
 \textbf{Solutions/Notes:} I put \verb|\usepackage{ragged2e}| at the top of the document and placed \verb|\begin{FlushLeft}| at the start of the text I wanted to align and \verb|\end{FlushLeft}| at the end of the document, and this seemed to work sucessfully and remove the error.
 
-\subsection{Objective: Include Code in the Text.}
-\textbf{Time Stamp:} 11:35 12 August\\
+\subsection{Objective: Include Code in the Text}
+\textbf{Time Stamp:} 11:35am 12 August\\
 \textbf{Actions:} I wanted to allow some parts of the code to be seen in the text so I could properly note my actions, and just including them would execute the command. I started by using the listings package, so included\\ \verb|\usepackage{listings}| at the top of the document, and put \verb|\begin{lstlisting}| before the code I wanted to be visisble and \verb|\end{lstlisting}| after.\\
 \textbf{Results:} This worked successfully.\\
 \textbf{Errors:} However, while not an error, it placed the code on a new line and in a larger font which made the document difficult to read.\\
@@ -59,33 +59,46 @@
 
 \subsection{Objective: Sync my Learning Journal on Overleaf to GitHub}
 \textbf{Time Stamp:} 8:00pm 12 August\\
-\textbf{Actions:} I went to the Menu Tab, clicked on GitHub under sync, clicked 'Link to GitHub', signed into my GitHub account and authorised OverLeaf.\\
+\textbf{Actions:} I went to the Menu tab, clicked on GitHub under sync, clicked 'Link to GitHub', signed into my GitHub account and authorised OverLeaf.\\
 \textbf{Results:} My GitHub and OverLeaf accounts were linked.\\
 \textbf{Errors:} Going back the menu and clicking GitHub, it says the document is not linked to a GitHub repository, and that I need to create one. I would like to link it to my existing repository created in class.\\ 
 \textbf{Solutions/Notes:} I need to work out how to put it into my existing repository. (See GitHub/Sourcetree section)
 
-\subsection{Objective: Insert a clickable link}
+\subsection{Objective: Insert a Clickable Link}
 \textbf{Time Stamp:} 8:10pm 12 August\\
 \textbf{Actions:} Add \verb|\usepackage{hyperref}| to the preamble. To insert the link, include in the source, \verb|\url{link goes here}|.\\
 \textbf{Results:} A link was successfully created.\\
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:}
 
-\subsection{Objective: Download a .tex file}
+\subsection{Objective: Download a .tex File}
 \textbf{Time Stamp:} 12:00pm 13 August\\
-\textbf{Actions:} Go to the menu at the top left hand corner of the page, and under download, click source. This will download it as a zipped file. Unzip the file after downloading to access the .tex file.\\
+\textbf{Actions:} Go to the Menu at the top left hand corner of the page, and under download, click Source. This will download it as a zipped file. Unzip the file after downloading to access the .tex file.\\
 \textbf{Results:} File was downloaded and opened successfully.\\
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:}
 
 \subsection{Error: Overfull hbox (**pts too wide) in paragraph at lines **}
-\textbf{Errors:} This error keeps appearing down the left hand side of the document where the lines are shown.   \\
-\textbf{Solutions/Notes:} I need to attempt a solution, which I can find from \url{https://www.overleaf.com/learn/latex/Errors/Underfull_%5Chbox}
+\textbf{Errors:} This error keeps appearing down the left hand side of the document where the lines are shown.\\
+\textbf{Solutions/Notes:} I can find information on this from \url{https://www.overleaf.com/learn/latex/Errors/Underfull_%5Chbox}
+As this seems error seems to be indicating the text exceeds the margins of the page, I will try using \verb|\\| to put the text on a new line. 
 
 \subsection{Objective: Put Text On a New Page}
-\textbf{Time Stamp:} 9:30 pm 13 August\\
+\textbf{Time Stamp:} 9:30pm 13 August\\
 \textbf{Actions:} Insert \verb|\pagebreak| in the source code before the line I want to appear on a new page .\\
 \textbf{Results:} The text appeared on the next page as intended.\\
+\textbf{Errors:} None\\
+\textbf{Solutions/Notes:}
+
+\subsection{Error: Check that your \$'s match around math expressions. If they do, then you've probably used a symbol in normal text that needs to be in math mode. . .}
+\textbf{Time Stamp:} 2:30pm 18 August\\
+\textbf{Errors:} This kept appearing when I used an underscore in the text, and the error notification informed me that some symbols are used for mathematical calculations and have to be in math mode. I had previously just replaced underscores with dashes but wanted to address this issue.\\
+\textbf{Solutions/Notes:} I used \verb|\textunderscore| to insert underscores where I needed them. However, when writing this journal entry where I had to include a dollar sign, I also discovered you can simply put a \verb|\| before the math symbol, or could use the same verb command I use when including code in the text.
+
+\subsection{Objective: Insert a Break Between Lines}
+\textbf{Time Stamp:} 9:30pm 19 August\\
+\textbf{Actions:} Insert \verb|\vspace{5mm}| where I want the break to occur .\\
+\textbf{Results:} The break appeared between the lines successfully.\\
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:}
 
@@ -94,42 +107,44 @@
 \section{GitHub/Sourcetree}
 
 \subsection{Objective: Commit a File}
-\textbf{Time Stamp:} 9.00 pm 12 August\\
-\textbf{Actions:} Go into the repository into which I want to commit the file. Click upload files, and then drag and drop the file into the box. Enter information about the changes made in both description boxes. Click commit changes.
+\textbf{Time Stamp:} 9.00pm 12 August\\
+\textbf{Actions:} Go into the repository into which I want to commit the file. Click upload files, and then drag and drop the file into the box. Enter information about the changes made in both description boxes. Click the green Commit changes button.
 \textbf{Results:} File was successfully committed to GitHub.\\
 \textbf{Errors:} None\\
-\textbf{Solutions/Notes:}
+\textbf{Solutions/Notes:} To commit a file using Sourcetree, save the file in the Hunt-Exercises folder on my computer. When I make a change in the document, I can go into Sourcetree and commit these changes. 
 
-\subsection{Objective: Delete a file}
-\textbf{Time Stamp:} 8:05 pm 16 August\\
-\textbf{Actions:} In the repository select the file I want to delete. Click on the trash can icon, and then click the red commit button.
+\subsection{Objective: Delete a File}
+\textbf{Time Stamp:} 8:05pm 16 August\\
+\textbf{Actions:} In the repository select the file I want to delete. Click on the trash can icon, and then click the red Commit button.\\
 \textbf{Results:} File was successfully deleted.\\
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:}
 
 \subsection{Objective: Change a Repository Name}
-\textbf{Time Stamp:} 8:10 pm 16 August\\
+\textbf{Time Stamp:} 8:10pm 16 August\\
 \textbf{Actions:} Within the repository, click settings. Under repository name, change the name to what I want it to be and click the Rename button.\\
 \textbf{Results:} Name was successfully changed.\\
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:} I need to check whether when I push overleaf changes to GitHub this still works.
 
-\subsection{Objective: Create a submodule}
-\textbf{Time Stamp:} 8:15 pm 12 August\\
-I saw Brian in the consultation time before class, and he helped me set up a submodule with my learning journal OverLeaf file. This was my attempted to set up a second submodule with my second scoping exercise OverLeaf file.\\
-\textbf{Actions:} In the OverLeaf file, go to menu and under sync, click GitHub. When prompted click Create A GitHub Repository. Give the repository an appropriate name, give ownership to MQ-FOAR705 and click the green Create button. Go to GitHub and go to the newly created repository. Within the repository, click on the green Clone or Download button and copy the link.In Sourcetree, after clicking on Hunt-Learning Journal, go to Repository in the menu bar and go down to Add Submodule and click on it. Paste the previously copied link into Source Path/URL. Click on the ellipsis button for Local Relative Path (Make sure it opens the folder Hunt-Exercises). Create a new folder and name it appropriately and click OK. Then click commit.\\
+\subsection{Objective: Create a Submodule}
+\textbf{Time Stamp:} 8:15pm 12 August\\
+I saw Brian in the consultation time before class, and he helped me set up a submodule with my learning journal OverLeaf file. This was my attempt to set up a second submodule with my Second Scoping Exercise OverLeaf file.\\
+\textbf{Actions:} In the OverLeaf file, go to Menu and under sync, click GitHub. When prompted click Create A GitHub Repository. Give the repository an appropriate name, give ownership to MQ-FOAR705 and click the green Create button. Go to GitHub and go to the newly created repository. Within the repository, click on the green Clone or Download button and copy the link. In Sourcetree, after clicking on Hunt-Learning Journal, go to Repository in the menu bar and go down to Add Submodule and click on it. Paste the previously copied link into Source Path/URL. Click on the ellipsis button for Local Relative Path (Make sure it opens the folder Hunt-Exercises). Create a new folder and name it appropriately and click OK. Then click Commit.\\
 \textbf{Results:} The submodule was created in Sourcetree.\\
 \textbf{Errors:} The submodule was not visible in GitHub.\\
-\textbf{Solutions/Notes:} I had previously deleted two files in GitHub within having been into Sourcetree. The Pull icon was displaying a number two, and the Push icon was displaying a number one. I clicked Push and then OK and then Pull and then OK, and this addressed this issue.
+\textbf{Solutions/Notes:} I had previously deleted two files in GitHub without having been into Sourcetree. The Pull icon was displaying a number two, and the Push icon was displaying a number one. I clicked Push and then OK and then Pull and then OK, and this addressed this issue.
 
-\subsection{Error: Pushes from OverLeaf appearing in Connected Repository, but not When it Is Accessed Through Main Hunt-Exercises Repository}
-\textbf{Time Stamp:} 10:00 pm 16 August(Error)/10:00 am 18 August (Solution attempted)\\
+\subsection{Error: Pushes from OverLeaf Appearing in Connected Repository, but Not When it is Accessed Through Main Hunt-Exercises Repository}
+\textbf{Time Stamp:} 10:00pm 16 August(Error)/10:00 am 18 August (Solution attempted)\\
 Prior to attempting a solution, I asked advice from Brian on Slack.\\
-\textbf{Actions:} Within Sourcetree, a Commit notification was appearing. I clicked commit, and within the description wrote, 'Commit changes from subdirectory into Hunt-Exercises', as well as the comment I put on the original push. I then clicked commit. This then produced a one on the push symbol. I then completed the push and went into GitHub.\\
+\textbf{Actions:} Within Sourcetree, a Commit notification appeared. I clicked commit, and within the description wrote, 'Commit changes from subdirectory into Hunt-Exercises', as well as the comment I put on the original push. I then clicked Commit. This then produced a one on the push symbol. I then completed the push and went into GitHub.\\
 \textbf{Results:} This seemed to successfully make the changes appear in the repository.\\
-\textbf{Notes:} I will now complete a new push with this added objective and follow these steps, and see if it works.
+\textbf{Notes:} I will now complete a new push with this added objective within the OverLeaf file and follow these steps to see if it works. This worked successfully. Note however, prior to the first Commit notification appearing in Sourcetree, there is a Pull notification within the subdirectory that is being changed.
 
-\section{Data Carpentry}
+\pagebreak
+
+\section{Data Carpentry: Data Organization in Spreadsheets for Social Scientists}
 
 \subsection{Introduction}
 \subsubsection*{Have I Used Spreadsheets in My Research?}
@@ -142,17 +157,17 @@ I have definitely done things that are frustrating, like not being able to find 
 Mozambique 
 \begin{itemize}
 \item The absence of an observation is indicated in a number of different ways e.g. -99, -999 or cells are left blank. This could be addressed by choosing one and using it consistently
-\item In the Dwelling table, there are a number of differences in spellings and identifications between the observations e.g. mabati-sloping v mabatisloping. One should be chosen and consistently used.
+\item In the Dwelling table, there are a number of differences in spellings and identifications between the observations e.g. mabati\textunderscore sloping v mabatisloping. One should be chosen and consistently used.
 \item In the Dwelling table, the yellow fill of the cell to indicate the inclusion of the barn will not be able to processed by the computer during analysis. Potentially the ownership of a barn could be included as a separate variable.
-\item In the Livestock table, the livestock-owned-and-numbers column contains two variables. To address this, it could be split into observations for each individual animal, as exemplified in the example.
+\item In the Livestock table, the livestock\textunderscore owned\textunderscore and\textunderscore numbers column contains two variables. To address this, it could be split into observations for each individual animal, as exemplified in the example.
 \item In the water use column of the Plots table, the data switches between ‘no’ and ‘yes’ and Y and N. One should be chosen and consistently used.
-\item Also in the water use column of the Plots table, there is an extra comment for key-id 2. This should either be entirely removed, or separate columns set up for the different seasons.
+\item Also in the water use column of the Plots table, there is an extra comment for key\textunderscore id 2. This should either be entirely removed, or separate columns set up for the different seasons.
 \end{itemize}
 Tanzania
 \begin{itemize}
-\item Similarly to the in the Mozambique Dwelling table, the use of an asterisk to indicate the inclusion of a cowshed is not an appropriate way to label the data. Cowsheds could be treated as a separate variable.
-\item This is also the case in the Livestock table, where key-id 3 has ‘yes/no*’ in the Look after cows column. Either yes or no should be chosen, or an observation committed completely.
-\item In the Livestock table, the data for key-id 5 is recorded with yes and no, as opposed to the numerical data primarily used for the other responses. This should be changed into quantitative data.
+\item Similarly to the Mozambique Dwelling table, the use of an asterisk to indicate the inclusion of a cowshed is not an appropriate way to label the data. Cowsheds could be treated as a separate variable.
+\item This is also the case in the Livestock table, where key\textunderscore id 3 has ‘yes/no*’ in the Look after cows column. Either yes or no should be chosen, or an observation committed completely.
+\item In the Livestock table, the data for key\textunderscore id 5 is recorded with yes and no, as opposed to the numerical data primarily used for the other responses. The yes/no entries should be changed into quantitative data.
 \item There are a lot of blank cells in the Livestock table. A single indicator of a lack of response should be decided upon and used consistently.
 \end{itemize}
 Generally
@@ -160,8 +175,8 @@ Generally
 \item The data set for Tanzania is missing data on Plots.
 \item Headers that have more than one word switch between having a space between them and an underscore.A single format for the headings should be consistently used.
 \item The two tables recording Livestock are set up differently. Also, one table records responses for poultry as either yes or no, while the other records them numerically.These issues could be addressed by fixing the Mozambique Livestock take as previously discussed.
-\item Across the two countries, the key-ids consist of the numbers 1-10. When the two country’s data is merged, they would be understood to be the same people. To address this, Tanzania’s could be changed to 11-20.
-\item Livestock data for key-id 10 is missing from both tables.
+\item Across the two countries, the key\textunderscore ids consist of the numbers 1-10. When the two country’s data is merged, they would be understood to be the same people. To address this, Tanzania’s could be changed to 11-20.
+\item Livestock data for key\textunderscore id 10 is missing from both tables.
 \item All of the data should be placed into a single table
 \end{itemize}
 \subsubsection*{Activity 2: What types of metadata should be recorded with this project?}
@@ -173,7 +188,7 @@ Generally
 
 \subsection{Formatting Problems}
 \subsubsection*{Examples of Problem Data in my Discipline (Film Studies) }
-\textbf{Problem 1:Data Spread Across Numerous Data Sets}\\
+\textbf{Problem 1: Data Spread Across Numerous Data Sets}\\
 Data Sets: \url{https://www.imdb.com/interfaces/} and \url{https://archive.ics.uci.edu/ml/datasets/Movie}\\
 The IMDb data is split into a number of datasets, each with different headers. For instance, the title.akas.tsv.gz data set has columns for the title, region for the version of the title and language of the title, whereas the title.basics.tsv.gz data set includes columns for the type/format of the title, primary title and original title.\\
 This is similarly the case with the University of California Irvine Movie Data Set, which has various data sets for ‘People’, ‘Casts’, ‘Actors’, ‘Remakes’ and ‘Studios’. Additionally, in the various data sets, there are a number of columns that contain two variables. For example, in the Remakes data set, in the title and priortitle columns, there is a ’T:’ in front of every entry to indicate it is a film title.\\
@@ -184,7 +199,7 @@ Though discussed vary vaguely, data from the IMDb database was used for\\
 
 \textbf{Problem 2: Null Values}\\
 Data Sets: \url{http://www.cinemetrics.lv/database.php}\\
-In the Cinemetrics Database, there are a number of cells left blank in a number of the entries and it is unclear why these cells have been left blank (e.g. is the data unavailable or is there its not applicable?). Additionally, there are a number of repeated entries (such as for the film \textit{Insidious The Last Key}). With the database containing the average lengths of shots in films, a potential problem in the raw data is that it is susceptible to human error, as the length of a shot is manually measured by a viewer using a software that works like a stopwatch.\\
+In the Cinemetrics Database, there are a number of cells left blank in a number of the entries and it is unclear why these cells have been left blank (e.g. is the data unavailable or is it not applicable?). Additionally, there are a number of repeated entries (such as for the film \textit{Insidious The Last Key}). With the database containing the average lengths of shots in films, a potential problem in the raw data is that it is susceptible to human error, as the length of a shot is manually measured by a viewer using a software that works like a stopwatch.\\
 This misidentification of null values is also present in the previously mentioned University of California Irvine Movie Data Set. Incomplete data is identified in a variety of ways, including cells being left blank, and question marks.\\ 
 The data from the Cinemetrics database appears in
 \begin{itemize}
@@ -193,14 +208,75 @@ The data from the Cinemetrics database appears in
 \end{itemize}
 
 \subsection{Dates as Data}
-\subsubsection*{Activity 1}
+Please see GitHub for the Excel Sheets these activities were completed on.
+\subsubsection*{Activity 1: Separating Dates Into Components}
+\textbf{Objective: Add Columns}\\
+\textbf{Time Stamp:} 12:46pm 18 August \\
+\textbf{Actions:} Right click on the edge of the two columns between which I want to add a new column, and click Insert. Repeat this twice more, and label the columns 'Date', 'Month' and 'Year'.\\
+\textbf{Results:} The three columns were created successfully.\\
+\textbf{Errors:} None. \\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Add Formulas to the Entire Columns}\\
+\textbf{Time Stamp:} 12:50pm 18 August \\
+\textbf{Actions:} In the first blank cell of the day column (B2), type =DAY(A2) and click enter. Double click the bottom right hand corner of the cell to apply to remainder of the column. Repeat for the Month and Year columns by typing =MONTH(A2) into cell C2, and =YEAR(A2) into cell D2.\\
+\textbf{Results:} This applied the formula successfully. \\
+\textbf{Errors:} However, the data in the day, month and year columns appeared as dates. \\
+\textbf{Solutions/Notes:} See the next Objective.\\
+\vspace{5mm}
+\textbf{Objective: Formatting Cells as a Number}\\
+\textbf{Time Stamp:} 1:00pm 18 August \\
+\textbf{Actions:} Highlight all the cells I want to format. Go to Format in the menu bar and click Cells . . . Under the Category menu click Number. Change the decimal place value to 0 and click OK.\\
+\textbf{Results:} This successfully formatted the cells to numbers.\\
+\textbf{Errors:}\\
+\textbf{Solutions/Notes:}\\
+
+\subsubsection*{Activity 2}
+\textbf{Objective: Including An Extra Date Without the Year to See the Default Year}\\
+\textbf{Time Stamp:} 1:07pm 18 August\\
+\textbf{Actions:} I typed 17/11 into the next blank cell in the interview\textunderscore date column.
+\textbf{Results:} This was automatically formatted into a year (17/11/2019) in the interview\textunderscore date column, revealing the current year is the default year in Excel.\\
+\textbf{Errors:} The day, month and year columns were not automatically populated.\\
+\textbf{Solutions/Notes:} The way I initially applied the formulas to the remainder of the columns (double clicking the bottom right hand corner of the cell) didn't apply the formulas to any of the cells in the column beyond those which already contained data in the interview\textunderscore date column. I then tried alternate ways of applying the formulas to more cells, first by selecting a cell with the formula and dragging it down the column, and, then by copying a cell with the formula and pasting into a blank cell within the column without the formula. These both populated the corresponding cells with the new data I had entered. To test whether it would do this automatically, I deleted the new data (17/11/2019) from the interview\textunderscore date column. This produced 0, 1 and 1900 in the corresponding cells in the day, month and year columns respectively. I then re-entered 17/11 in the interview\textunderscore date column, and this automatically populated the columns with the data. 2019 appeared in the year column, further demonstrating how the current year is the deafult year used by Excel.\\
 
 \subsection{Quality Assurance}
-\subsubsection*{Activity 1}
+Please see GitHub for the Excel Sheets these activities were completed on.
+\subsubsection*{Activity 1: Restricting Data to a Numeric Range}
+\textbf{Objective: Follow the Instructions in the Lesson to Add a Restriction to the no\_membrs Column}\\
+\textbf{Time Stamp:} 2:46pm 18 August\\
+\textbf{Actions:} Select the entire no\_membrs column by clicking the top of the column (D). Go to the Data tab and select Data Validation (has a symbol with two boxes, a green tick and a red circle). A window appears, make sure the Settings tab is selected. Under Validation Criteria, from the Allow drop down menu, select Whole Number. Make sure under Data, 'between' is selected. Enter a minimum and maximum value, which for this example is 1 and 30 respectively. To create a specific message to appear when entering data, go to the Input Message tab. Enter a title (e.g. Invalid Data) and Input Message (e.g. Number of household members must be a whole number between 1 and 30.). If there is a tick in the box for 'Show input message when cell is selected', every time a cell in this column is selected, the typed message with appear. Select OK.\\
+\textbf{Results:} This was successful as when 1.5 was attempted to be entered in the column, an Alert appeared that the value didn't match the data validation restrictions.\\
+\textbf{Errors:}\\
+\textbf{Solutions/Notes:} To customise the alert that appears when invalid data is entered, go to the Error Alert tab in Data Validation. I added a message with the title 'This Data Is Invalid' that says 'You entered a whole number that was not between 1 and 30.\\
+\vspace{5mm}
+\textbf{Adding a New Numeric Data Validation Rule of My Choosing}\\
+Following the steps just outlined, I will attempt to add my own rule to another column with numeric data.\\
+\textbf{Rule:} I added a restriction of whole numbers between 1 and 10 to the rooms column, as assessing the data in the table, it appears unlikely a house would have more than 10 rooms, and cannot have less than 1.\\
+\textbf{Messages:} The input message I added was titled 'Invalid Data' and said 'The number of rooms must be a whole number between 1 and 10.'. I also added an error alert titled 'This Data Is Invalid', and with the message 'You entered a whole number that was not between 1 and 10.'.\\
+\textbf{Result:} This was successful, as the input message appeared as intended, and when tested in the same way as before, the alert message also appeared as intended.
+
+\subsubsection*{Activity 2: Restricting Data to Entries from a List}
+\textbf{Objective:Follow the Instructions in the Lesson to Add a Restriction to the respondent\_wall\_type Column}\\ 
+\textbf{Time Stamp:} 3:30pm 18 August\\
+\textbf{Actions:} Select the entire respondent\_wall\_type column by clicking the top of the column (F). Go to the Data tab and select Data Validation. A window appears, make sure the Settings tab is selected. Under Validation Criteria, from the Allow drop down menu, select List. Under Source, enter all the options you want to allow to be entered into the column separating each with a comma (for this example: grass, muddaub, burntbricks, sunbricks, cement). As in Activity 1, add an appropriate input message (Invalid Data: Wall type must be either grass, muddaub, burntbricks, sunbricks or cement.) and error alert (This Data is Invalid: You entered a wall type that was not grass, muddaub, burntbricks, sunbricks or cement.).\\
+\textbf{Results:} The data restriction was successfully added as the input message appeared as intended and when 'mud' was attempted to be entered into the column, the error alert appeared.\\
+\textbf{Errors:}\\
+\textbf{Solutions/Notes:} As the box, 'In-cell drop-down' was ticked in the Data Validation window in the Setting tab, when a cell in the column is selected, a down arrow appears on the right hand side of the cell, and when clicked down, a menu appears with the accepted data options. When one is selected, it is entered into the cell.\\
+\vspace{5mm}
+\textbf{Adding a New List Data Validation Rule of My Choosing}\\
+Following the steps just outlined, I will attempt to add my own rule to another column with cateogrical data.\\
+\textbf{Rule:} I added a list of restrictions to the months\_lack\_food column. The list included the abbreviations already used in the column (Jan, Feb, Mar, Apr, May, June, July, Aug, Sept, Oct, Nov, Dec). I chose this column to add a restriction to as months can be abbreviated in a number of different ways and it is important to ensure consistency.\\
+\textbf{Messages:} The input message I added was titled 'Invalid Data' and said 'The month abbreviation must be Jan, Feb, Mar, Apr, May, June, July, Aug, Sept, Oct, Nov or Dec'. I also added an error alert titled 'This Data Is Invalid', and with the message 'You entered a month that was not Jan, Feb, Mar, Apr, May, June, July, Aug, Sept, Oct, Nov or Dec.'\\
+\textbf{Result:} This was successful as the input message successfully appeared and when I tried enter 'Jan;Dece', I received the alert message I had entered. As this was such a long list and the cell can contain more than one month, I decided not to have a drop down menu in each individual cell.\\
+\textbf{Error}: 9:00am 19 August, However I realised that entering the list of options for this column would only allow one month would be selected. 'Jan;Dece' was not a good way to test the successfullness of this data validation rule because instead of the alert message presenting because 'Dece' was used instead of Dec, it was presenting because the two months was not a single option on the list. So, I then removed this data validation rule from the months\_lack\_food column, and applied a rule to the affect\_conflict column, only allowing never, once, more\_once, frequently,or NULL to be entered, and created appropriate alert and data entry messages. This worked as intended.\\
 
 \subsection{Exporting Data}
-\subsubsection*{Activity 1}
-
+\textbf{Objective: Save an Excel File in CSV format}\\ 
+\textbf{Time Stamp:} 4:50pm 18 August\\
+\textbf{Actions:} I will attempt to save my Dates as Data Activity Excel document in CSV Format. Inside the open document, in the menu bar go to File, and then select Save As . . . From the File Format drop down menu, select Comma-separated Values (.csv) and name the file appropriately. Select the correct folder to save it to and click Save. \\
+\textbf{Results:} The file was exported successfully, and I uploaded it to my GitHub repoistory.\\
+\textbf{Errors:} The export was not initially allowed because the spreadsheet had more than one sheet.\\
+\textbf{Solutions/Notes:} I then deleted the MM/DD/YEAR sheet and tried again. This was successful and I uploaded it to my GitHub repository.\\
 \end{FlushLeft}
 
 \end{document}
