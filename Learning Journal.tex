@@ -4,13 +4,16 @@
 \usepackage{hyperref}
 
 \title{LEARNING JOURNAL}
-\author{Emily Hunt }
+\author{Emily Hunt 44888619}
 \date{August 2019}
 
 \begin{document}
 
 \maketitle
 \begin{FlushLeft}
+
+\tableofcontents
+\pagebreak
 
 \section{OverLeaf}
 
@@ -29,19 +32,19 @@
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} To underline text replace \verb|\textbf| with \verb|\underline|, and use \verb|\textit| for italics.
 
-\subsection{Objective: Create a Line Break in a Block of Text}
+\subsection{Objective: Put Text on a New Line}\label{sec:underfull}
 \textbf{Time Stamp:} 11:10am  12 August\\
 \textbf{Actions:} Insert \verb|\\| at the end of the line I want the space at.\\
 \textbf{Results:} The text was placed on a new line.\\
 \textbf{Errors:} At first using the two back slashes prompted the error - Underfull /hbox (badness 10000) in paragraph at lines 15-19.\\
-\textbf{Solutions/Notes:} I removed the \verb|\\| and instead inserted an extra space between the lines in the source tab using the enter key. This seemed to work successfully and removed the error. I then went back later a tried again with the two back slashes and this no longer produced an error so I reinserted them where I wanted the line breaks.
+\textbf{Solutions/Notes:} I removed the \verb|\\| and instead inserted an extra space between the lines in the source tab using the enter key. This seemed to work successfully and removed the error. I then went back later and tried again with the two back slashes and this no longer produced an error so I reinserted them where I wanted the line breaks.
 
-\subsection{Objective: Align Text to the Left}
+\subsection{Objective: Align Text to the Left}\label{sec:logcommand}
 \textbf{Time Stamp:} 11:20am 12 August\\
 \textbf{Actions:} I inserted \verb|\usepackage[document]{ragged2e}| at the top of the document.\\
 \textbf{Results:} This aligned the entire text the left.\\
 \textbf{Errors:} I received a note in the log the command had changed. \\
-\textbf{Solutions/Notes:} I put \verb|\usepackage{ragged2e}| at the top of the document and placed \verb|\begin{FlushLeft}| at the start of the text I wanted to align and \verb|\end{FlushLeft}| at the end of the document, and this seemed to work sucessfully and remove the error.
+\textbf{Solutions/Notes:} I read further through the page \url{https://www.overleaf.com/learn/latex/Text_alignment} where I got the initial command from, and checked some of the example documents. I put \verb|\usepackage{ragged2e}| at the top of the document and placed \verb|\begin{FlushLeft}| at the start of the text I wanted to align and \verb|\end{FlushLeft}| at the end of the document, and this seemed to work successfully and remove the error.
 
 \subsection{Objective: Include Code in the Text}
 \textbf{Time Stamp:} 11:35am 12 August\\
@@ -78,22 +81,12 @@
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:}
 
-\subsection{Error: Overfull hbox (**pts too wide) in paragraph at lines **}
-\textbf{Errors:} This error keeps appearing down the left hand side of the document where the lines are shown.\\
-\textbf{Solutions/Notes:} I can find information on this from \url{https://www.overleaf.com/learn/latex/Errors/Underfull_%5Chbox}
-As this seems error seems to be indicating the text exceeds the margins of the page, I will try using \verb|\\| to put the text on a new line. 
-
 \subsection{Objective: Put Text On a New Page}
 \textbf{Time Stamp:} 9:30pm 13 August\\
 \textbf{Actions:} Insert \verb|\pagebreak| in the source code before the line I want to appear on a new page .\\
 \textbf{Results:} The text appeared on the next page as intended.\\
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:}
-
-\subsection{Error: Check that your \$'s match around math expressions. If they do, then you've probably used a symbol in normal text that needs to be in math mode. . .}
-\textbf{Time Stamp:} 2:30pm 18 August\\
-\textbf{Errors:} This kept appearing when I used an underscore in the text, and the error notification informed me that some symbols are used for mathematical calculations and have to be in math mode. I had previously just replaced underscores with dashes but wanted to address this issue.\\
-\textbf{Solutions/Notes:} I used \verb|\textunderscore| to insert underscores where I needed them. However, when writing this journal entry where I had to include a dollar sign, I also discovered you can simply put a \verb|\| before the math symbol, or could use the same verb command I use when including code in the text.
 
 \subsection{Objective: Insert a Break Between Lines}
 \textbf{Time Stamp:} 9:30pm 19 August\\
@@ -102,13 +95,27 @@ As this seems error seems to be indicating the text exceeds the margins of the p
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:}
 
+\subsection{Objective: Insert a Table of Contents}
+\textbf{Time Stamp:} 10:30pm 21 August\\
+\textbf{Actions:} Insert \verb|\tableofcontents| at the beginning of the document after \verb|\maketitle|.\\
+\textbf{Results:} The table of contents was created successfully.\\
+\textbf{Errors:} None\\
+\textbf{Solutions/Notes:}
+
+\subsection{Objective: Insert a Cross-reference to Another Section}
+\textbf{Time Stamp:} 11:00pm 21 August\\
+\textbf{Actions:} With the hyperref package already in the preamble, insert \verb|\autoref{sec:nameforlink}| where you want the link to be, and \verb|\label{sec:nameforlink}| behind the section/subsection command of the section/subsection you want to link to. This command will make the link be 'section/subsection no'.\\
+\textbf{Results:} The link was created successfully.\\
+\textbf{Errors:} None\\
+\textbf{Solutions/Notes:} This was a useful resource, \url{https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing#Sections} as recommended by Brian.
+
 \pagebreak
 
 \section{GitHub/Sourcetree}
 
 \subsection{Objective: Commit a File}
 \textbf{Time Stamp:} 9.00pm 12 August\\
-\textbf{Actions:} Go into the repository into which I want to commit the file. Click upload files, and then drag and drop the file into the box. Enter information about the changes made in both description boxes. Click the green Commit changes button.
+\textbf{Actions:} Go into the repository into which I want to commit the file. Click upload files, and then drag and drop the file into the box. Enter information about the changes made in both description boxes. Click the green Commit changes button.\\
 \textbf{Results:} File was successfully committed to GitHub.\\
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:} To commit a file using Sourcetree, save the file in the Hunt-Exercises folder on my computer. When I make a change in the document, I can go into Sourcetree and commit these changes. 
@@ -125,9 +132,9 @@ As this seems error seems to be indicating the text exceeds the margins of the p
 \textbf{Actions:} Within the repository, click settings. Under repository name, change the name to what I want it to be and click the Rename button.\\
 \textbf{Results:} Name was successfully changed.\\
 \textbf{Errors:} None\\
-\textbf{Solutions/Notes:} I need to check whether when I push overleaf changes to GitHub this still works.
+\textbf{Solutions/Notes:} I need to check whether when I push overleaf changes to GitHub this still works. I did, and the changes were still pushed successfully (I think this was because even though the repository's name changed, the link remained the same).
 
-\subsection{Objective: Create a Submodule}
+\subsection{Objective: Create a Submodule}\label{sec:subnot}
 \textbf{Time Stamp:} 8:15pm 12 August\\
 I saw Brian in the consultation time before class, and he helped me set up a submodule with my learning journal OverLeaf file. This was my attempt to set up a second submodule with my Second Scoping Exercise OverLeaf file.\\
 \textbf{Actions:} In the OverLeaf file, go to Menu and under sync, click GitHub. When prompted click Create A GitHub Repository. Give the repository an appropriate name, give ownership to MQ-FOAR705 and click the green Create button. Go to GitHub and go to the newly created repository. Within the repository, click on the green Clone or Download button and copy the link. In Sourcetree, after clicking on Hunt-Learning Journal, go to Repository in the menu bar and go down to Add Submodule and click on it. Paste the previously copied link into Source Path/URL. Click on the ellipsis button for Local Relative Path (Make sure it opens the folder Hunt-Exercises). Create a new folder and name it appropriately and click OK. Then click Commit.\\
@@ -135,16 +142,9 @@ I saw Brian in the consultation time before class, and he helped me set up a sub
 \textbf{Errors:} The submodule was not visible in GitHub.\\
 \textbf{Solutions/Notes:} I had previously deleted two files in GitHub without having been into Sourcetree. The Pull icon was displaying a number two, and the Push icon was displaying a number one. I clicked Push and then OK and then Pull and then OK, and this addressed this issue.
 
-\subsection{Error: Pushes from OverLeaf Appearing in Connected Repository, but Not When it is Accessed Through Main Hunt-Exercises Repository}
-\textbf{Time Stamp:} 10:00pm 16 August(Error)/10:00 am 18 August (Solution attempted)\\
-Prior to attempting a solution, I asked advice from Brian on Slack.\\
-\textbf{Actions:} Within Sourcetree, a Commit notification appeared. I clicked commit, and within the description wrote, 'Commit changes from subdirectory into Hunt-Exercises', as well as the comment I put on the original push. I then clicked Commit. This then produced a one on the push symbol. I then completed the push and went into GitHub.\\
-\textbf{Results:} This seemed to successfully make the changes appear in the repository.\\
-\textbf{Notes:} I will now complete a new push with this added objective within the OverLeaf file and follow these steps to see if it works. This worked successfully. Note however, prior to the first Commit notification appearing in Sourcetree, there is a Pull notification within the subdirectory that is being changed.
-
 \pagebreak
 
-\section{Data Carpentry: Data Organization in Spreadsheets for Social Scientists}
+\section{Data Carpentry: Data Organisation in Spreadsheets for Social Scientists}
 
 \subsection{Introduction}
 \subsubsection*{Have I Used Spreadsheets in My Research?}
@@ -217,7 +217,7 @@ Please see GitHub for the Excel Sheets these activities were completed on.
 \textbf{Errors:} None. \\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Objective: Add Formulas to the Entire Columns}\\
+\textbf{Objective: Add Formulas to the Entire Columns}\label{sec:cellformat}\\
 \textbf{Time Stamp:} 12:50pm 18 August \\
 \textbf{Actions:} In the first blank cell of the day column (B2), type =DAY(A2) and click enter. Double click the bottom right hand corner of the cell to apply to remainder of the column. Repeat for the Month and Year columns by typing =MONTH(A2) into cell C2, and =YEAR(A2) into cell D2.\\
 \textbf{Results:} This applied the formula successfully. \\
@@ -231,7 +231,7 @@ Please see GitHub for the Excel Sheets these activities were completed on.
 \textbf{Errors:}\\
 \textbf{Solutions/Notes:}\\
 
-\subsubsection*{Activity 2}
+\subsubsection*{Activity 2}\label{sec:formulacolumn}
 \textbf{Objective: Including An Extra Date Without the Year to See the Default Year}\\
 \textbf{Time Stamp:} 1:07pm 18 August\\
 \textbf{Actions:} I typed 17/11 into the next blank cell in the interview\textunderscore date column.
@@ -246,7 +246,7 @@ Please see GitHub for the Excel Sheets these activities were completed on.
 \textbf{Time Stamp:} 2:46pm 18 August\\
 \textbf{Actions:} Select the entire no\_membrs column by clicking the top of the column (D). Go to the Data tab and select Data Validation (has a symbol with two boxes, a green tick and a red circle). A window appears, make sure the Settings tab is selected. Under Validation Criteria, from the Allow drop down menu, select Whole Number. Make sure under Data, 'between' is selected. Enter a minimum and maximum value, which for this example is 1 and 30 respectively. To create a specific message to appear when entering data, go to the Input Message tab. Enter a title (e.g. Invalid Data) and Input Message (e.g. Number of household members must be a whole number between 1 and 30.). If there is a tick in the box for 'Show input message when cell is selected', every time a cell in this column is selected, the typed message with appear. Select OK.\\
 \textbf{Results:} This was successful as when 1.5 was attempted to be entered in the column, an Alert appeared that the value didn't match the data validation restrictions.\\
-\textbf{Errors:}\\
+\textbf{Errors:} None. \\
 \textbf{Solutions/Notes:} To customise the alert that appears when invalid data is entered, go to the Error Alert tab in Data Validation. I added a message with the title 'This Data Is Invalid' that says 'You entered a whole number that was not between 1 and 30.\\
 \vspace{5mm}
 \textbf{Adding a New Numeric Data Validation Rule of My Choosing}\\
@@ -260,7 +260,7 @@ Following the steps just outlined, I will attempt to add my own rule to another 
 \textbf{Time Stamp:} 3:30pm 18 August\\
 \textbf{Actions:} Select the entire respondent\_wall\_type column by clicking the top of the column (F). Go to the Data tab and select Data Validation. A window appears, make sure the Settings tab is selected. Under Validation Criteria, from the Allow drop down menu, select List. Under Source, enter all the options you want to allow to be entered into the column separating each with a comma (for this example: grass, muddaub, burntbricks, sunbricks, cement). As in Activity 1, add an appropriate input message (Invalid Data: Wall type must be either grass, muddaub, burntbricks, sunbricks or cement.) and error alert (This Data is Invalid: You entered a wall type that was not grass, muddaub, burntbricks, sunbricks or cement.).\\
 \textbf{Results:} The data restriction was successfully added as the input message appeared as intended and when 'mud' was attempted to be entered into the column, the error alert appeared.\\
-\textbf{Errors:}\\
+\textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} As the box, 'In-cell drop-down' was ticked in the Data Validation window in the Setting tab, when a cell in the column is selected, a down arrow appears on the right hand side of the cell, and when clicked down, a menu appears with the accepted data options. When one is selected, it is entered into the cell.\\
 \vspace{5mm}
 \textbf{Adding a New List Data Validation Rule of My Choosing}\\
@@ -270,13 +270,59 @@ Following the steps just outlined, I will attempt to add my own rule to another 
 \textbf{Result:} This was successful as the input message successfully appeared and when I tried enter 'Jan;Dece', I received the alert message I had entered. As this was such a long list and the cell can contain more than one month, I decided not to have a drop down menu in each individual cell.\\
 \textbf{Error}: 9:00am 19 August, However I realised that entering the list of options for this column would only allow one month would be selected. 'Jan;Dece' was not a good way to test the successfullness of this data validation rule because instead of the alert message presenting because 'Dece' was used instead of Dec, it was presenting because the two months was not a single option on the list. So, I then removed this data validation rule from the months\_lack\_food column, and applied a rule to the affect\_conflict column, only allowing never, once, more\_once, frequently,or NULL to be entered, and created appropriate alert and data entry messages. This worked as intended.\\
 
-\subsection{Exporting Data}
+\subsection{Exporting Data}\label{sec:CSV}
 \textbf{Objective: Save an Excel File in CSV format}\\ 
 \textbf{Time Stamp:} 4:50pm 18 August\\
 \textbf{Actions:} I will attempt to save my Dates as Data Activity Excel document in CSV Format. Inside the open document, in the menu bar go to File, and then select Save As . . . From the File Format drop down menu, select Comma-separated Values (.csv) and name the file appropriately. Select the correct folder to save it to and click Save. \\
 \textbf{Results:} The file was exported successfully, and I uploaded it to my GitHub repoistory.\\
 \textbf{Errors:} The export was not initially allowed because the spreadsheet had more than one sheet.\\
 \textbf{Solutions/Notes:} I then deleted the MM/DD/YEAR sheet and tried again. This was successful and I uploaded it to my GitHub repository.\\
+
+\pagebreak
+
+\section{Errors}
+\subsection{OverLeaf}
+
+\subsubsection{Error: Overfull hbox (**pts too wide) in paragraph at lines **}
+\textbf{Errors:} This error keeps appearing down the left hand side of the document where the lines are shown.\\
+\textbf{Solutions/Notes:} I can find information on this from \url{https://www.overleaf.com/learn/latex/Errors/Underfull_%5Chbox}
+As this seems error seems to be indicating the text exceeds the margins of the page, I will try using \verb|\\| to put the text on a new line. 
+
+\subsubsection{Error: Check that your \$'s match around math expressions. If they do, then you've probably used a symbol in normal text that needs to be in math mode. . .}
+\textbf{Time Stamp:} 2:30pm 18 August\\
+\textbf{Errors:} This kept appearing when I used an underscore in the text, and the error notification informed me that some symbols are used for mathematical calculations and have to be in math mode. I had previously just replaced underscores with dashes but wanted to address this issue.\\
+\textbf{Solutions/Notes:} I used \verb|\textunderscore| to insert underscores where I needed them. However, when writing this journal entry where I had to include a dollar sign, I also discovered you can simply put a \verb|\| before the math symbol, or could use the same verb command I use when including code in the text.
+
+\subsubsection{Useful Errors}
+\autoref{sec:underfull} Underfull /hbox (badness ****) in paragraph at lines **\\
+
+\autoref{sec:logcommand} Log Command Has Changed
+
+
+
+
+\subsection{GitHub/Sourcetree}
+
+\subsubsection{Error: Pushes from OverLeaf Appearing in Connected Repository, but Not When it is Accessed Through Main Hunt-Exercises Repository}
+\textbf{Time Stamp:} 10:00pm 16 August(Error)/10:00 am 18 August (Solution attempted)\\
+Prior to attempting a solution, I asked advice from Brian on Slack.\\
+\textbf{Actions:} Within Sourcetree, a Commit notification appeared. I clicked Commit, and within the description wrote, 'Commit changes from subdirectory into Hunt-Exercises', as well as the comment I put on the original push. I then clicked Commit. This then produced a one on the push symbol. I then completed the push and went into GitHub.\\
+\textbf{Results:} This seemed to successfully make the changes appear in the repository.\\
+\textbf{Notes:} I will now complete a new push with this added objective within the OverLeaf file and follow these steps to see if it works. This worked successfully. Note however, prior to the first Commit notification appearing in Sourcetree, there is a Pull notification within the subdirectory that is being changed.
+
+\subsubsection{Useful Errors}
+
+\autoref{sec:subnot} Submodule Not Visible in GitHub
+
+\subsection{Excel}
+
+\subsubsection{Useful Errors}
+
+\autoref{sec:cellformat} Cells in the Incorrect Format.\\
+\autoref{sec:formulacolumn} Cells Which Should Have a Formula Applied Not Automatically Populating.\\
+\autoref{sec:CSV} CSV Export Not Working.\\
+
 \end{FlushLeft}
+
 
 \end{document}
