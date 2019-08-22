@@ -3,7 +3,7 @@
 \usepackage{ragged2e}
 \usepackage{hyperref}
 
-\title{LEARNING JOURNAL}
+\title{\textbf{LEARNING JOURNAL}}
 \author{Emily Hunt 44888619}
 \date{August 2019}
 
@@ -11,6 +11,8 @@
 
 \maketitle
 \begin{FlushLeft}
+
+To view on OverLeaf \url{https://www.overleaf.com/read/mbyzzhcjkmtv}
 
 \tableofcontents
 \pagebreak
@@ -65,7 +67,7 @@
 \textbf{Actions:} I went to the Menu tab, clicked on GitHub under sync, clicked 'Link to GitHub', signed into my GitHub account and authorised OverLeaf.\\
 \textbf{Results:} My GitHub and OverLeaf accounts were linked.\\
 \textbf{Errors:} Going back the menu and clicking GitHub, it says the document is not linked to a GitHub repository, and that I need to create one. I would like to link it to my existing repository created in class.\\ 
-\textbf{Solutions/Notes:} I need to work out how to put it into my existing repository. (See GitHub/Sourcetree section)
+\textbf{Solutions/Notes:} I need to work out how to put it into my existing repository. (See \autoref{sec:submodule})
 
 \subsection{Objective: Insert a Clickable Link}
 \textbf{Time Stamp:} 8:10pm 12 August\\
@@ -134,7 +136,7 @@
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:} I need to check whether when I push overleaf changes to GitHub this still works. I did, and the changes were still pushed successfully (I think this was because even though the repository's name changed, the link remained the same).
 
-\subsection{Objective: Create a Submodule}\label{sec:subnot}
+\subsection{Objective: Create a Submodule}\label{sec:submodule}
 \textbf{Time Stamp:} 8:15pm 12 August\\
 I saw Brian in the consultation time before class, and he helped me set up a submodule with my learning journal OverLeaf file. This was my attempt to set up a second submodule with my Second Scoping Exercise OverLeaf file.\\
 \textbf{Actions:} In the OverLeaf file, go to Menu and under sync, click GitHub. When prompted click Create A GitHub Repository. Give the repository an appropriate name, give ownership to MQ-FOAR705 and click the green Create button. Go to GitHub and go to the newly created repository. Within the repository, click on the green Clone or Download button and copy the link. In Sourcetree, after clicking on Hunt-Learning Journal, go to Repository in the menu bar and go down to Add Submodule and click on it. Paste the previously copied link into Source Path/URL. Click on the ellipsis button for Local Relative Path (Make sure it opens the folder Hunt-Exercises). Create a new folder and name it appropriately and click OK. Then click Commit.\\
@@ -166,7 +168,7 @@ Mozambique
 Tanzania
 \begin{itemize}
 \item Similarly to the Mozambique Dwelling table, the use of an asterisk to indicate the inclusion of a cowshed is not an appropriate way to label the data. Cowsheds could be treated as a separate variable.
-\item This is also the case in the Livestock table, where key\textunderscore id 3 has ‘yes/no*’ in the Look after cows column. Either yes or no should be chosen, or an observation committed completely.
+\item This is also the case in the Livestock table, where key\textunderscore id 3 has ‘yes/no*’ in the Look after cows column. Either yes or no should be chosen, or an observation omitted completely.
 \item In the Livestock table, the data for key\textunderscore id 5 is recorded with yes and no, as opposed to the numerical data primarily used for the other responses. The yes/no entries should be changed into quantitative data.
 \item There are a lot of blank cells in the Livestock table. A single indicator of a lack of response should be decided upon and used consistently.
 \end{itemize}
@@ -228,7 +230,7 @@ Please see GitHub for the Excel Sheets these activities were completed on.
 \textbf{Time Stamp:} 1:00pm 18 August \\
 \textbf{Actions:} Highlight all the cells I want to format. Go to Format in the menu bar and click Cells . . . Under the Category menu click Number. Change the decimal place value to 0 and click OK.\\
 \textbf{Results:} This successfully formatted the cells to numbers.\\
-\textbf{Errors:}\\
+\textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 
 \subsubsection*{Activity 2}\label{sec:formulacolumn}
@@ -283,6 +285,10 @@ Following the steps just outlined, I will attempt to add my own rule to another 
 \section{Errors}
 \subsection{OverLeaf}
 
+\subsubsection{Useful Errors}
+\autoref{sec:underfull} Underfull /hbox (badness ****) in paragraph at lines **\\
+\autoref{sec:logcommand} Log Command Has Changed
+
 \subsubsection{Error: Overfull hbox (**pts too wide) in paragraph at lines **}
 \textbf{Errors:} This error keeps appearing down the left hand side of the document where the lines are shown.\\
 \textbf{Solutions/Notes:} I can find information on this from \url{https://www.overleaf.com/learn/latex/Errors/Underfull_%5Chbox}
@@ -293,15 +299,10 @@ As this seems error seems to be indicating the text exceeds the margins of the p
 \textbf{Errors:} This kept appearing when I used an underscore in the text, and the error notification informed me that some symbols are used for mathematical calculations and have to be in math mode. I had previously just replaced underscores with dashes but wanted to address this issue.\\
 \textbf{Solutions/Notes:} I used \verb|\textunderscore| to insert underscores where I needed them. However, when writing this journal entry where I had to include a dollar sign, I also discovered you can simply put a \verb|\| before the math symbol, or could use the same verb command I use when including code in the text.
 
-\subsubsection{Useful Errors}
-\autoref{sec:underfull} Underfull /hbox (badness ****) in paragraph at lines **\\
-
-\autoref{sec:logcommand} Log Command Has Changed
-
-
-
-
 \subsection{GitHub/Sourcetree}
+
+\subsubsection{Useful Errors}
+\autoref{sec:submodule} Submodule Not Visible in GitHub
 
 \subsubsection{Error: Pushes from OverLeaf Appearing in Connected Repository, but Not When it is Accessed Through Main Hunt-Exercises Repository}
 \textbf{Time Stamp:} 10:00pm 16 August(Error)/10:00 am 18 August (Solution attempted)\\
@@ -310,17 +311,13 @@ Prior to attempting a solution, I asked advice from Brian on Slack.\\
 \textbf{Results:} This seemed to successfully make the changes appear in the repository.\\
 \textbf{Notes:} I will now complete a new push with this added objective within the OverLeaf file and follow these steps to see if it works. This worked successfully. Note however, prior to the first Commit notification appearing in Sourcetree, there is a Pull notification within the subdirectory that is being changed.
 
-\subsubsection{Useful Errors}
-
-\autoref{sec:subnot} Submodule Not Visible in GitHub
-
 \subsection{Excel}
 
 \subsubsection{Useful Errors}
 
-\autoref{sec:cellformat} Cells in the Incorrect Format.\\
-\autoref{sec:formulacolumn} Cells Which Should Have a Formula Applied Not Automatically Populating.\\
-\autoref{sec:CSV} CSV Export Not Working.\\
+\autoref{sec:cellformat} Cells in the Incorrect Format\\
+\autoref{sec:formulacolumn} Cells Which Should Have a Formula Applied Not Automatically Populating\\
+\autoref{sec:CSV} CSV Export Not Working\\
 
 \end{FlushLeft}
 
