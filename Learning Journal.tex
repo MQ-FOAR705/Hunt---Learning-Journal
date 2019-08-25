@@ -8,16 +8,15 @@
 \date{August 2019}
 
 \begin{document}
-%test 
 \maketitle
 \begin{FlushLeft}
 
-To view on OverLeaf \url{https://www.overleaf.com/read/mbyzzhcjkmtv}
+To view on Overleaf \url{https://www.Overleaf.com/read/mbyzzhcjkmtv}
 
 \tableofcontents
 \pagebreak
 
-\section{OverLeaf}
+\section{Overleaf}
 
 \subsection{Objective: Create a Section}
 \textbf{Time Stamp} 10:52am 12 August\\
@@ -46,7 +45,7 @@ To view on OverLeaf \url{https://www.overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Actions:} I inserted \verb|\usepackage[document]{ragged2e}| at the top of the document.\\
 \textbf{Results:} This aligned the entire text the left.\\
 \textbf{Errors:} I received a note in the log the command had changed. \\
-\textbf{Solutions/Notes:} I read further through the page \url{https://www.overleaf.com/learn/latex/Text_alignment} where I got the initial command from, and checked some of the example documents. I put \verb|\usepackage{ragged2e}| at the top of the document and placed \verb|\begin{FlushLeft}| at the start of the text I wanted to align and \verb|\end{FlushLeft}| at the end of the document, and this seemed to work successfully and remove the error.
+\textbf{Solutions/Notes:} I read further through the page \url{https://www.Overleaf.com/learn/latex/Text_alignment} where I got the initial command from, and checked some of the example documents. I put \verb|\usepackage{ragged2e}| at the top of the document and placed \verb|\begin{FlushLeft}| at the start of the text I wanted to align and \verb|\end{FlushLeft}| at the end of the document, and this seemed to work successfully and remove the error.
 
 \subsection{Objective: Include Code in the Text}
 \textbf{Time Stamp:} 11:35am 12 August\\
@@ -64,8 +63,8 @@ To view on OverLeaf \url{https://www.overleaf.com/read/mbyzzhcjkmtv}
 
 \subsection{Objective: Sync my Learning Journal on Overleaf to GitHub}
 \textbf{Time Stamp:} 8:00pm 12 August\\
-\textbf{Actions:} I went to the Menu tab, clicked on GitHub under sync, clicked 'Link to GitHub', signed into my GitHub account and authorised OverLeaf.\\
-\textbf{Results:} My GitHub and OverLeaf accounts were linked.\\
+\textbf{Actions:} I went to the Menu tab, clicked on GitHub under sync, clicked 'Link to GitHub', signed into my GitHub account and authorised Overleaf.\\
+\textbf{Results:} My GitHub and Overleaf accounts were linked.\\
 \textbf{Errors:} Going back the menu and clicking GitHub, it says the document is not linked to a GitHub repository, and that I need to create one. I would like to link it to my existing repository created in class.\\ 
 \textbf{Solutions/Notes:} I need to work out how to put it into my existing repository. (See \autoref{sec:submodule})
 
@@ -111,6 +110,28 @@ To view on OverLeaf \url{https://www.overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Errors:} None\\
 \textbf{Solutions/Notes:} This was a useful resource, \url{https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing#Sections} as recommended by Brian.
 
+\subsection{Objective: Adding a Commit Description from An Overleaf Push}\label{sec:description}
+\textbf{Time Stamp:} 1:05pm 23 August\\
+\textbf{Actions:} In the Overleaf file, go to Menu and under Sync click GitHub. Type what I want the commit message to be on the first line, and then click enter two times. Type what I want the description to be and then click Commit. \\
+\textbf{Results:} See Errors.\\
+\textbf{Errors:} The push was not appearing in GitHub, the previous push was still being displayed as the latest commit.\\
+\textbf{Solutions/Notes:} No changes had been made to the file on Overleaf so the push was not appearing. After a change was made to the Overleaf file, the same steps were followed and this worked successfully.
+
+\subsection{Objective: Add a Comment}
+\textbf{Time Stamp:} 10:15pm 25 August \\%This is a test comment 
+\textbf{Actions:} Use a percentage symbol and then type the comment. \\
+\textbf{Results:} The comment was added successfully - it appeared in green and cannot be seen in the rendered pdf.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} It was suggested in class if we find code from online sources to put a comment with where we found them for future reference. If I decide I would like the comments to appear in the margin of a document, refer to this source for how to do it, \url{https://www.overleaf.com/blog/619-tip-of-the-week-add-inline-or-margin-comments-to-your-pdf}
+
+\subsection{Objective: Delete a File}
+\textbf{Time Stamp:} 10:20pm 25 August\\
+\textbf{Actions:} When in the projects page of Overleaf, under Actions, click the Archive symbol (little box) of the file I want to delete. When the pop-up appears informing me I am about to archive the project, click the red Confirm button. Then in the sidebar, click Archived Projects and click the little trash can icon of the file(s) I want to delete under Actions. I can also select the check box of the file and click the red Delete Forever button.\\
+\textbf{Results:} The file was deleted successfully.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} In the Archived Projects page I can also restore the file by either selecting the check box and selecting the Restore button, or under Actions, selecting the Unarchive symbol (backward arrow/undo symbol)
+
+
 \pagebreak
 
 \section{GitHub/Sourcetree}
@@ -120,7 +141,7 @@ To view on OverLeaf \url{https://www.overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Actions:} Go into the repository into which I want to commit the file. Click upload files, and then drag and drop the file into the box. Enter information about the changes made in both description boxes. Click the green Commit changes button.\\
 \textbf{Results:} File was successfully committed to GitHub.\\
 \textbf{Errors:} None\\
-\textbf{Solutions/Notes:} To commit a file using Sourcetree, save the file in the Hunt-Exercises folder on my computer. When I make a change in the document, I can go into Sourcetree and commit these changes. 
+\textbf{Solutions/Notes:} To commit a file using Sourcetree, save the file in the Hunt-Exercises folder on my computer. When I make a change in the document, I can go into Sourcetree and commit these changes. To commit from Overleaf, within the file, go to Menu and under Sync click GitHub, click Push Overleaf Changes to GitHub, add a commit message and click Commit. For adding a description with the commit message, see \autoref{sec:description}.
 
 \subsection{Objective: Delete a File}
 \textbf{Time Stamp:} 8:05pm 16 August\\
@@ -134,12 +155,12 @@ To view on OverLeaf \url{https://www.overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Actions:} Within the repository, click settings. Under repository name, change the name to what I want it to be and click the Rename button.\\
 \textbf{Results:} Name was successfully changed.\\
 \textbf{Errors:} None\\
-\textbf{Solutions/Notes:} I need to check whether when I push overleaf changes to GitHub this still works. I did, and the changes were still pushed successfully (I think this was because even though the repository's name changed, the link remained the same).
+\textbf{Solutions/Notes:} I need to check whether when I push Overleaf changes to GitHub this still works. I did, and the changes were still pushed successfully (I think this was because even though the repository's name changed, the link remained the same).
 
 \subsection{Objective: Create a Submodule}\label{sec:submodule}
 \textbf{Time Stamp:} 8:15pm 12 August\\
-I saw Brian in the consultation time before class, and he helped me set up a submodule with my learning journal OverLeaf file. This was my attempt to set up a second submodule with my Second Scoping Exercise OverLeaf file.\\
-\textbf{Actions:} In the OverLeaf file, go to Menu and under sync, click GitHub. When prompted click Create A GitHub Repository. Give the repository an appropriate name, give ownership to MQ-FOAR705 and click the green Create button. Go to GitHub and go to the newly created repository. Within the repository, click on the green Clone or Download button and copy the link. In Sourcetree, after clicking on Hunt-Learning Journal, go to Repository in the menu bar and go down to Add Submodule and click on it. Paste the previously copied link into Source Path/URL. Click on the ellipsis button for Local Relative Path (Make sure it opens the folder Hunt-Exercises). Create a new folder and name it appropriately and click OK. Then click Commit.\\
+I saw Brian in the consultation time before class, and he helped me set up a submodule with my learning journal Overleaf file. This was my attempt to set up a second submodule with my Second Scoping Exercise Overleaf file.\\
+\textbf{Actions:} In the Overleaf file, go to Menu and under sync, click GitHub. When prompted click Create A GitHub Repository. Give the repository an appropriate name, give ownership to MQ-FOAR705 and click the green Create button. Go to GitHub and go to the newly created repository. Within the repository, click on the green Clone or Download button and copy the link. In Sourcetree, after clicking on Hunt-Learning Journal, go to Repository in the menu bar and go down to Add Submodule and click on it. Paste the previously copied link into Source Path/URL. Click on the ellipsis button for Local Relative Path (Make sure it opens the folder Hunt-Exercises). Create a new folder and name it appropriately and click OK. Then click Commit.\\
 \textbf{Results:} The submodule was created in Sourcetree.\\
 \textbf{Errors:} The submodule was not visible in GitHub.\\
 \textbf{Solutions/Notes:} I had previously deleted two files in GitHub without having been into Sourcetree. The Pull icon was displaying a number two, and the Push icon was displaying a number one. I clicked Push and then OK and then Pull and then OK, and this addressed this issue.
@@ -282,16 +303,271 @@ Following the steps just outlined, I will attempt to add my own rule to another 
 
 \pagebreak
 
+\section{Software Carpentry: The Unix Shell}
+\subsection{Introducing the Shell}
+\textbf{Objective: Open the Unix Shell}\\ 
+\textbf{Time Stamp:} 11:00am 25 August\\
+\textbf{Actions:} Go to Spotlight Search in menu bar (top right hand corner of screen)(magnifying glass symbol). Type in 'Terminal' and open the top hit.\\
+\textbf{Results:} It opened successfully with a prompt reading \verb|Emily$| appearing.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective:List the Current Directory}\\ 
+\textbf{Time Stamp:} 11:05am 25 August\\
+\textbf{Actions:} After \verb|Emily$| type in ls (stands for listing) and press enter. This is a command\\
+\textbf{Results:} The listings of the current directory appeared.\\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Clear the Window}\\ 
+\textbf{Time Stamp:} 12:00pm 25 August\\
+\textbf{Actions:} Hold down control and click the letter 'l'.\\
+\textbf{Results:} The window was cleared successfully.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+
+\subsection{Navigating Files and Directories}
+\textbf{Objective: Finding My Current Directory}\\ 
+\textbf{Time Stamp:} 12:45pm 25 August\\
+\textbf{Actions:} After \verb|Emily$| enter 'pwd' (print working directory) and press enter.\\
+\textbf{Results:} The response was  '/Users/Emily'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The first /, is referencing the root directory, in which the Users directory can be found (as explained in the lesson). When a slash appears inside a name, its just a separator. When I open a new command prompt, I will be in my home directory to start. Using the listings command, typing 'ls /' will give me all the directories in my root directory.\\
+\vspace{5mm}
+\textbf{Objective: Add a Marker to Directory Names}\\ 
+\textbf{Time Stamp:} 1:00pm 25 August\\
+\textbf{Actions:} Type 'ls -F' and press enter. This is known as a switch/option.\\
+\textbf{Results:} A /, was put behind each of the directories.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} A @ indicates a link and a * indicates an executable. \\
+\vspace{5mm}
+\textbf{Objective: Make A Directory Be Identified by a Colour}\\ 
+\textbf{Time Stamp:} 1:05pm 25 August\\
+\textbf{Actions:} Type 'ls -G' and press enter.\\
+\textbf{Results:} The directories appeared in purple/blue. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} This option can be combined with the one in the previous objective. Typing 'ls -G -F' both colours the directories and puts a slash behind them.\\
+\vspace{5mm}
+\textbf{Objective: Getting Help}\label{sec:help}\\ 
+\textbf{Time Stamp:} 1:15pm 25 August\\
+\textbf{Actions:} I typed 'ls --help' and pressed enter.\\
+\textbf{Results:} \\
+\textbf{Errors:} This produced the response 'ls: illegal option'\\
+\textbf{Solutions/Notes:} I just tried typing 'help' and this produced information on how to use different commands. At the start of this is also different help commands for specific problems (e.g. use info bash' to find out more about the shell in general). Also, typing 'man ls' produces a lot of information, however, I couldn't enter a command after this and had to exit Terminal and start again. The lesson says to quit the man pages, press 'Q'. I can also find help online.\\
+\vspace{5mm}
+\textbf{Objective: Exploring More ls Flags (Activity)}\\ 
+\textbf{Time Stamp:} 1:32pm 25 August\\
+\textbf{Actions:} I typed 'ls -l' and pressed enter, and then tried 'ls -l -h' and pressed enter.\\
+\textbf{Results:} 'ls 'l' produced extra information with the files/directories in the home directory, such as the date of creation, their owner, and what appears to be the owner's permissions (staff appeared next to Emily for all of them). 'ls -l -h' converted what appeared as just a number for 'ls -l' into a file size expressed in B/K (human readable).\\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Listing Recursively and By Time (Activity)}\\ 
+\textbf{Time Stamp:} 1:45pm 25 August\\
+\textbf{Actions:} I typed 'ls -t' and pressed enter. Then I tried 'ls -R' and pressed enter, and finally 'ls -R -t'.\\
+\textbf{Results:} 'ls -t' ordered the files and directories in my home directory from most recently changed to least recently changed. 'ls -R' produced a really long list which the lesson informed me is the contents of all the directories. 'ls -R -t', as the lesson says, sorted the 'files/directories in each directory . . by time of last change'.\\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Seeing the Contents of a Different Directory}\\ 
+\textbf{Time Stamp:} 2:40pm 25 August\\
+\textbf{Actions:} I typed 'ls -F Desktop' to see the contents of my desktop. \\
+\textbf{Results:} The response was a list of all the files and directories on my desktop, with all the directories indicated with a /. \\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:} To look at a sub-directory put a slash and then the name of that directory e.g to look at the data-shell directory on the desktop, type 'ls -F Desktop/data-shell' and press enter.\\
+\vspace{5mm}
+\textbf{Objective: Change the Working Directory Using a Relative Path}\\
+\textbf{Time Stamp:} 2:50pm 25 August\\
+\textbf{Actions:} This will use the 'cd' command (change directory). I typed 'cd Desktop' and pressed enter, typed 'cd data-shell' and pressed enter, and then typed 'cd data' and pressed enter.\\
+\textbf{Results:} This change of working directory was successful, which I was able to identify in a number of ways. Firstly, there was no text response. Secondly, when the prompt appeared after each command, before \verb|Emily$| the name of the directory I had made the working directory appeared. Thirdly, when I entered 'pwd' after completing all the actions, /Users/Emily/Desktop/data-shell/data appeared. \\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:} This process can also be combined into one line, 'cd Desktop/data-shell/data'. To return to the home directory, just type 'cd' and press enter.\\
+\vspace{5mm}
+\textbf{Objective: Change the Working Directory Using an Absolute Path}\label{sec:absolute}\\ 
+\textbf{Time Stamp:} 4:00pm 25 August\\
+\textbf{Actions:} Beginning with /Users/Emily, type 'cd' and then the path to the directory I want to make the working one e.g. /Users/Emily/Desktop/data-shell \\
+\textbf{Results:} When the example was used this was successful, as determined by using the same tests as for the previous objective.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} This allows me to make this the working directory from anywhere, even when I am inside one of the subdirectories of the directory I want to be the working one. Instead of /Users/Emily/, I can just use ~ (stands for current user's home directory)(can only be at the front of a command). Another shortcut is also - for the previous directory. e.g. cd -\\
+\vspace{5mm}
+\textbf{Activity: Absolute vs Relative Paths}\\ 
+Amanda could use these commands to navigate to her home directory
+\begin{itemize}
+    \item 2. cd /
+    \item 5. cd ~
+    \item 8. cd
+\end{itemize}
+Looking at the solutions, these are correct, but she could have also used 7. cd ~/data/.. (although this is unnessarily complicated) and 9. cd ..\\
+\vspace{5mm}
+\textbf{Activity: Relative Path Resolution}\\
+The command will display 4. original/ pnas\textunderscore final/ pnas\textunderscore sub/. This is correct, as the .. is in references to a higher directory.\\
+\vspace{5mm}
+\textbf{Activity: Reading Comprehension}\\
+I think 2. ls -r -F, will produce the output listed. Looking at the solution, this is correct, but 3. ls -r -F /Users/backup could also have been used.\\
+\vspace{5mm}
+\textbf{Objective: Tab Completion}\\ 
+\textbf{Time Stamp:} 4:40pm 25 August\\
+\textbf{Actions/Results:} Following the steps in the lesson, inside data-shell as the working directory, I typed 'ls nor' and then pressed tab. This completed to 'ls north-pacific-gyre/'. I then pressed tab again and this completed to 'ls north-pacific-gyre/2012-07-03/'. I then pressed tab again, and the reply was a list with all the files in this directory.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+
+\subsection{Working with Files and Directories}
+\textbf{Objective: Creating A Directory}\\ 
+\textbf{Time Stamp:} 7:15pm 25 August\\
+\textbf{Actions:} I first made the directory I wanted to create the new directory in (data-shell) the working directory. I then typed 'mkdir thesis' (thesis is the name of the new directory). \\
+\textbf{Results:} This was succesfful as there was no response, when I entered ls -F the new directory appeared followed by a slash and when I accessed the folder from GUI, the new thesis folder was there. \\
+\textbf{Errors:} None. \\
+\textbf{Solutions/Notes:} The lesson has notes for good file names including not using spaces and not starting names with a dash.\\
+\vspace{5mm}
+\textbf{Objective: Create A Text File}\\ 
+\textbf{Time Stamp:} 7:20pm 25 August\\
+\textbf{Actions/Results:} I first had to make the new thesis directory the working directory by entering 'cd thesis'. I then types 'nano draft.txt' and pressed enter. This was successful as it opened the nano text editor in the window. I then typed the same text that was suggested in the lesson and when finished pressed control 'O' (to save the file). A line appeared down the bottom saying 'File Name to Write: draft.txt.' I pressed enter. A message appeared down the bottom saying \verb|[ Wrote 1 line ]|. I then pressed control 'X' to exit. This was successful as when I entered 'ls', draft.txt appeared.\\
+\textbf{Errors:} None. \\
+\textbf{Solutions/Notes:} In nano there are a number of instructions down the bottom. \verb|^| means press the control key.\\
+\vspace{5mm}
+\textbf{Objective: Creating Files a Different Way (Activity)}\\ 
+\textbf{Time Stamp:} 7:35pm 25 August\\
+\textbf{Actions:} I typed 'touch my\textunderscore file.txt' and pressed enter.\\
+\textbf{Results:} When I view the directory using Finder (GUI) the file did show up. When I entered 'ls -l' in Terminal, the file size is 0. I am unsure of what the touch command did or why this would be useful. \\
+\textbf{Errors:} None (I think?)\\
+\textbf{Solutions/Notes:} The solutions informed me 'some programs do not generate output files themselves, but instead require that empty files have already been generated. When the program is run, it searches for an existing file to populate with its output. The touch command allows you to efficiently generate a blank text file to be used by such programs'. This command and its use now makes sense to me.\\
+\vspace{5mm}
+\textbf{Objective: Renaming a File}\\ 
+\textbf{Time Stamp:} 7:42pm 25 August\\
+\textbf{Actions:} I first had to return to the data-shell directory by entering 'cd ~/Desktop/data-shell'. To rename draft.txt in the thesis directory to quotes.txt, enter 'mv thesis/draft.txt thesis/quotes.txt'. \\
+\textbf{Results:} This was successful as entering 'ls thesis' produced the response my\textunderscore file.txt and quotes.txt \\
+\textbf{Errors:} None. \\
+\textbf{Solutions/Notes:} The lesson says to use mv -i or mv --interactive to get a confirmation message before overwriting, but neither of these worked when I tested them on the quote.txt file.\\
+\vspace{5mm}
+\textbf{Objective: Moving a Files}\\ 
+\textbf{Time Stamp:} 8:00pm 25 August\\
+\textbf{Actions:} The goal was to move quotes.txt into the current working directory (data-shell). I entered 'mv thesis/quotes.txt .' (the dot specifies the current directory; mv stands for move)\\
+\textbf{Results:} This was successful as entering 'ls thesis' produced only my\textunderscore file.txt as a response, and as per the lesson instructions, entering 'ls quotes.txt' produced quotes.txt as a response. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity: Moving to the Current Folder}\\ 
+Filling in the blanks: to move the files to the current folder, Jamie should enter \verb|$| mv \underline{analyzed}/sucrose.dat \underline{analyzed}/maltose.dat \underline{.} Checking the solution, I realised I should have had ../ before both 'analyzed'.\\
+\vspace{5mm}
+\textbf{Objective: Copying A File}\\ 
+\textbf{Time Stamp:} 8:15pm 25 August\\
+\textbf{Actions:} I entered 'cp quotes.txt thesis/quotations.txt' (cp stands for copy)\\
+\textbf{Results:} This was successful, as confirmed by entering 'ls quotes.txt thesis/quotations.txt', and I also checked through the GUI (there was a file in the thesis folder called quotations.txt'\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The second command demonstrates ls can be given multiple paths at once.\\
+\vspace{5mm}
+\textbf{Objective: Copying A Directory}\\ 
+\textbf{Time Stamp:} 8:20pm 25 August\\
+\textbf{Actions:} To copy the thesis directory and its entire contents (back it up) I entered 'cp -r thesis thesis\textunderscore backup'. \\
+\textbf{Results:} This was successful as when I entered 'ls thesis thesis\textunderscore backup' the response indicated that both directories contained the files my\textunderscore file and quotations.txt. Accessing the data-shell folder through GUI also confirmed this. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity: Moving to the Current Folder}\\ 
+To rename the file, you could use the second option 'mv statstics.txt statistics.txt'. The solution confirmed this was correct.\\
+\vspace{5mm}
+\textbf{Activity: Moving And Copying}\\ 
+After completing this sequence, the ls command would produce option 2. recombine. This solution confirmed this was correct. While I got the right answer my reasoning was a little bit off, but the explanation provided with the solutions assisted the development of my understanding of what each of the commands meant. It also demonstrates to move a file to a directory, have 'mv filetobemoved.extension newdirectory/'\\
+\vspace{5mm}
+\textbf{Objective: Removing A File}\\ 
+\textbf{Time Stamp:} 8:50pm 25 August\\
+\textbf{Actions:} I typed 'rm quotes.txt' whule in the data-shell directory and pressed enter.\\
+\textbf{Results:} The removal of this file was confirmed by entering 'ls quotes.txt' which produced the response 'ls: quotes.txt: No such file or directory'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity: Using rm Safely}\\
+I tried entering 'rm -i thesis\textunderscore backup/quotations.txt' While -i didn't work before, this time it did producing the response 'remove thesis\textunderscore backup/quotations.txt?'. This switch is important because as the lesson previously stated 'deleting is forever'. The solution said to use 'y' to confirm deletion, or 'n' to keep the file, but I also tried 'yes' and 'no', and these worked as well.\\
+\vspace{5mm}
+\textbf{Objective: Removing a Directory}\\ 
+\textbf{Time Stamp:} 8:55pm 25 August\\
+\textbf{Actions/Results:} As per the lesson instructions, I tried entering 'rm thesis' which produced 'rm: thesis: is a directory', proving rm does not work on directories. I then typed 'rm -r thesis' which deleted the directory successfully (as confirmed by entering 'ls' and through the GUI.\\ 
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson suggests using -i as these steps delete a directory and its entire contents, and \textit{should be used with great caution}\\
+\vspace{5mm}
+\textbf{Objective: Copy With Multiple File names (Activity)}\\ 
+\textbf{Time Stamp:} 9:05pm 25 August\\
+\textbf{Actions/Results:} As this activity was being completed in the data-shell/data directory I first entered 'cd data'. I also entered 'ls -F' to familiarise myself with the directory. Per the instructions, I then entered 'mkdir backup', followed by 'cp amino-acids.txt animals.txt backup/'. Entering ls backup confirmed a copy of each of the two files had been made in the backup directory. \\ I then tried the next commands, first entering 'ls -F' and then 'cp amino-acids.txt animals.txt morse.txt'. This produced a large chunk of text, which the solution informed me was because the last argument was not a directory.\\
+\textbf{Errors:} None. \\
+\textbf{Solutions/Notes:} I then tried entering 'cp planets.txt salmon.txt sunspot.txt backup/' to see if this would work with three files if the last argument was a directory. This worked successfully. I then tried deleting these three files using 'rm backup/planets.txt salmon.txt sunspot.txt'. This only deleted planets.txt. So I then tried 'rm backup/salmon.txt backup/sunspot.txt', and this successfully deleted the files.\\
+\vspace{5mm}
+\textbf{Activity: Wildcards - Listfilenames matching a pattern}\\
+I first made the data-shell/molecules directory the working one by entering 'cd /Users/Emily/Desktop/data-shell/molecules'. The Wildcards information box is very useful, but to summarise, *.pdb would match (in this directory) every file that ends with .pdb, whereas p*.pdb would only match pentane.pdb and propane.pdb. As ? only matches one character, ?ethane.pdb would match methane.pdb, ???ane.pdb could also be used, which matches cubane.pdb ethane.pdb octane.pdb\\
+The command which produce the output ethane.pdb methane.pdb in this directory, would be 1. ls *t*ane.pdb. Reviewing the solution the answer was actually 3. ls *t??ne.pdb. Upon reflection, this makes sense to me, as I didn't consider the files that weren't chosen when choosing my answer.\\
+\vspace{5mm}
+\textbf{Activity: More on Wildcards}\\
+My responses to this activity were:\\
+cp *dataset* backup/datasets\\
+cp \underline{*}calibration\underline{.txt} backup/calibration\\
+cp 2015-\underline{11-??-*}send\textunderscore to\textunderscore bob/all\textunderscore november\textunderscore files/\\
+cp \underline{2015-??-23-*} send\textunderscore to\textunderscore bob/all\textunderscore datasets\textunderscore created\textunderscore on\textunderscore a\textunderscore 23rd/\\
+The correct responses were:\\
+cp *dataset* backup/datasets\\
+cp \underline{*}calibration\underline{.txt} backup/calibration\\
+cp 2015-\underline{11-*}send\textunderscore to\textunderscore bob/all\textunderscore november\textunderscore files/\\
+cp \underline{*-23-dataset*}send\textunderscore to\textunderscore bob/all\textunderscore datasets\textunderscore created\textunderscore on\textunderscore a\textunderscore 23rd/\\
+I understand where I went wrong, and how I could have simplified the commands.\\
+\vspace{5mm}
+\textbf{Activity: Organizing Directories and Files}\\
+Jamie needs to enter 'mv *ose.dat/analyzed'. The answer was just 'mv *.dat/analyzed', but I'm really happy with how close I was able to get in writing this command without looking at any of my notes.\\
+\vspace{5mm}
+\textbf{Activity: Reproduce A Folder Structure}\\
+I think the first two options would achieve the outlined objective. The issue with the third option is that no data directory is created before the raw and processed directories are attempted to be created so this wouldn't work. I think the problem with the last option is that the raw and processed directories have not been made subdirectories of the data directory. This was correct. \\
+
+\subsection{Pipes and Filters}
+\textbf{Objective:}\\ 
+\textbf{Time Stamp:} pm  August\\
+\textbf{Actions:} \\
+\textbf{Results:} \\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity:}\\
+\vspace{5mm}
+
+\subsection{Loops}
+\textbf{Objective:}\\ 
+\textbf{Time Stamp:} pm  August\\
+\textbf{Actions:} \\
+\textbf{Results:} \\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+
+\subsection{Shell Scripts}
+\textbf{Objective:}\\ 
+\textbf{Time Stamp:} pm  August\\
+\textbf{Actions:} \\
+\textbf{Results:} \\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+
+\subsection{Finding Things}
+\textbf{Objective:}\\ 
+\textbf{Time Stamp:} pm  August\\
+\textbf{Actions:} \\
+\textbf{Results:} \\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+
+
+\pagebreak
+
 \section{Errors}
-\subsection{OverLeaf}
+\subsection{Overleaf}
 
 \subsubsection{Useful Errors}
 \autoref{sec:underfull} Underfull /hbox (badness ****) in paragraph at lines **\\
 \autoref{sec:logcommand} Log Command Has Changed
+\autoref{sec:description} Commit From Overleaf not Appearing in GitHub
 
 \subsubsection{Error: Overfull hbox (**pts too wide) in paragraph at lines **}
 \textbf{Errors:} This error keeps appearing down the left hand side of the document where the lines are shown.\\
-\textbf{Solutions/Notes:} I can find information on this from \url{https://www.overleaf.com/learn/latex/Errors/Underfull_%5Chbox}
+\textbf{Solutions/Notes:} I can find information on this from \url{https://www.Overleaf.com/learn/latex/Errors/Underfull_%5Chbox}
 As this seems error seems to be indicating the text exceeds the margins of the page, I will try using \verb|\\| to put the text on a new line. 
 
 \subsubsection{Error: Check that your \$'s match around math expressions. If they do, then you've probably used a symbol in normal text that needs to be in math mode. . .}
@@ -304,20 +580,32 @@ As this seems error seems to be indicating the text exceeds the margins of the p
 \subsubsection{Useful Errors}
 \autoref{sec:submodule} Submodule Not Visible in GitHub
 
-\subsubsection{Error: Pushes from OverLeaf Appearing in Connected Repository, but Not When it is Accessed Through Main Hunt-Exercises Repository}
+\subsubsection{Error: Pushes from Overleaf Appearing in Connected Repository, but Not When it is Accessed Through Main Hunt-Exercises Repository}
 \textbf{Time Stamp:} 10:00pm 16 August(Error)/10:00 am 18 August (Solution attempted)\\
 Prior to attempting a solution, I asked advice from Brian on Slack.\\
 \textbf{Actions:} Within Sourcetree, a Commit notification appeared. I clicked Commit, and within the description wrote, 'Commit changes from subdirectory into Hunt-Exercises', as well as the comment I put on the original push. I then clicked Commit. This then produced a one on the push symbol. I then completed the push and went into GitHub.\\
 \textbf{Results:} This seemed to successfully make the changes appear in the repository.\\
-\textbf{Notes:} I will now complete a new push with this added objective within the OverLeaf file and follow these steps to see if it works. This worked successfully. Note however, prior to the first Commit notification appearing in Sourcetree, there is a Pull notification within the subdirectory that is being changed.
+\textbf{Notes:} I will now complete a new push with this added objective within the Overleaf file and follow these steps to see if it works. This worked successfully. Note however, prior to the first Commit notification appearing in Sourcetree, there is a Pull notification within the subdirectory that is being changed.
 
 \subsection{Excel}
-
 \subsubsection{Useful Errors}
-
 \autoref{sec:cellformat} Cells in the Incorrect Format\\
 \autoref{sec:formulacolumn} Cells Which Should Have a Formula Applied Not Automatically Populating\\
 \autoref{sec:CSV} CSV Export Not Working\\
+
+\subsection{The Unix Shell}
+\subsubsection{Useful Errors}
+\autoref{sec:help} Illegal Option/Getting Help\\
+
+\subsubsection{Command Not Found}
+\textbf{Time Stamp:} Numerous Occasions\\
+\textbf{Action:} Check the spelling of the command. If this is not the issue, check online to see if the command is different.\\
+
+\subsubsection{Error: Not Being Able to Move Up a Directory After Changing Working Directory (Using a Relative Path)}
+\textbf{Time Stamp:} 3:20pm 25 August\\
+\textbf{Actions:} I typed 'cd . .' and pressed enter. \\
+\textbf{Results:} At first this didn't work and the response was 'command not found'. I then realised that there are not meant to be spaces between the dots and tried 'cd ..'. This worked and the prompt appeared with the parent (the directory containing) of the directory I had changed to the working directory. Also see Objective: Change the Working Directory Using an Absolute Path in \autoref{sec:absolute}\\
+\textbf{Notes:} To be able to see the special directory (..) when running ls, type 'ls -F -a' (show all). In the response, the single dot is the current working directory. '.bash\textunderscore profile' is the file containing shell configuration settings and other files may have dots in front of them (see Navigating Files and Directories lesson for more details). To summarise .. means 'the directory above the current one' and . means 'the current directory'.
 
 \end{FlushLeft}
 
