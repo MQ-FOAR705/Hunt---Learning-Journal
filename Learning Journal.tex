@@ -115,10 +115,10 @@ To view on Overleaf \url{https://www.Overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Actions:} In the Overleaf file, go to Menu and under Sync click GitHub. Type what I want the commit message to be on the first line, and then click enter two times. Type what I want the description to be and then click Commit. \\
 \textbf{Results:} See Errors.\\
 \textbf{Errors:} The push was not appearing in GitHub, the previous push was still being displayed as the latest commit.\\
-\textbf{Solutions/Notes:} No changes had been made to the file on Overleaf so the push was not appearing. After a change was made to the Overleaf file, the same steps were followed and this worked successfully.
+\textbf{Solutions/Notes:} No changes had been made to the file on Overleaf so the push was not appearing. After a change was made to the Overleaf file, the same steps were followed and this worked successfully. 10:35pm 25 August - this method also works for commits from Sourcetree.
 
 \subsection{Objective: Add a Comment}
-\textbf{Time Stamp:} 10:15pm 25 August \\%This is a test comment 
+\textbf{Time Stamp:} 10:15pm 25 August \\%This is a test comment
 \textbf{Actions:} Use a percentage symbol and then type the comment. \\
 \textbf{Results:} The comment was added successfully - it appeared in green and cannot be seen in the rendered pdf.\\
 \textbf{Errors:} None.\\
@@ -514,9 +514,76 @@ I understand where I went wrong, and how I could have simplified the commands.\\
 Jamie needs to enter 'mv *ose.dat/analyzed'. The answer was just 'mv *.dat/analyzed', but I'm really happy with how close I was able to get in writing this command without looking at any of my notes.\\
 \vspace{5mm}
 \textbf{Activity: Reproduce A Folder Structure}\\
-I think the first two options would achieve the outlined objective. The issue with the third option is that no data directory is created before the raw and processed directories are attempted to be created so this wouldn't work. I think the problem with the last option is that the raw and processed directories have not been made subdirectories of the data directory. This was correct. \\
+I think the first two options would achieve the outlined objective. The issue with the third option is that no data directory is created before the raw and processed directories are attempted to be created so this wouldn't work. I think the problem with the last option is that the raw and processed directories have not been made subdirectories of the data directory. This was correct.\\
 
 \subsection{Pipes and Filters}
+\textbf{Objective: See the Word Count of Files in a Directory}\\ 
+\textbf{Time Stamp:} 3:40pm 26 August\\
+\textbf{Actions:} I first made the molecules directory the working one by entering 'cd /Users/Emily/Desktop/data-shell/molecules', and then used 'ls' to familiarise myself with its contents. I then typed 'wc *.pdb'. wc stands for word count, and this produces a list of the number of lines, words and characters (in that order). So, that specific command listed these for all the files in the directory which ended in .pdb. \\
+\textbf{Results:} This produced the list as it appears in the lesson. \\
+\textbf{Errors:} None. \\
+\textbf{Solutions/Notes:} Typing 'wc -l *.pdb' just produces the number of lines. '-w' can be added for just the words, or '-c' for the number of characters. I also tested, and a combination of any two of these can also be used.\\
+\vspace{5mm}
+\textbf{Objective: Output Word Count Information to a File }\\ 
+\textbf{Time Stamp:} 5:30pm 26 August\\
+\textbf{Actions:} Type 'wc -l *.pdb > lengths.txt' and press enter. This creates a file (lengths.txt) which contains the number of lines for each of the files indicated by *.pdb. The > symbol is what 'redirect(s) the command's output to a file instead of printing it to the screen.\\
+\textbf{Results:} This was successful, as confirmed by running 'ls lengths.txt' and through GUI.\\
+\textbf{Errors:} None. \\
+\textbf{Solutions/Notes:} Be careful as if there was already a file lengths.txt this would have overwritten it.\\
+\vspace{5mm}
+\textbf{Objective: View a File's Content in Terminal}\\ 
+\textbf{Time Stamp:} 5:45pm 26 August\\
+\textbf{Actions:} To see the file that was created in the previous objective onscreen, I typed 'cat lengths.txt' and pressed enter (cat stands for concatenate).\\
+\textbf{Results:} This was successful as it printed the entire contents of the file onscreen.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} This command prints the entire contents of the file to the screen. To view a file page by page, use the command 'less lengths.txt'. To go forward a page, press the space bar, and go back a page, press 'b'. To exit, press 'q'. Also, to get a specific number of lines enter, for example, 'head -n 1 filename.extension' (for the first line) or 'head -n 20 filename.extension' (for the first 20 lines).\\
+\vspace{5mm}
+\textbf{Activity: What Does Sort -n Do?}\\
+Looking at the outputs, the addition of -n, has sorted the contents of the file numerically. The solution confirms that 'the -n option specifies a numerical rather than an alphanumerical sort'.\\
+\vspace{5mm}
+\textbf{Objective: Sorting the Contents of a File Numerically and Then Putting this in a New File}\\ 
+\textbf{Time Stamp:} 6:50pm 26 August\\
+\textbf{Actions/Results:} To sort the contents of the lengths.txt file from the previous objectives, I entered 'sort -n lengths.txt'.This sorted the contents of the file, from the the lowest number (least amount of lines) to the highest number (most amount of lines). To then put this information in a new file, the command 'sort -n lengths.txt > sorted-lengths.txt' was entered. This was successful as when 'head -n 1 sorted-lengths.txt' (to view the first line), 9  methane.pdb appeared correctly.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} As this has been sorted, entering 'head -n 1 sorted-lengths.txt' will give the file with the fewest lines. \\The lesson also notes that when directing the output of a sort to a new file, don't have the new file be the same name as the one the contents have been sorted from.\\ The sorting and word count commands are examples of a filter --> they turn 'a stream of imput into a stream of output'.
+\vspace{5mm}
+\textbf{Activity: What Does >> Mean?}\\
+The lesson explains that the echo command prints strings e.g. entering 'echo The echo command prints text' produces the response 'The echo command prints text'. The instructions said to firstly enter 'echo hello > testfile01.txt' and then 'echo hello >> testfile02.txt', and then examine the output files (by entering 'cat testfile01.txt' and then testfile02.txt'). I did this, (both files contained 'hello') and then repeated the process. Now, testfile01.txt contained 'hello', while testfile02.txt contained 'hello hello'. This indicates that the >> command adds to a file rather than overwrites it. This was confirmed by the answers.\\
+\vspace{5mm}
+\textbf{Activity: Appending Data}\\
+The tail command functions the same as the head command, but prints lines from the end of a file. In light of this, the commands listed for this activity ('head -n 3 animals.txt > animals-subset.txt', and 'tail -n 2 animals.txt >> animals-subset.txt') would produce option 3. The first three lines and the last two lines of animals.txt. The answer confimed this is correct.\\
+\vspace{5mm}
+\textbf{Objective: Using a Pipe (Combining Commands)}\\ 
+\textbf{Time Stamp:} 7:40pm 26 August\\
+\textbf{Actions:} This pipe aims to combine the word count, sort and head commands used in the previous objectives. A pipe (|) is used to separate the commands and tell the shell that 'we want to use the output of the command on the left as the input to the command on the right'. I entered 'wc -l *.pdb | sort -n | head -n 1'. This will the look at the number of lines in each file ending in .pdb in the molecules directory (the current working one), sort them numerically and print the first of the sorted files (i.e. the one with the fewest lines), all in one command.\\
+\textbf{Results:} This was successful, as the response was 9 methane.pdb, like before when these commands were entered separately. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity: Piping Commands Together}\\
+In the current directory, to find the three files which have the least number of lines I think option 4 ('wc -l * | sort -n | head -n 3') should be used. This was correct. When I tried this, this produced 1 testfile01.txt, 2. testfile02.txt and 7 lengths.txt.\\
+\vspace{5mm}
+\textbf{Activity: Pipe Reading Comprehension}\\
+The pipeline provided (for the data-shell/data directory) was 'cat animals.txt | head -n 5 | tail -n 3 | sort -r > final.txt'. While I thought I understood what the first three pipes did, as well as the final one, I was unsure about what 'sort -r' did. The answers informed me it sorted the 3 lines from the previous pipe in reverse order. Consulting the solution, I also realised I didn't fully grasp that the 'tail -n 3' command would draw its input from the 'head -n 5' command, and not the entire animals.txt file. This now makes more sense to me.I then ran the entire command and it produced the same response as appears in the lesson.\\
+\vspace{5mm}
+\textbf{Activity: Pipe Construction}\\
+The cut command can remove sections of each line (and is based on the expectation the lines will be separated into tab columns)(this is called a delimiter). In the command 'cut -d , -f 2 animals.txt', '-d' is used to indicate the comma as the delimiter character at where to cut, and the '-f' extract the second column. The uniq command deletes any consecutive double ups of lines in a file. The question said, what could I add to the 'cut -d , -f 2 animals.txt' command to find out what animals the file contains (without any duplicates in their names)? At first I was really unsure of the answer as I didn't really understand either what I was being asked to do, or exactly what the uniq command did (filters out adjacent matching lines in a file). When looking at the answer, I now understand that adding '| sort | uniq' to the end of the command, would allow the files to be sorted alphabetically, which would then allow the uniq command to identify and delete any double ups (as they would now be consecutive through the sorting). \\
+\vspace{5mm}
+\textbf{Activity: Which Pipe?}\\
+When -c is added to the uniq command, a count is provided of the number of times a line occurs in its input. Based on this to produce a table that shows the total count of each animal in the file animals.txt, I think option 4 (cut -d, -f 2 animals.txt | sort | uniq -c)would be appropriate This is correct.\\
+\vspace{5mm}
+\textbf{Activity: Wildcard Expressions}\\
+In writing wildcards, putting things in brackets like this [ ] means either or, e.g. *[AB].txt matches files ending in A.txt or B.txt. These are my answers to the questions, in the case I wasn't able to use [].
+\begin{enumerate}
+    \item You could use 'ls *A.txt' and 'ls *B.txt. This was correct.
+    \item The small difference in the outputs would be that using the two described above would list all the files that end in A.txt and then all the files that end in B.txt, whereas *[AB].txt would list all the files ending in A.txt or B.txt in the order they are currently in. Looking at the solutions, this was partially right as the answer was 'the output from the new commands is separated because there are two commands'.
+    \item I was unsure about the answer to this question. The solutions informed me my new expression would produce an error message where the original would not, 'When there are no files ending in A.txt, or there are no files ending in B.txt.' This makes sense to me now.
+\end{enumerate}
+\vspace{5mm}
+\textbf{Activity: Removing Unneeded Files}\\
+To delete the processed data files described, option 2 would be the best (rm *.txt). This is correct.\\
+
+\subsection{Loops}
 \textbf{Objective:}\\ 
 \textbf{Time Stamp:} pm  August\\
 \textbf{Actions:} \\
@@ -527,14 +594,6 @@ I think the first two options would achieve the outlined objective. The issue wi
 \textbf{Activity:}\\
 \vspace{5mm}
 
-\subsection{Loops}
-\textbf{Objective:}\\ 
-\textbf{Time Stamp:} pm  August\\
-\textbf{Actions:} \\
-\textbf{Results:} \\
-\textbf{Errors:} \\
-\textbf{Solutions/Notes:}\\
-\vspace{5mm}
 
 \subsection{Shell Scripts}
 \textbf{Objective:}\\ 
@@ -606,6 +665,10 @@ Prior to attempting a solution, I asked advice from Brian on Slack.\\
 \textbf{Actions:} I typed 'cd . .' and pressed enter. \\
 \textbf{Results:} At first this didn't work and the response was 'command not found'. I then realised that there are not meant to be spaces between the dots and tried 'cd ..'. This worked and the prompt appeared with the parent (the directory containing) of the directory I had changed to the working directory. Also see Objective: Change the Working Directory Using an Absolute Path in \autoref{sec:absolute}\\
 \textbf{Notes:} To be able to see the special directory (..) when running ls, type 'ls -F -a' (show all). In the response, the single dot is the current working directory. '.bash\textunderscore profile' is the file containing shell configuration settings and other files may have dots in front of them (see Navigating Files and Directories lesson for more details). To summarise .. means 'the directory above the current one' and . means 'the current directory'.
+
+\subsubsection{Word Count Command Not Working}
+\textbf{Time Stamp:} N/A\\
+\textbf{Action:} As noted in the lesson, if you type 'wc' and click enter, you haven't added a file name so Terminal waits for you to provide input for it to process. To exit this, press control and 'c'.\\
 
 \end{FlushLeft}
 
