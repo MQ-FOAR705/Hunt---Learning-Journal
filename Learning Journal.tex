@@ -584,14 +584,83 @@ In writing wildcards, putting things in brackets like this [ ] means either or, 
 To delete the processed data files described, option 2 would be the best (rm *.txt). This is correct.\\
 
 \subsection{Loops}
-\textbf{Objective:}\\ 
-\textbf{Time Stamp:} pm  August\\
-\textbf{Actions:} \\
-\textbf{Results:} \\
+\textbf{Objective: Performing a Loop (Repeating a Command)}\\ 
+\textbf{Time Stamp:} 8:15pm 27 August\\
+\textbf{Actions:} The general form of a loop is: \\
+'for thing in list\textunderscore of\textunderscore things\\
+do\\
+operation\textunderscore using \verb|$thing|\\
+done'\\
+So for this task, to get the second line in three files, I entered the commands\\
+'for filename in basilisk.dat minotaur.dat unicorn.dat\\
+do\\
+head -n 2 \verb|$filename| | tail -n 1\\
+done\\
+\textbf{Results:} When entering the second, third and fourth lines, the prompt changed to >. The lines appeared successfully. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson suggests an indent for the third line to assist legibility. Each time the loop runs, it assigns a new file name to the filename variable (e.g. in this example, it assigns basilisk.dat then minotaur.dat then unicorn.dat) and runns the command. The variable name (\verb|$filename|) could be anything (e.g. temperature) but it is more beneficial to me to have it as something I can understand. Also, \verb|$filename| is the same as \verb|{$filename}| but different to \verb|${file}name|  \\
+\vspace{5mm}
+\textbf{Activity: Variables in Loops}\\
+I ran the first code (each line of what I entered separated by ;)(for datafile in *.pdb; do; ls *.pdb; done). The output of this, was a list of the filenames repeated six times. In then ran the second code (for datafile in *.pdb; do; ls \verb|$datafile|; done). The output for this was a single list of the files. I think this is because the first command is essentially saying, for each of the files ending in .pdb, list all the files ending in .pdb, whereas the second one is just saying for all the files ending in .pdb list the file name. I think this is correct.\\
+\vspace{5mm}
+\textbf{Activity: Limiting Sets of Files}\\
+The output of the loop listed would be option 4. Only cubane.pdb is listed, as this is indicated by c*. If *c* was used in replacement of c*, octane.pdb would be listed (as this matches *c*) as well as cubane.pdb (as the * before the c can also be 0 like in this instance). Both of these responses are correct as highlighted in the solution.\\
+\vspace{5mm}
+\textbf{Activity:Saving to a File in a Loop - Part One}\\
+The effect of this loop would be 4. None of the above, as the output would be saved to a file called alkanes.pdb. This response was incorrect. Option 1 was the correct one (Prints cubane.pdb, ethane.pdb, methane.pdb, octane.pdb, pentane.pdb and propane.pdb, and the text from propane.pdb will be saved to a file called alkanes.pdb.). Upon reviewing the solution this now makes sense to me.\\
+\vspace{5mm}
+\textbf{Activity:Saving to a File in a Loop - Part Two}\\
+While I originally thought option 1 was the correct output of the loop listed (All of the text from cubane.pdb, ethane.pdb, methane.pdb, octane.pdb, and pentane.pdb would be concatenated and saved to a file called all.pdb), I didn't realise that propane.pdb was not included in this option. Therefore option 3 is correct as it says all of the files (including propane.pdb) would be concatenated and saved to a file called all.pdb. This was correct.\\
+\vspace{5mm}
+\textbf{Objective: Run a More Complicated Loop}\\ 
+\textbf{Time Stamp:} 9:40pm 27 August\\
+\textbf{Actions:} The loop to be run will attempt to list the name of every file ending in .dat in the creatures directory, and then print lines 81-100 of these files. To do this I typed each of these lines and pressed enter:\\
+for filename in *.dat\\
+do]]
+echo \verb|$filename|\\
+head -n 100 \verb|$filename| | tail -n 20\\
+done\\
+\textbf{Results:} This worked successfully, as the filename was listed and then the right amount of lines. \\
+\textbf{Errors:} None. \\
+\textbf{Solutions/Notes:} If the names of the files I am going to contain in a loop contain spaces, put the file in quote marks (e.g. in this objective if rather than *.dat, I had two files I would type them in as "red dragon.dat" and "purple unicorn.dat"). I would also have to put the loop variable in quotes (e.g. in this example, \verb|"$filename"| would appear in the third line.\\
+\vspace{5mm}
+\textbf{Objective: Making a Copy of Original Files Using a Loop}\\ 
+\textbf{Time Stamp:} 10:00pm  27 August\\
+\textbf{Actions:} The aim of this objective is to make a copy of each of the files in the creatures directory, with the name of the copy being original-originalfilename.dat (e.g. the copy of basilisk.dat will be original-basilisk.dat). This cannot simply be achieved be entering 'cp *dat original-*.dat' as cp has received more than two output nd expects the last to be a directory to copy the files to (which it isn't). Therefore, to achieve this aim this loop was entered\\
+for filename in *dat\\
+do\\
+cp \verb|$filename| original-\verb|$filename|\\
+done\\
+\textbf{Results:} This successfully duplicated all the files with the intended name.\\
 \textbf{Errors:} \\
+\textbf{Solutions/Notes:} If I wanted to see what the commands in this loop would be without actually executing them, I could just add 'echo' to the beginning of the third line of the loop. This is a good way to check a loop before I run it.\\
+\vspace{5mm}
+\textbf{Objective: Moving Around the Lines in Terminal}\\ 
+\textbf{Time Stamp:} 10:10pm  27 August\\
+\textbf{Actions/Results:} At the beginning of a new prompt after running a loop I pressed the up arrow. This displayed the loop on a single line with each part separated by a semi-colon. This works for other commands too (just press the up arrow to copy the most recent one, or enter '!!' To move to the beginning of this line I pressed control 'A'. To move back to the end, I pressed control 'E'. \\
+\textbf{Errors:} None. \\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Activity:}\\
+\textbf{Objective: Repeat a Previous Command}\\ 
+\textbf{Time Stamp:} 10:20pm  27 August\\
+\textbf{Actions:} To look at the history of your commands type 'history' and press enter. You can also limit the history printed by typing 'history | tail/head -n (no)'. I just tried entering 'history' and this printed all the commands I had entered since first using Terminal. To repeat a command, enter '!nocommand'. I entered '!179' which repeated the command in which I made the data directory my working one using an absolute path. \\
+\textbf{Results:} This worked successfully and the data directory was made the working one. \\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:} I can also press control 'R' and then enter text, and Terminal will find the most recent command that matches what I have typed. Typing '!\verb|$| will get me the last word of the most recent command (e.g if the precedding commands ends in a file, I can type 'less !\verb|$|' to see the file.\\
+\vspace{5mm}
+\textbf{Activity: Doing a Dry Run}\\
+At first, even after reading the solutions for this exercise I was really unsure. So I did as the solutions suggested and ran both of the loops. The first actually created the files (e.g. analyzed-cubane.pdb, analyzed-ethane etc.)(although I could not see the output as I did not have a program to open this type of file). Running the second one printed the steps of the loop in Terminal. I can now see how if the intention was to preview the commands the loop would run, the second loop (containing the line 'echo "analyze /verb|$file > analyzed-$file|"' would be more appropriate and the explanation in the solution makes more sense to me now.\\
+\vspace{5mm}
+\textbf{Activity: Nested Loops}\\
+Again I was a little unsure, so I ran the code. I entered  as follows:\\
+for species in cubane ethane methane\\
+do\\
+for temperature in 25 30 37 40\\
+do\\
+mkdir \verb|$species-$temperature|\\
+done\\
+done\\
+This produced directories labelled e.g. cubane-25, cubane-30, cubane-37 and cubane-40, for cubane, ethane and methane. This now made more sense to me as I think the point of confusion was I thought this was extracting data related to temperature from the files, rather than just creating directories.\\
 \vspace{5mm}
 
 
