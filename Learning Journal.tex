@@ -108,7 +108,7 @@ To view on Overleaf \url{https://www.Overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Actions:} With the hyperref package already in the preamble, insert \verb|\autoref{sec:nameforlink}| where you want the link to be, and \verb|\label{sec:nameforlink}| behind the section/subsection command of the section/subsection you want to link to. This command will make the link be 'section/subsection no'.\\
 \textbf{Results:} The link was created successfully.\\
 \textbf{Errors:} None\\
-\textbf{Solutions/Notes:} This was a useful resource, \url{https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing#Sections} as recommended by Brian.
+\textbf{Solutions/Notes:} This was a useful resource, \url{https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing#Sections} as recommended by Brian. This also works for images, if I switch 'sec' to 'fig'.
 
 \subsection{Objective: Adding a Commit Description from An Overleaf Push}\label{sec:description}
 \textbf{Time Stamp:} 1:05pm 23 August\\
@@ -122,15 +122,33 @@ To view on Overleaf \url{https://www.Overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Actions:} Use a percentage symbol and then type the comment. \\
 \textbf{Results:} The comment was added successfully - it appeared in green and cannot be seen in the rendered pdf.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} It was suggested in class if we find code from online sources to put a comment with where we found them for future reference. If I decide I would like the comments to appear in the margin of a document, refer to this source for how to do it, \url{https://www.overleaf.com/blog/619-tip-of-the-week-add-inline-or-margin-comments-to-your-pdf}
+\textbf{Solutions/Notes:} It was suggested in class if we find code from online sources to put a comment with where we found them for future reference. If I decide I would like the comments to appear in the margin of a document, refer to this source for how to do it,\\ \url{https://www.overleaf.com/blog/619-tip-of-the-week-add-inline-or-margin-comments-to-your-pdf}
 
 \subsection{Objective: Delete a File}
 \textbf{Time Stamp:} 10:20pm 25 August\\
 \textbf{Actions:} When in the projects page of Overleaf, under Actions, click the Archive symbol (little box) of the file I want to delete. When the pop-up appears informing me I am about to archive the project, click the red Confirm button. Then in the sidebar, click Archived Projects and click the little trash can icon of the file(s) I want to delete under Actions. I can also select the check box of the file and click the red Delete Forever button.\\
 \textbf{Results:} The file was deleted successfully.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} In the Archived Projects page I can also restore the file by either selecting the check box and selecting the Restore button, or under Actions, selecting the Unarchive symbol (backward arrow/undo symbol)
+\textbf{Solutions/Notes:} In the Archived Projects page I can also restore the file by either selecting the check box and selecting the Restore button, or under Actions, selecting the Unarchive symbol (backward arrow/undo symbol).
 
+\subsection{Objective: Add an Image}
+\textbf{Time Stamp:} 1:25pm 29 August\\
+\textbf{Actions:} In the OverLeaf file, I went to the upper left hand corner and clicked on the Upload button (little upwards facing arrow). In the pop-up, I clicked the green 'Select From Your Computer' button, found the image I wanted to use and pressed Open. The name of the image then appeared under the file name in the sidebar on the left. I then added \verb|\usepackage{graphicx}| to the preamble. To put the image in the document I entered \\
+\verb|\begin{figure}[htp]| \\
+\verb|\centering|\\
+\verb|\includegraphics[width=4cm]{IMG_9495.PNG}|\\
+\verb|\caption{Colour Maps of Disney Films in the 'Animated' App}|\\
+\verb|\end{figure}|\\
+\textbf{Results:} When typing in \verb|\includegraphics . . .| the line auto completed with the image file name. The image was successfully put into the document. I then played around with the image width until I was happy with the size.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} If I want to sort my images if I have a large number in the file, I can click the New Folder button next to the Upload button in the top left hand corner of the Overleaf file. For more information, go to \url{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}. Removing htp from the code put the image in the middle of my text.
+
+\subsection{Objective: Add a Special Character (\textbar{})}
+\textbf{Time Stamp:} 1:50pm 29 August\\
+\textbf{Actions:} I wanted to add a \textbar{} in my text when completing the objectives and activities for The Unix Shell lesson, and I didn't initially realise when I was just entering \textbar{} it was appearing as |. So where I wanted them appear I inserted \verb|\textbar{}| in the text. \\
+\textbf{Results:} When I recompiled the file, this inserted a \textbar{} successfully.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} For ways to insert other special characters see, \url{https://en.wikibooks.org/wiki/LaTeX/Special_Characters}. An issue I had was that there was not space between \textbar{} and the next word. Adding \verb|{}| after \verb|\textbar| fixed this issue.
 
 \pagebreak
 
@@ -291,13 +309,13 @@ Following the steps just outlined, I will attempt to add my own rule to another 
 \textbf{Rule:} I added a list of restrictions to the months\_lack\_food column. The list included the abbreviations already used in the column (Jan, Feb, Mar, Apr, May, June, July, Aug, Sept, Oct, Nov, Dec). I chose this column to add a restriction to as months can be abbreviated in a number of different ways and it is important to ensure consistency.\\
 \textbf{Messages:} The input message I added was titled 'Invalid Data' and said 'The month abbreviation must be Jan, Feb, Mar, Apr, May, June, July, Aug, Sept, Oct, Nov or Dec'. I also added an error alert titled 'This Data Is Invalid', and with the message 'You entered a month that was not Jan, Feb, Mar, Apr, May, June, July, Aug, Sept, Oct, Nov or Dec.'\\
 \textbf{Result:} This was successful as the input message successfully appeared and when I tried enter 'Jan;Dece', I received the alert message I had entered. As this was such a long list and the cell can contain more than one month, I decided not to have a drop down menu in each individual cell.\\
-\textbf{Error}: 9:00am 19 August, However I realised that entering the list of options for this column would only allow one month would be selected. 'Jan;Dece' was not a good way to test the successfullness of this data validation rule because instead of the alert message presenting because 'Dece' was used instead of Dec, it was presenting because the two months was not a single option on the list. So, I then removed this data validation rule from the months\_lack\_food column, and applied a rule to the affect\_conflict column, only allowing never, once, more\_once, frequently,or NULL to be entered, and created appropriate alert and data entry messages. This worked as intended.\\
+\textbf{Error}: 9:00am 19 August, However I realised that entering the list of options for this column would only allow one month would be selected. 'Jan;Dece' was not a good way to test the success of this data validation rule because instead of the alert message presenting because 'Dece' was used instead of Dec, it was presenting because the two months was not a single option on the list. So, I then removed this data validation rule from the months\_lack\_food column, and applied a rule to the affect\_conflict column, only allowing never, once, more\_once, frequently,or NULL to be entered, and created appropriate alert and data entry messages. This worked as intended.\\
 
 \subsection{Exporting Data}\label{sec:CSV}
 \textbf{Objective: Save an Excel File in CSV format}\\ 
 \textbf{Time Stamp:} 4:50pm 18 August\\
 \textbf{Actions:} I will attempt to save my Dates as Data Activity Excel document in CSV Format. Inside the open document, in the menu bar go to File, and then select Save As . . . From the File Format drop down menu, select Comma-separated Values (.csv) and name the file appropriately. Select the correct folder to save it to and click Save. \\
-\textbf{Results:} The file was exported successfully, and I uploaded it to my GitHub repoistory.\\
+\textbf{Results:} The file was exported successfully, and I uploaded it to my GitHub repository.\\
 \textbf{Errors:} The export was not initially allowed because the spreadsheet had more than one sheet.\\
 \textbf{Solutions/Notes:} I then deleted the MM/DD/YEAR sheet and tried again. This was successful and I uploaded it to my GitHub repository.\\
 
@@ -312,16 +330,16 @@ Following the steps just outlined, I will attempt to add my own rule to another 
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Objective:List the Current Directory}\\ 
+\textbf{Objective: List the Current Directory}\\ 
 \textbf{Time Stamp:} 11:05am 25 August\\
-\textbf{Actions:} After \verb|Emily$| type in ls (stands for listing) and press enter. This is a command\\
+\textbf{Actions:} After \verb|Emily$| type in ls (stands for listing) and press enter. This is a command.\\
 \textbf{Results:} The listings of the current directory appeared.\\
-\textbf{Errors:} \\
+\textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
 \textbf{Objective: Clear the Window}\\ 
 \textbf{Time Stamp:} 12:00pm 25 August\\
-\textbf{Actions:} Hold down control and click the letter 'l'.\\
+\textbf{Actions:} Hold down control and click the letter 'L'.\\
 \textbf{Results:} The window was cleared successfully.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
@@ -354,7 +372,7 @@ Following the steps just outlined, I will attempt to add my own rule to another 
 \textbf{Actions:} I typed 'ls --help' and pressed enter.\\
 \textbf{Results:} \\
 \textbf{Errors:} This produced the response 'ls: illegal option'\\
-\textbf{Solutions/Notes:} I just tried typing 'help' and this produced information on how to use different commands. At the start of this is also different help commands for specific problems (e.g. use info bash' to find out more about the shell in general). Also, typing 'man ls' produces a lot of information, however, I couldn't enter a command after this and had to exit Terminal and start again. The lesson says to quit the man pages, press 'Q'. I can also find help online.\\
+\textbf{Solutions/Notes:} I just tried typing 'help' and this produced information on how to use different commands. At the start of this is also different help commands for specific problems (e.g. use 'info bash' to find out more about the shell in general). Also, typing 'man ls' produces a lot of information, however, I couldn't enter a command after this and had to exit Terminal and start again. The lesson says to quit the man pages, press 'Q'. I can also find help online.\\
 \vspace{5mm}
 \textbf{Objective: Exploring More ls Flags (Activity)}\\ 
 \textbf{Time Stamp:} 1:32pm 25 August\\
@@ -526,7 +544,7 @@ I think the first two options would achieve the outlined objective. The issue wi
 \vspace{5mm}
 \textbf{Objective: Output Word Count Information to a File }\\ 
 \textbf{Time Stamp:} 5:30pm 26 August\\
-\textbf{Actions:} Type 'wc -l *.pdb > lengths.txt' and press enter. This creates a file (lengths.txt) which contains the number of lines for each of the files indicated by *.pdb. The > symbol is what 'redirect(s) the command's output to a file instead of printing it to the screen.\\
+\textbf{Actions:} Type 'wc -l *.pdb \textgreater  lengths.txt' and press enter. This creates a file (lengths.txt) which contains the number of lines for each of the files indicated by *.pdb. The \textgreater  symbol is what 'redirect(s) the command's output to a file instead of printing it to the screen.\\
 \textbf{Results:} This was successful, as confirmed by running 'ls lengths.txt' and through GUI.\\
 \textbf{Errors:} None. \\
 \textbf{Solutions/Notes:} Be careful as if there was already a file lengths.txt this would have overwritten it.\\
@@ -543,34 +561,34 @@ Looking at the outputs, the addition of -n, has sorted the contents of the file 
 \vspace{5mm}
 \textbf{Objective: Sorting the Contents of a File Numerically and Then Putting this in a New File}\\ 
 \textbf{Time Stamp:} 6:50pm 26 August\\
-\textbf{Actions/Results:} To sort the contents of the lengths.txt file from the previous objectives, I entered 'sort -n lengths.txt'.This sorted the contents of the file, from the the lowest number (least amount of lines) to the highest number (most amount of lines). To then put this information in a new file, the command 'sort -n lengths.txt > sorted-lengths.txt' was entered. This was successful as when 'head -n 1 sorted-lengths.txt' (to view the first line), 9  methane.pdb appeared correctly.\\
+\textbf{Actions/Results:} To sort the contents of the lengths.txt file from the previous objectives, I entered 'sort -n lengths.txt'.This sorted the contents of the file, from the the lowest number (least amount of lines) to the highest number (most amount of lines). To then put this information in a new file, the command 'sort -n lengths.txt \textgreater  sorted-lengths.txt' was entered. This was successful as when 'head -n 1 sorted-lengths.txt' (to view the first line), 9  methane.pdb appeared correctly.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} As this has been sorted, entering 'head -n 1 sorted-lengths.txt' will give the file with the fewest lines. \\The lesson also notes that when directing the output of a sort to a new file, don't have the new file be the same name as the one the contents have been sorted from.\\ The sorting and word count commands are examples of a filter --> they turn 'a stream of imput into a stream of output'.
+\textbf{Solutions/Notes:} As this has been sorted, entering 'head -n 1 sorted-lengths.txt' will give the file with the fewest lines. \\The lesson also notes that when directing the output of a sort to a new file, don't have the new file be the same name as the one the contents have been sorted from.\\ The sorting and word count commands are examples of a filter --\textgreater  they turn 'a stream of imput into a stream of output'.\\
 \vspace{5mm}
-\textbf{Activity: What Does >> Mean?}\\
-The lesson explains that the echo command prints strings e.g. entering 'echo The echo command prints text' produces the response 'The echo command prints text'. The instructions said to firstly enter 'echo hello > testfile01.txt' and then 'echo hello >> testfile02.txt', and then examine the output files (by entering 'cat testfile01.txt' and then testfile02.txt'). I did this, (both files contained 'hello') and then repeated the process. Now, testfile01.txt contained 'hello', while testfile02.txt contained 'hello hello'. This indicates that the >> command adds to a file rather than overwrites it. This was confirmed by the answers.\\
+\textbf{Activity: What Does \textgreater \textgreater  Mean?}\\
+The lesson explains that the echo command prints strings e.g. entering 'echo The echo command prints text' produces the response 'The echo command prints text'. The instructions said to firstly enter 'echo hello \textgreater  testfile01.txt' and then 'echo hello \textgreater \textgreater  testfile02.txt', and then examine the output files (by entering 'cat testfile01.txt' and then testfile02.txt'). I did this, (both files contained 'hello') and then repeated the process. Now, testfile01.txt contained 'hello', while testfile02.txt contained 'hello hello'. This indicates that the \textgreater \textgreater  command adds to a file rather than overwrites it. This was confirmed by the answers.\\
 \vspace{5mm}
 \textbf{Activity: Appending Data}\\
-The tail command functions the same as the head command, but prints lines from the end of a file. In light of this, the commands listed for this activity ('head -n 3 animals.txt > animals-subset.txt', and 'tail -n 2 animals.txt >> animals-subset.txt') would produce option 3. The first three lines and the last two lines of animals.txt. The answer confimed this is correct.\\
+The tail command functions the same as the head command, but prints lines from the end of a file. In light of this, the commands listed for this activity ('head -n 3 animals.txt \textgreater  animals-subset.txt', and 'tail -n 2 animals.txt \textgreater \textgreater  animals-subset.txt') would produce option 3. The first three lines and the last two lines of animals.txt. The answer confimed this is correct.\\
 \vspace{5mm}
 \textbf{Objective: Using a Pipe (Combining Commands)}\\ 
 \textbf{Time Stamp:} 7:40pm 26 August\\
-\textbf{Actions:} This pipe aims to combine the word count, sort and head commands used in the previous objectives. A pipe (|) is used to separate the commands and tell the shell that 'we want to use the output of the command on the left as the input to the command on the right'. I entered 'wc -l *.pdb | sort -n | head -n 1'. This will the look at the number of lines in each file ending in .pdb in the molecules directory (the current working one), sort them numerically and print the first of the sorted files (i.e. the one with the fewest lines), all in one command.\\
+\textbf{Actions:} This pipe aims to combine the word count, sort and head commands used in the previous objectives. A pipe (\textbar{}) is used to separate the commands and tell the shell that 'we want to use the output of the command on the left as the input to the command on the right'. I entered 'wc -l *.pdb \textbar{}{} sort -n \textbar{} head -n 1'. This will the look at the number of lines in each file ending in .pdb in the molecules directory (the current working one), sort them numerically and print the first of the sorted files (i.e. the one with the fewest lines), all in one command.\\
 \textbf{Results:} This was successful, as the response was 9 methane.pdb, like before when these commands were entered separately. \\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
 \textbf{Activity: Piping Commands Together}\\
-In the current directory, to find the three files which have the least number of lines I think option 4 ('wc -l * | sort -n | head -n 3') should be used. This was correct. When I tried this, this produced 1 testfile01.txt, 2. testfile02.txt and 7 lengths.txt.\\
+In the current directory, to find the three files which have the least number of lines I think option 4 ('wc -l * \textbar{} sort -n \textbar{} head -n 3') should be used. This was correct. When I tried this, this produced 1 testfile01.txt, 2. testfile02.txt and 7 lengths.txt.\\
 \vspace{5mm}
 \textbf{Activity: Pipe Reading Comprehension}\\
-The pipeline provided (for the data-shell/data directory) was 'cat animals.txt | head -n 5 | tail -n 3 | sort -r > final.txt'. While I thought I understood what the first three pipes did, as well as the final one, I was unsure about what 'sort -r' did. The answers informed me it sorted the 3 lines from the previous pipe in reverse order. Consulting the solution, I also realised I didn't fully grasp that the 'tail -n 3' command would draw its input from the 'head -n 5' command, and not the entire animals.txt file. This now makes more sense to me.I then ran the entire command and it produced the same response as appears in the lesson.\\
+The pipeline provided (for the data-shell/data directory) was 'cat animals.txt \textbar{} head -n 5 \textbar{} tail -n 3 \textbar{} sort -r \textgreater  final.txt'. While I thought I understood what the first three pipes did, as well as the final one, I was unsure about what 'sort -r' did. The answers informed me it sorted the 3 lines from the previous pipe in reverse order. Consulting the solution, I also realised I didn't fully grasp that the 'tail -n 3' command would draw its input from the 'head -n 5' command, and not the entire animals.txt file. This now makes more sense to me.I then ran the entire command and it produced the same response as appears in the lesson.\\
 \vspace{5mm}
 \textbf{Activity: Pipe Construction}\\
-The cut command can remove sections of each line (and is based on the expectation the lines will be separated into tab columns)(this is called a delimiter). In the command 'cut -d , -f 2 animals.txt', '-d' is used to indicate the comma as the delimiter character at where to cut, and the '-f' extract the second column. The uniq command deletes any consecutive double ups of lines in a file. The question said, what could I add to the 'cut -d , -f 2 animals.txt' command to find out what animals the file contains (without any duplicates in their names)? At first I was really unsure of the answer as I didn't really understand either what I was being asked to do, or exactly what the uniq command did (filters out adjacent matching lines in a file). When looking at the answer, I now understand that adding '| sort | uniq' to the end of the command, would allow the files to be sorted alphabetically, which would then allow the uniq command to identify and delete any double ups (as they would now be consecutive through the sorting). \\
+The cut command can remove sections of each line (and is based on the expectation the lines will be separated into tab columns)(this is called a delimiter). In the command 'cut -d , -f 2 animals.txt', '-d' is used to indicate the comma as the delimiter character at where to cut, and the '-f' extract the second column. The uniq command deletes any consecutive double ups of lines in a file. The question said, what could I add to the 'cut -d , -f 2 animals.txt' command to find out what animals the file contains (without any duplicates in their names)? At first I was really unsure of the answer as I didn't really understand either what I was being asked to do, or exactly what the uniq command did (filters out adjacent matching lines in a file). When looking at the answer, I now understand that adding '\textbar{} sort \textbar{} uniq' to the end of the command, would allow the files to be sorted alphabetically, which would then allow the uniq command to identify and delete any double ups (as they would now be consecutive through the sorting). \\
 \vspace{5mm}
 \textbf{Activity: Which Pipe?}\\
-When -c is added to the uniq command, a count is provided of the number of times a line occurs in its input. Based on this to produce a table that shows the total count of each animal in the file animals.txt, I think option 4 (cut -d, -f 2 animals.txt | sort | uniq -c)would be appropriate This is correct.\\
+When -c is added to the uniq command, a count is provided of the number of times a line occurs in its input. Based on this to produce a table that shows the total count of each animal in the file animals.txt, I think option 4 (cut -d, -f 2 animals.txt \textbar{} sort \textbar{} uniq -c)would be appropriate This is correct.\\
 \vspace{5mm}
 \textbf{Activity: Wildcard Expressions}\\
 In writing wildcards, putting things in brackets like this [ ] means either or, e.g. *[AB].txt matches files ending in A.txt or B.txt. These are my answers to the questions, in the case I wasn't able to use [].
@@ -594,9 +612,9 @@ done'\\
 So for this task, to get the second line in three files, I entered the commands\\
 'for filename in basilisk.dat minotaur.dat unicorn.dat\\
 do\\
-head -n 2 \verb|$filename| | tail -n 1\\
+head -n 2 \verb|$filename| \textbar{} tail -n 1\\
 done\\
-\textbf{Results:} When entering the second, third and fourth lines, the prompt changed to >. The lines appeared successfully. \\
+\textbf{Results:} When entering the second, third and fourth lines, the prompt changed to \textgreater . The lines appeared successfully. \\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} The lesson suggests an indent for the third line to assist legibility. Each time the loop runs, it assigns a new file name to the filename variable (e.g. in this example, it assigns basilisk.dat then minotaur.dat then unicorn.dat) and runns the command. The variable name (\verb|$filename|) could be anything (e.g. temperature) but it is more beneficial to me to have it as something I can understand. Also, \verb|$filename| is the same as \verb|{$filename}| but different to \verb|${file}name|  \\
 \vspace{5mm}
@@ -618,13 +636,13 @@ While I originally thought option 1 was the correct output of the loop listed (A
 for filename in *.dat\\
 do]]
 echo \verb|$filename|\\
-head -n 100 \verb|$filename| | tail -n 20\\
+head -n 100 \verb|$filename| \textbar{} tail -n 20\\
 done\\
 \textbf{Results:} This worked successfully, as the filename was listed and then the right amount of lines. \\
 \textbf{Errors:} None. \\
 \textbf{Solutions/Notes:} If the names of the files I am going to contain in a loop contain spaces, put the file in quote marks (e.g. in this objective if rather than *.dat, I had two files I would type them in as "red dragon.dat" and "purple unicorn.dat"). I would also have to put the loop variable in quotes (e.g. in this example, \verb|"$filename"| would appear in the third line.\\
 \vspace{5mm}
-\textbf{Objective: Making a Copy of Original Files Using a Loop}\\ 
+\textbf{Objective: Make a Copies of Original Files Using a Loop}\\ 
 \textbf{Time Stamp:} 10:00pm  27 August\\
 \textbf{Actions:} The aim of this objective is to make a copy of each of the files in the creatures directory, with the name of the copy being original-originalfilename.dat (e.g. the copy of basilisk.dat will be original-basilisk.dat). This cannot simply be achieved be entering 'cp *dat original-*.dat' as cp has received more than two output nd expects the last to be a directory to copy the files to (which it isn't). Therefore, to achieve this aim this loop was entered\\
 for filename in *dat\\
@@ -643,13 +661,13 @@ done\\
 \vspace{5mm}
 \textbf{Objective: Repeat a Previous Command}\\ 
 \textbf{Time Stamp:} 10:20pm  27 August\\
-\textbf{Actions:} To look at the history of your commands type 'history' and press enter. You can also limit the history printed by typing 'history | tail/head -n (no)'. I just tried entering 'history' and this printed all the commands I had entered since first using Terminal. To repeat a command, enter '!nocommand'. I entered '!179' which repeated the command in which I made the data directory my working one using an absolute path. \\
+\textbf{Actions:} To look at the history of your commands type 'history' and press enter. You can also limit the history printed by typing 'history \textbar{} tail/head -n (no)'. I just tried entering 'history' and this printed all the commands I had entered since first using Terminal. To repeat a command, enter '!nocommand'. I entered '!179' which repeated the command in which I made the data directory my working one using an absolute path. \\
 \textbf{Results:} This worked successfully and the data directory was made the working one. \\
 \textbf{Errors:} \\
 \textbf{Solutions/Notes:} I can also press control 'R' and then enter text, and Terminal will find the most recent command that matches what I have typed. Typing '!\verb|$| will get me the last word of the most recent command (e.g if the precedding commands ends in a file, I can type 'less !\verb|$|' to see the file.\\
 \vspace{5mm}
 \textbf{Activity: Doing a Dry Run}\\
-At first, even after reading the solutions for this exercise I was really unsure. So I did as the solutions suggested and ran both of the loops. The first actually created the files (e.g. analyzed-cubane.pdb, analyzed-ethane etc.)(although I could not see the output as I did not have a program to open this type of file). Running the second one printed the steps of the loop in Terminal. I can now see how if the intention was to preview the commands the loop would run, the second loop (containing the line 'echo "analyze /verb|$file > analyzed-$file|"' would be more appropriate and the explanation in the solution makes more sense to me now.\\
+At first, even after reading the solutions for this exercise I was really unsure. So I did as the solutions suggested and ran both of the loops. The first actually created the files (e.g. analyzed-cubane.pdb, analyzed-ethane etc.)(although I could not see the output as I did not have a program to open this type of file). Running the second one printed the steps of the loop in Terminal. I can now see how if the intention was to preview the commands the loop would run, the second loop (containing the line 'echo "analyze \verb|$file > analyzed-$file|"' would be more appropriate and the explanation in the solution makes more sense to me now.\\
 \vspace{5mm}
 \textbf{Activity: Nested Loops}\\
 Again I was a little unsure, so I ran the code. I entered  as follows:\\
@@ -663,14 +681,88 @@ done\\
 This produced directories labelled e.g. cubane-25, cubane-30, cubane-37 and cubane-40, for cubane, ethane and methane. This now made more sense to me as I think the point of confusion was I thought this was extracting data related to temperature from the files, rather than just creating directories.\\
 \vspace{5mm}
 
-
 \subsection{Shell Scripts}
-\textbf{Objective:}\\ 
-\textbf{Time Stamp:} pm  August\\
-\textbf{Actions:} \\
-\textbf{Results:} \\
-\textbf{Errors:} \\
+\textbf{Objective: Create and Run a Shell Script to Extract Specific Lines from a Specific File}\\
+\textbf{Time Stamp:} 7:50pm 28 August\\
+\textbf{Actions:} The shell created will attempt to select lines 11-15 of the file octane.pdb in the molecules directory which has been set as the working one. Firstly, I created a new file called middle.sh which will be the shell script by entering 'nano middle.sh'. This opens and creates the file in nano within Terminal. I then entered 'head -n 15 octane.pdb \textbar{} tail -n 5'. I then saved the file by pressing control 'O' and then enter, and exited nano by pressing control 'X'. I then entered 'ls' to confirm the file had been created. To run the shell script, I entered 'bash middle.sh'. \\
+\textbf{Results:} This was successful as the lines 11-15 fro the file were printed to the screen, as they appear in the lesson. \\
+\textbf{Errors:} None/\\
 \textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Edit the Shell Script from the Previous Objective to Run on Arbitrary Files}\\ 
+\textbf{Time Stamp:} 8:00pm 28 August\\
+\textbf{Actions:} I opened the shell script from the previous objective by entering 'nano middle.sh'. I then replaced 'octane.pdb' in the file with \verb|"$1"| so it reads, 'head -n 15  \verb|"$1"| \textbar{} tail -n 5'. I then saved the file by pressing control 'O' and then enter, and exited nano by pressing control 'X'. The \verb|"$1"|, means 'the first filename (or other argument) on the command line'. I then entered 'bash middle.sh pentane.pdb' to run the shell on pentane.pdb. \\
+\textbf{Results:} This worked successfully, printing the correct lines from the file (checked against the lesson).\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson notes the \verb|$1| is surrounded in double quotes for the same reason the loop variable was contained in quotations (in case the file name contains spaces).\\
+\vspace{5mm}
+\textbf{Objective: Edit the Shell Script from the Previous Objective to Allow the Range of Lines Printed to be Adjusted}\\ 
+\textbf{Time Stamp:} 8:20pm 28 August\\
+\textbf{Actions:} I again opened the middle.sh file in nano by entering 'nano middle.sh'. I changed 15 to \verb|$2| and 5 to \verb|$3|, so it read 'head -n \verb|"$2"| \verb|"$1"| \textbar{} tail -n \verb|"$3"|'. I then saved the file by pressing control 'O' and then enter, and exited nano by pressing control 'X'. I then entered 'bash middle.sh pentane.pdb 20 5' to print the lines 16-20 of the file pentant.pdb. \\
+\textbf{Results:} This worked successfully, printing the lines as they appeared in the lesson. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Add a Comment to a Shell Script}\\ 
+\textbf{Time Stamp:} 8:35pm 28 August\\
+\textbf{Actions:} I opened the shell script from the previous objective, entering 'nano middle.sh'. At the top, I added a comment by starting the line with '\verb|#|'. As suggested in the lesson, I entered\\
+\verb|#| Select lines from the middle of a file.\\
+\verb|#| Usage: bash middle.sh filename end\textunderscore line num\textunderscore lines\\
+I then saved this and exited nano.
+\textbf{Results:} The addition of the comment was successful as when I ran the shell is still worked as intended, and when I opened it in nano again the comment appeared. \\
+\textbf{Errors:} Comments are very useful in assisting other people and myself identify what a shell script does. It is useful to include both what a shell script does and how it should be used as in this example. However, everytime I change a shell script, I need to make sure I change the comment. \\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Create a Run a Shell Script to Process Many Files in a Single Pipeline}\\ 
+\textbf{Time Stamp:} 8:45pm 28 August\\
+\textbf{Actions:} Instead of \verb|"$1"| etc. being used as in the previous objectives, \verb|"$@"| will be used as this means 'all of the command-line arguments to the shell script' (which allows the shell script to process many files in a single pipeline and files beyond the current directory). This script will sort filenames by their length. I began by opening and creating a new file by entering 'nano sorted.sh'. In nano, I then entered the description,\\
+\verb|#| Sort filenames by their length.
+\verb|#| Usage: bash sorted.sh one\textunderscore or\textunderscore more\textunderscore filenames.\\
+Underneath this I then entered the command\\
+wc -l \verb|"$@"| \textbar{} sort -n\\
+I then saved this and exited nano. I then entered 'bash sorted.sh *.pdb ../creatures/*.dat' to run the shell script.
+\textbf{Results:} This successfully sorted all the files ending in *pdb by their length.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity: List Unique Species} \\
+After reading the instructions for this exercise, I really had no idea where to start and was really confused, and had to consult the solution. It read as follows:\\
+\verb|#| Script to find unique species in csv files where species is the second data field\\
+\verb|#| This script accepts any number of file names as command line arguments\\
+\verb|#| Loop over all files\\
+for file in \verb|$@|\\
+do\\
+echo "Unique species in \verb|$file|:"\\
+\verb|#| Extract species names\\
+cut -d , -f 2 \verb|$file|\textbar{} sort \textbar{} uniq\\
+done\\
+Reading this made sense to me, but I realised I didn't remember as much of the information from the loops lesson as I would have liked, so I will now go back and review my notes from that lesson.
+\vspace{5mm}
+\textbf{Objective: Save Previous Commands in a File to Use for a Shell Script}\\ 
+\textbf{Time Stamp:} 9:10pm 28 August\\
+\textbf{Actions:} The example the lesson provides for saving commands used to create a graph is 'history \textbar{} tail -n 5 \textgreater  redo-figure-3.sh'. I attempted saving previous commands to a file by entering 'history \textbar{} tail -n 5 \textgreater  testsave.sh' \\
+\textbf{Results:} To test whether this worked, I entered 'nano testsave.sh'. My five previous commands appeared in the file successfully.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson notes people usually run a command first to see if it works, and then save it to a shell script using the history command.\\
+\vspace{5mm}
+\textbf{Activity: Why Record Commands in the History Before Running Them?} \\
+I think commands are saved to the command log before being run so that if any errors occur during the running of the command, the command can still be recovered. The solution confirmed this was right stating, 'if a command causes something to crash or hang, it might be useful to know what that command was, in order to investigate the problem'.\\
+\vspace{5mm}
+\textbf{Activity: Variables in Shell Scripts} \\
+I think the correct answer is option 2. he first and the last line of each file ending in .pdb in the molecules directory. As the two ones would be in the place of the \verb|$2| and \verb|$3|, meaning the first and last lines of the files would be printed, and '*.pdb' means these would be printed for each file in the directory ending in .pdb. The solution confirms this to be correct.\\
+\vspace{5mm}
+\textbf{Activity: Finding the Longest File With a Given Extension} \\
+text\\
+\vspace{5mm}
+\textbf{Activity: Script Reading Comprehension} \\
+text\\
+\vspace{5mm}
+\textbf{Activity: Debugging Scripts} \\
+When I ran the script in debug mode, it presented these lines for each of the files\\
+bash goostats NENE01729A.txt\\ stats-NENE01729A.txt\\
++ for datafile in \verb|'"$@"'|\\
++ echo\\
+As nothing is printed for echo, this must be the issue, reviewing the shell script \verb|$datfile| is in the place of \verb|$datafile|. The answers confirm this is correct.
 \vspace{5mm}
 
 \subsection{Finding Things}
@@ -680,6 +772,9 @@ This produced directories labelled e.g. cubane-25, cubane-30, cubane-37 and cuba
 \textbf{Results:} \\
 \textbf{Errors:} \\
 \textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity:} \\
+text\\
 \vspace{5mm}
 
 
