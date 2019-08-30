@@ -544,7 +544,7 @@ I think the first two options would achieve the outlined objective. The issue wi
 \vspace{5mm}
 \textbf{Objective: Output Word Count Information to a File }\\ 
 \textbf{Time Stamp:} 5:30pm 26 August\\
-\textbf{Actions:} Type 'wc -l *.pdb \textgreater  lengths.txt' and press enter. This creates a file (lengths.txt) which contains the number of lines for each of the files indicated by *.pdb. The \textgreater  symbol is what 'redirect(s) the command's output to a file instead of printing it to the screen.\\
+\textbf{Actions:} Type 'wc -l *.pdb \textgreater{}  lengths.txt' and press enter. This creates a file (lengths.txt) which contains the number of lines for each of the files indicated by *.pdb. The \textgreater{}  symbol is what 'redirect(s) the command's output to a file instead of printing it to the screen'.\\
 \textbf{Results:} This was successful, as confirmed by running 'ls lengths.txt' and through GUI.\\
 \textbf{Errors:} None. \\
 \textbf{Solutions/Notes:} Be careful as if there was already a file lengths.txt this would have overwritten it.\\
@@ -561,15 +561,15 @@ Looking at the outputs, the addition of -n, has sorted the contents of the file 
 \vspace{5mm}
 \textbf{Objective: Sorting the Contents of a File Numerically and Then Putting this in a New File}\\ 
 \textbf{Time Stamp:} 6:50pm 26 August\\
-\textbf{Actions/Results:} To sort the contents of the lengths.txt file from the previous objectives, I entered 'sort -n lengths.txt'.This sorted the contents of the file, from the the lowest number (least amount of lines) to the highest number (most amount of lines). To then put this information in a new file, the command 'sort -n lengths.txt \textgreater  sorted-lengths.txt' was entered. This was successful as when 'head -n 1 sorted-lengths.txt' (to view the first line), 9  methane.pdb appeared correctly.\\
+\textbf{Actions/Results:} To sort the contents of the lengths.txt file from the previous objectives, I entered 'sort -n lengths.txt'.This sorted the contents of the file, from the the lowest number (least amount of lines) to the highest number (most amount of lines). To then put this information in a new file, the command 'sort -n lengths.txt \textgreater{}  sorted-lengths.txt' was entered. This was successful as when 'head -n 1 sorted-lengths.txt' (to view the first line), 9  methane.pdb appeared correctly.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} As this has been sorted, entering 'head -n 1 sorted-lengths.txt' will give the file with the fewest lines. \\The lesson also notes that when directing the output of a sort to a new file, don't have the new file be the same name as the one the contents have been sorted from.\\ The sorting and word count commands are examples of a filter --\textgreater  they turn 'a stream of imput into a stream of output'.\\
+\textbf{Solutions/Notes:} As this has been sorted, entering 'head -n 1 sorted-lengths.txt' will give the file with the fewest lines. \\The lesson also notes that when directing the output of a sort to a new file, don't have the new file be the same name as the one the contents have been sorted from.\\ The sorting and word count commands are examples of a filter --\textgreater{}  they turn 'a stream of imput into a stream of output'.\\
 \vspace{5mm}
-\textbf{Activity: What Does \textgreater \textgreater  Mean?}\\
-The lesson explains that the echo command prints strings e.g. entering 'echo The echo command prints text' produces the response 'The echo command prints text'. The instructions said to firstly enter 'echo hello \textgreater  testfile01.txt' and then 'echo hello \textgreater \textgreater  testfile02.txt', and then examine the output files (by entering 'cat testfile01.txt' and then testfile02.txt'). I did this, (both files contained 'hello') and then repeated the process. Now, testfile01.txt contained 'hello', while testfile02.txt contained 'hello hello'. This indicates that the \textgreater \textgreater  command adds to a file rather than overwrites it. This was confirmed by the answers.\\
+\textbf{Activity: What Does \textgreater\textgreater{}  Mean?}\\
+The lesson explains that the echo command prints strings e.g. entering 'echo The echo command prints text' produces the response 'The echo command prints text'. The instructions said to firstly enter 'echo hello \textgreater{}  testfile01.txt' and then 'echo hello \textgreater \textgreater{}  testfile02.txt', and then examine the output files (by entering 'cat testfile01.txt' and then testfile02.txt'). I did this, (both files contained 'hello') and then repeated the process. Now, testfile01.txt contained 'hello', while testfile02.txt contained 'hello hello'. This indicates that the \textgreater \textgreater{}  command adds to a file rather than overwrites it. This was confirmed by the answers.\\
 \vspace{5mm}
 \textbf{Activity: Appending Data}\\
-The tail command functions the same as the head command, but prints lines from the end of a file. In light of this, the commands listed for this activity ('head -n 3 animals.txt \textgreater  animals-subset.txt', and 'tail -n 2 animals.txt \textgreater \textgreater  animals-subset.txt') would produce option 3. The first three lines and the last two lines of animals.txt. The answer confimed this is correct.\\
+The tail command functions the same as the head command, but prints lines from the end of a file. In light of this, the commands listed for this activity ('head -n 3 animals.txt \textgreater{}  animals-subset.txt', and 'tail -n 2 animals.txt \textgreater \textgreater{}  animals-subset.txt') would produce option 3. The first three lines and the last two lines of animals.txt. The answer confimed this is correct.\\
 \vspace{5mm}
 \textbf{Objective: Using a Pipe (Combining Commands)}\\ 
 \textbf{Time Stamp:} 7:40pm 26 August\\
@@ -582,7 +582,7 @@ The tail command functions the same as the head command, but prints lines from t
 In the current directory, to find the three files which have the least number of lines I think option 4 ('wc -l * \textbar{} sort -n \textbar{} head -n 3') should be used. This was correct. When I tried this, this produced 1 testfile01.txt, 2. testfile02.txt and 7 lengths.txt.\\
 \vspace{5mm}
 \textbf{Activity: Pipe Reading Comprehension}\\
-The pipeline provided (for the data-shell/data directory) was 'cat animals.txt \textbar{} head -n 5 \textbar{} tail -n 3 \textbar{} sort -r \textgreater  final.txt'. While I thought I understood what the first three pipes did, as well as the final one, I was unsure about what 'sort -r' did. The answers informed me it sorted the 3 lines from the previous pipe in reverse order. Consulting the solution, I also realised I didn't fully grasp that the 'tail -n 3' command would draw its input from the 'head -n 5' command, and not the entire animals.txt file. This now makes more sense to me.I then ran the entire command and it produced the same response as appears in the lesson.\\
+The pipeline provided (for the data-shell/data directory) was 'cat animals.txt \textbar{} head -n 5 \textbar{} tail -n 3 \textbar{} sort -r \textgreater{}  final.txt'. While I thought I understood what the first three pipes did, as well as the final one, I was unsure about what 'sort -r' did. The answers informed me it sorted the 3 lines from the previous pipe in reverse order. Consulting the solution, I also realised I didn't fully grasp that the 'tail -n 3' command would draw its input from the 'head -n 5' command, and not the entire animals.txt file. This now makes more sense to me.I then ran the entire command and it produced the same response as appears in the lesson.\\
 \vspace{5mm}
 \textbf{Activity: Pipe Construction}\\
 The cut command can remove sections of each line (and is based on the expectation the lines will be separated into tab columns)(this is called a delimiter). In the command 'cut -d , -f 2 animals.txt', '-d' is used to indicate the comma as the delimiter character at where to cut, and the '-f' extract the second column. The uniq command deletes any consecutive double ups of lines in a file. The question said, what could I add to the 'cut -d , -f 2 animals.txt' command to find out what animals the file contains (without any duplicates in their names)? At first I was really unsure of the answer as I didn't really understand either what I was being asked to do, or exactly what the uniq command did (filters out adjacent matching lines in a file). When looking at the answer, I now understand that adding '\textbar{} sort \textbar{} uniq' to the end of the command, would allow the files to be sorted alphabetically, which would then allow the uniq command to identify and delete any double ups (as they would now be consecutive through the sorting). \\
@@ -614,7 +614,7 @@ So for this task, to get the second line in three files, I entered the commands\
 do\\
 head -n 2 \verb|$filename| \textbar{} tail -n 1\\
 done\\
-\textbf{Results:} When entering the second, third and fourth lines, the prompt changed to \textgreater . The lines appeared successfully. \\
+\textbf{Results:} When entering the second, third and fourth lines, the prompt changed to \textgreater{} . The lines appeared successfully. \\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} The lesson suggests an indent for the third line to assist legibility. Each time the loop runs, it assigns a new file name to the filename variable (e.g. in this example, it assigns basilisk.dat then minotaur.dat then unicorn.dat) and runns the command. The variable name (\verb|$filename|) could be anything (e.g. temperature) but it is more beneficial to me to have it as something I can understand. Also, \verb|$filename| is the same as \verb|{$filename}| but different to \verb|${file}name|  \\
 \vspace{5mm}
@@ -740,7 +740,7 @@ Reading this made sense to me, but I realised I didn't remember as much of the i
 \vspace{5mm}
 \textbf{Objective: Save Previous Commands in a File to Use for a Shell Script}\\ 
 \textbf{Time Stamp:} 9:10pm 28 August\\
-\textbf{Actions:} The example the lesson provides for saving commands used to create a graph is 'history \textbar{} tail -n 5 \textgreater  redo-figure-3.sh'. I attempted saving previous commands to a file by entering 'history \textbar{} tail -n 5 \textgreater  testsave.sh' \\
+\textbf{Actions:} The example the lesson provides for saving commands used to create a graph is 'history \textbar{} tail -n 5 \textgreater{}  redo-figure-3.sh'. I attempted saving previous commands to a file by entering 'history \textbar{} tail -n 5 \textgreater{}  testsave.sh' \\
 \textbf{Results:} To test whether this worked, I entered 'nano testsave.sh'. My five previous commands appeared in the file successfully.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} The lesson notes people usually run a command first to see if it works, and then save it to a shell script using the history command.\\
@@ -751,11 +751,21 @@ I think commands are saved to the command log before being run so that if any er
 \textbf{Activity: Variables in Shell Scripts} \\
 I think the correct answer is option 2. he first and the last line of each file ending in .pdb in the molecules directory. As the two ones would be in the place of the \verb|$2| and \verb|$3|, meaning the first and last lines of the files would be printed, and '*.pdb' means these would be printed for each file in the directory ending in .pdb. The solution confirms this to be correct.\\
 \vspace{5mm}
-\textbf{Activity: Finding the Longest File With a Given Extension} \\
-text\\
+\textbf{Activity: Find the Longest File With a Given Extension} \\
+I began this activity on 28 August and got really stuck and looked at the solution. I returned the next day and tried to answer the question from both what I could remember of the solution and by looking at my notes. I was able to get the answer, 'wc -l \verb|$1/*.$2| | sort -n | tail -n 2 | head -n 1'. Creating scripts is something I really need to work on. I didn't think to write comments with my script, the lesson suggested;\\
+\verb|#| Shell script which takes two arguments:\\
+\verb|#| 1. a directory name\\
+\verb|#| 2. a file extension\\
+\verb|#| and prints the name of the file in that directory\\
+\verb|#| with the most lines which matches the file extension.\\
 \vspace{5mm}
 \textbf{Activity: Script Reading Comprehension} \\
-text\\
+\begin{itemize}
+    \item echo *.* - This would print the names of all the files in the directory that have characters (or none), a dot, and then more characters (or none).
+    \item for filename in \verb|$1 $2 $3|; do; cat \verb|$filename|; done - I think this would list the name of the first three files ending in .pdb.
+    \item echo \verb|$@|.pdb - I'm not too sure about this one (Answer: Script 3 would print all the arguments to the script (i.e. all the .pdb files), followed by .pdb. \verb|$@| refers to all the arguments given to a shell script)
+\end{itemize}
+I confirmed each of these with the solutions and also successfully ran each of these scripts as well.\\
 \vspace{5mm}
 \textbf{Activity: Debugging Scripts} \\
 When I ran the script in debug mode, it presented these lines for each of the files\\
@@ -766,15 +776,93 @@ As nothing is printed for echo, this must be the issue, reviewing the shell scri
 \vspace{5mm}
 
 \subsection{Finding Things}
-\textbf{Objective:}\\ 
-\textbf{Time Stamp:} pm  August\\
-\textbf{Actions:} \\
-\textbf{Results:} \\
-\textbf{Errors:} \\
+\textbf{Objective: Use 'grep' to Find Lines}\\ 
+\textbf{Time Stamp:} 10:50am 30 August\\
+\textbf{Actions:} With data-shell/writing as the working directory, my aim was to find lines in the file haiku.txtthat contain the work 'not'. The grep command will be used which stands for 'global/regular expression/print'. I entered 'grep not haiku.txt'\\
+\textbf{Results:} The three lines containing 'not' in the file were printed succesffully. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} This search is case sensitive e.g. I entered 'grep the haiku.txt' and 'grep The haiku.txt' and these printed different lines. One of the lines included \underline{The}sis. To search by a term for itself, see the next objective.\\
+\vspace{5mm}
+\textbf{Objective: Restricting a 'grep' Search to a Single Word or Phrase}\\ 
+\textbf{Time Stamp:} 11:04am 30 August\\
+\textbf{Actions/Results:} To search for just the word 'The' I added '-w' to the command entering, 'grep -w The haiku.txt'. This successfully removed the line from the previous objective which contained \underline{The}sis, only printing the line 'The Tao that is seen'. To lesson says to restrict a search to a single phrase e.g. 'is not', you place it within double quotations in the command. I tried this by entering 'grep -w "is not" haiku.txt'. This successfully printed the line, 'Today it is not working'.\\
+\textbf{Errors: None.} \\
+\textbf{Solutions/Notes:} For clarity, it is also good to put one word searches in double quotations.\\
+\vspace{5mm}
+\textbf{Objective: Print the Line Number of the Results in a grep Search}\\ 
+\textbf{Time Stamp:} 11:10am  August\\
+\textbf{Actions:} To print the line number of a result in a search add '-n' to the command. I entered 'grep -n "it" haiku.txt' to print all the lines in haiku.txt containing the word 'it' with their line number.\\
+\textbf{Results:} This printed the lines as I intended, and as they appear in the lesson.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} None. \\
+\vspace{5mm}
+\textbf{Objective: Try Different Switch Combinations with a Grep Search inc. Making the Search Case Insensitive and Inverting the Search}\\ 
+\textbf{Time Stamp:} 11:17am 30 August\\
+\textbf{Actions:} I tried a number of the various switch combinations listed in the lesson including:
+\begin{itemize}
+    \item 'grep -n -w "the" haiku.txt' to find the lines containing 'the' specifically and list their line number
+    \item 'grep -n -w -i "the" haiku.txt' to remove the case sensitvity of the previous search.
+    \item 'grep -n -w -v "the" haiku.txt to invert the previous search (meaning all the lines not containing 'the' are searched for'.
+\end{itemize}
+\textbf{Results:} These all worked successfully, printing the results of the search as they appeared in the lesson. The third search also contained the numbers of lines containing the word 'the', but these were left blank and the line wasn't printed.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson notes that to find extra stiches to use with grep I should use 'grep --help'. However, as I realised this command doesn't work for me as identified previously, this may be a good resourse for grep searches: \url{https://en.wikibooks.org/wiki/Grep}\\
+\vspace{5mm}
+\textbf{Activity: Using grep} \\
+The command that would print the line 'and the presence of absence:' would be option 3, 'grep -w "of" haiku.txt' as this would just search for the word 'of' specifically and not words containing 'of'. This would be the case for option 1 'grep "of" haiku.txt' which would print the line containing S\underline{of}tware, which is not the intended output. This solutions confirmed this was correct.\\
+\vspace{5mm}
+Note: The lesson contains an information box on using Wildcard in grep searches for complex searches. If I need to do a complex search, refer to this box on the lesson and the site \url{https://v4.software-carpentry.org/regexp/index.html}\\
+\vspace{5mm}
+\textbf{Activity: Tracking a Species} \\
+I liked how this activity gave me the commands to start with and I was required to order them, as I struggled with where to start with other similar activities. I knew 'grep -w \verb|$1| -r \verb|$2|' had to come first, and I also knew '\textgreater{} \verb|$1|.txt' would have to be last. I was unsure of the order of the other two commands so consulted the answers. The final command would be 'grep -w \verb|$1| -r \verb|$2| \textbar{} cut -d: -f 2 \textbar{} cut -d , -f 1,3 \textgreater{} \verb|$1|.txt. I think  'cut -d , -f 1,3' cuts the first and second fields as separated by the commas, but I don't understand what 'cut -d : -f 2' does. To run the script you would enter 'bash count-species.sh bear .'. I created the script and ran it, and this made me realise the '.' in the command stands for the current directory, which I didn't intially realise.\\
+\vspace{5mm}
+\textbf{Activity: Little Women} \\
+Again, I was really unsure about this activity. I read through what was required of me and the solutions in the morning of the day I was completing this lesson, and then had to leave the lesson to do something else. When I returned to the lesson in the evening, I tried to write the answer from what I remembered and from my notes on loops and their general structure. What I came up with was \\
+for names in Jo Beth Meg Amy\\
+do\\
+echo \verb|$|name\\
+grep \verb|$|name LittleWomen.txt \textbar{} wc -l\\
+done\\
+When I re-checked the answers I had forgotten to include '-ow' before 'LittleWomen.txt'. I had to use 'man grep' for what -w meant, which is the word is searched for, and -o means only matching. I am still a little unsure about what the second part of the pipe in the loop means.\\
+\vspace{5mm}
+\textbf{Objective: Run the Find Command in a Directory}\\ 
+\textbf{Time Stamp:} 7:00pm 29 August\\
+\textbf{Actions:} With the writing directory as the working one (\~{}/Desktop/data-shell/writing/), I entered 'find .' (with '.' being for the current directory). \\
+\textbf{Results:} This successfully listed the paths of all directories and files in the writing directory (each began with ./) \\
+\textbf{Errors:} None. \\
+\textbf{Solutions/Notes:} It is also possible to find just directories or files. To look for directories enter 'find . -type d', and for files enter 'find . -type f'. I tried both of these in the writing directory, and it printed the appropriate responses for both. \\
+\vspace{5mm}
+\textbf{Objective: Finding a File By Name in the Writing Directory}\\ 
+\textbf{Time Stamp:} 8:30pm 30 August\\
+\textbf{Actions:} I entered 'find . -name '*.txt''.\\
+\textbf{Results:} This successfully printed each of the files in the directory ending in .txt.\\
+\textbf{Errors:} None. \\
+\textbf{Solutions/Notes:} The lesson notes its important to put '*.txt' in quotations, otherwise the shell will just expand the wild card prior to the command being run (i.e. so it would just fill it out to be haiku.txt and just search for that).\\
+\vspace{5mm}
+\textbf{Objective: Combining the Find Command with wc -l}\\ 
+\textbf{Time Stamp:} 8:45pm 30 August\\
+\textbf{Actions:} To print all the files ending in .txt in the directory along with the number of lines they have I entered, 'wc -l \verb|$|(find . -name '*.txt')'. The lesson explains that the shell runs the brackets first and gets that output, and then runs that with 'wc -l' \\
+\textbf{Results:} This successfully printed each of the files ending in .txt with the number of lines it has. \\
+\textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Activity:} \\
-text\\
+\textbf{Objective: Using find and grep Together}\\ 
+\textbf{Time Stamp:} 8:50pm 30 August\\
+\textbf{Actions:} This combination of find and grep aims to find all the pdb files in the data-shell directory that contain 'FE' (iron atoms). To do this, 'grep "FE" \verb|$|(find .. -name '*.pdb')' was entered.\\
+\textbf{Results:} This successfully printed the path of the file and the contents of the line in which 'FE' appears. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity: Matching and Subtracting} \\
+I think it would be option 1 'find data -name '*s.txt' \textbar{} grep -v net', as option 2 doesn't have *s.txt in quotations which is important and option 3 is searching for files ending in *s.txt that don't contain the word 'temp' rather than 'net'. I think the solution confirms this is correct. I tested all the options in the directory, 1 printed the location of all the files ending in .txt that don't contain net, option 2 didn't print anything and option 3 print a whole heap of information which I think was all the lines of all the files ending in .txt which don't contain temp. \\
+\vspace{5mm}
+The lesson notes there are ways to extract text drom data saved in other formats for processing in the Unix Shell. \\
+\vspace{5mm}
+\textbf{Activity: Pipeline Reading Comprehension} \\
+The script will first expand *.dat to be all the file names in the current directory ending in .dat. It will then list each of these files with the number of lines they contain (wc -l) ordering them from least amount of lines to most amount of lines (sort -n). This is correct as confirmed by the solution.\
+\vspace{5mm}
+\textbf{Activity: Finding Files with Different Properties} \\
+I wasn't really sure so consulted the solution. It reads 'find ./ -type f -mtime -1 -user ahmed'. I didn't think to put './' to search in the current and directory below, but this command makes sense to me.\\ To answer the question in the activity, -mtime would have to be negative as 'man find' explains that it evaluates the difference between the entering of the command and the time the file was last updated in 24 hour periods, rounding them upwards. Therefore, as this specific command is seeking to find files modified in the last 24 hours, it would have to be a negative number (-1 specifically).\\
 \vspace{5mm}
 
 
