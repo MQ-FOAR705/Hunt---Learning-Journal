@@ -3,6 +3,7 @@
 \usepackage{ragged2e}
 \usepackage{hyperref}
 
+
 \title{\textbf{LEARNING JOURNAL}}
 \author{Emily Hunt 44888619}
 \date{August 2019}
@@ -73,7 +74,8 @@ To view on Overleaf \url{https://www.Overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Actions:} Add \verb|\usepackage{hyperref}| to the preamble. To insert the link, include in the source, \verb|\url{link goes here}|.\\
 \textbf{Results:} A link was successfully created.\\
 \textbf{Errors:} None\\
-\textbf{Solutions/Notes:}
+\textbf{Solutions/Notes:} To include a link in text to a website, insert \\
+\verb| \href{link goes here}{Text You Want to Appear Goes Here}|.
 
 \subsection{Objective: Download a .tex File}
 \textbf{Time Stamp:} 12:00pm 13 August\\
@@ -108,7 +110,7 @@ To view on Overleaf \url{https://www.Overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Actions:} With the hyperref package already in the preamble, insert \verb|\autoref{sec:nameforlink}| where you want the link to be, and \verb|\label{sec:nameforlink}| behind the section/subsection command of the section/subsection you want to link to. This command will make the link be 'section/subsection no'.\\
 \textbf{Results:} The link was created successfully.\\
 \textbf{Errors:} None\\
-\textbf{Solutions/Notes:} This was a useful resource, \url{https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing#Sections} as recommended by Brian. This also works for images, if I switch 'sec' to 'fig'.
+\textbf{Solutions/Notes:} This was a useful resource, \url{https://en.wikibooks.org/wiki/LaTeX/Labels_and_Cross-referencing#Sections} as recommended by Brian. This also works for images, if I switch 'sec' to 'fig'. To link to a specific page, use \verb|\pageref{name of link}| to create the clickable link and use \verb|\label{name of link}| to label where you want to link to.
 
 \subsection{Objective: Adding a Commit Description from An Overleaf Push}\label{sec:description}
 \textbf{Time Stamp:} 1:05pm 23 August\\
@@ -122,7 +124,7 @@ To view on Overleaf \url{https://www.Overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Actions:} Use a percentage symbol and then type the comment. \\
 \textbf{Results:} The comment was added successfully - it appeared in green and cannot be seen in the rendered pdf.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} It was suggested in class if we find code from online sources to put a comment with where we found them for future reference. If I decide I would like the comments to appear in the margin of a document, refer to this source for how to do it,\\ \url{https://www.overleaf.com/blog/619-tip-of-the-week-add-inline-or-margin-comments-to-your-pdf}
+\textbf{Solutions/Notes:} It was suggested in class if we find code from online sources to put a comment with where we found them for future reference. If I decide I would like the comments to appear in the margin of a document, \href{https://www.overleaf.com/blog/619-tip-of-the-week-add-inline-or-margin-comments-to-your-pdf}{Click Here} for a resource on how to do it.
 
 \subsection{Objective: Delete a File}
 \textbf{Time Stamp:} 10:20pm 25 August\\
@@ -141,14 +143,28 @@ To view on Overleaf \url{https://www.Overleaf.com/read/mbyzzhcjkmtv}
 \verb|\end{figure}|\\
 \textbf{Results:} When typing in \verb|\includegraphics . . .| the line auto completed with the image file name. The image was successfully put into the document. I then played around with the image width until I was happy with the size.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} If I want to sort my images if I have a large number in the file, I can click the New Folder button next to the Upload button in the top left hand corner of the Overleaf file. For more information, go to \url{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}. Removing htp from the code put the image in the middle of my text.
+\textbf{Solutions/Notes:} If I want to sort my images if I have a large number in the file, I can click the New Folder button next to the Upload button in the top left hand corner of the Overleaf file. For more information, go to \url{https://www.overleaf.com/learn/how-to/Including_images_on_Overleaf}. Removing htp from the code put the image in the middle of my text. To label the image for cross references, I included \verb|\label{fig:colourmaps}| in the line before \verb|\end{figure}|.
 
-\subsection{Objective: Add a Special Character (\textbar{})}
+\subsection{Objective: Add a Special Character (\textbar{})}\label{sec:space}
 \textbf{Time Stamp:} 1:50pm 29 August\\
 \textbf{Actions:} I wanted to add a \textbar{} in my text when completing the objectives and activities for The Unix Shell lesson, and I didn't initially realise when I was just entering \textbar{} it was appearing as |. So where I wanted them appear I inserted \verb|\textbar{}| in the text. \\
 \textbf{Results:} When I recompiled the file, this inserted a \textbar{} successfully.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} For ways to insert other special characters see, \url{https://en.wikibooks.org/wiki/LaTeX/Special_Characters}. An issue I had was that there was not space between \textbar{} and the next word. Adding \verb|{}| after \verb|\textbar| fixed this issue.
+
+\subsection{Objective: Insert a Title Page}
+\textbf{Time Stamp:} 10:30pm 3 September\\
+\textbf{Actions:} I searched LaTeX title pages on Google which took me to this site \url{https://www.latextemplates.com/cat/title-pages}. I looked through the options and decided I liked the Vertical Line Title Page so I clicked on the link to the Full Template Description and Download. I then clicked the Open in OverLeaf button, and copied the appropriate part of the code, including the comments, and inserted it after \verb|\begin{document}|. I typed what I wanted to appear on the title page in the appropriate section of the code and deleted the part of it that had a logo down the button. \\
+\textbf{Results:} The titled page was created successfully.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}
+
+\subsection{Objective: Make the Sections, Subsections etc. Different Colours}
+\textbf{Time Stamp:} 11:00pm 4 September\\
+\textbf{Actions:} After some searching on Google, I found this site \url{https://tex.stackexchange.com/questions/75667/change-colour-on-chapter-section-headings-lyx}. So I inserted \verb|\usepackage{sectsty}| and \verb|\usepackage{xcolor}|, as well as \verb|\sectionfont{\color{pink}| in the preamble.\\
+\textbf{Results:} This successfully coloured the sections pink. I think did the same thing with the subsections and the subsubsection, colouring them blue and cyan respectively.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} 
 
 \pagebreak
 
@@ -365,61 +381,60 @@ Following the steps just outlined, I will attempt to add my own rule to another 
 \textbf{Actions:} Type 'ls -G' and press enter.\\
 \textbf{Results:} The directories appeared in purple/blue. \\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} This option can be combined with the one in the previous objective. Typing 'ls -G -F' both colours the directories and puts a slash behind them.\\
+\textbf{Solutions/Notes:} This option can be combined with the one in the previous objective. Typing 'ls -G -F' both colours the directories and puts a slash behind them. It can also be entered ls -GF.\\
 \vspace{5mm}
 \textbf{Objective: Getting Help}\label{sec:help}\\ 
 \textbf{Time Stamp:} 1:15pm 25 August\\
 \textbf{Actions:} I typed 'ls --help' and pressed enter.\\
-\textbf{Results:} \\
-\textbf{Errors:} This produced the response 'ls: illegal option'\\
-\textbf{Solutions/Notes:} I just tried typing 'help' and this produced information on how to use different commands. At the start of this is also different help commands for specific problems (e.g. use 'info bash' to find out more about the shell in general). Also, typing 'man ls' produces a lot of information, however, I couldn't enter a command after this and had to exit Terminal and start again. The lesson says to quit the man pages, press 'Q'. I can also find help online.\\
+\textbf{Results/Errors:} This produced the response 'ls: illegal option'.\\
+\textbf{Solutions/Notes:} I just tried typing 'help' and this produced information on how to use different commands. At the start of this is also different help commands for specific problems (e.g. use 'info bash' to find out more about the shell in general). Also, typing 'man ls' produces a lot of information, however, I couldn't enter a command after this and had to exit Terminal and start again. The lesson says to quit the man pages, press 'Q'. I can also find help online. For the manual for a specific command type 'man thecommandname'. e.g. 'man grep'.\\
 \vspace{5mm}
 \textbf{Objective: Exploring More ls Flags (Activity)}\\ 
 \textbf{Time Stamp:} 1:32pm 25 August\\
 \textbf{Actions:} I typed 'ls -l' and pressed enter, and then tried 'ls -l -h' and pressed enter.\\
 \textbf{Results:} 'ls 'l' produced extra information with the files/directories in the home directory, such as the date of creation, their owner, and what appears to be the owner's permissions (staff appeared next to Emily for all of them). 'ls -l -h' converted what appeared as just a number for 'ls -l' into a file size expressed in B/K (human readable).\\
-\textbf{Errors:} \\
+\textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
 \textbf{Objective: Listing Recursively and By Time (Activity)}\\ 
 \textbf{Time Stamp:} 1:45pm 25 August\\
 \textbf{Actions:} I typed 'ls -t' and pressed enter. Then I tried 'ls -R' and pressed enter, and finally 'ls -R -t'.\\
 \textbf{Results:} 'ls -t' ordered the files and directories in my home directory from most recently changed to least recently changed. 'ls -R' produced a really long list which the lesson informed me is the contents of all the directories. 'ls -R -t', as the lesson says, sorted the 'files/directories in each directory . . by time of last change'.\\
-\textbf{Errors:} \\
+\textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
 \textbf{Objective: Seeing the Contents of a Different Directory}\\ 
 \textbf{Time Stamp:} 2:40pm 25 August\\
 \textbf{Actions:} I typed 'ls -F Desktop' to see the contents of my desktop. \\
 \textbf{Results:} The response was a list of all the files and directories on my desktop, with all the directories indicated with a /. \\
-\textbf{Errors:} \\
+\textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} To look at a sub-directory put a slash and then the name of that directory e.g to look at the data-shell directory on the desktop, type 'ls -F Desktop/data-shell' and press enter.\\
 \vspace{5mm}
 \textbf{Objective: Change the Working Directory Using a Relative Path}\\
 \textbf{Time Stamp:} 2:50pm 25 August\\
 \textbf{Actions:} This will use the 'cd' command (change directory). I typed 'cd Desktop' and pressed enter, typed 'cd data-shell' and pressed enter, and then typed 'cd data' and pressed enter.\\
 \textbf{Results:} This change of working directory was successful, which I was able to identify in a number of ways. Firstly, there was no text response. Secondly, when the prompt appeared after each command, before \verb|Emily$| the name of the directory I had made the working directory appeared. Thirdly, when I entered 'pwd' after completing all the actions, /Users/Emily/Desktop/data-shell/data appeared. \\
-\textbf{Errors:} \\
-\textbf{Solutions/Notes:} This process can also be combined into one line, 'cd Desktop/data-shell/data'. To return to the home directory, just type 'cd' and press enter.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} To combine this process into one line, see the next objecive.. To return to the home directory, just type 'cd' and press enter.\\
 \vspace{5mm}
-\textbf{Objective: Change the Working Directory Using an Absolute Path}\label{sec:absolute}\\ 
+\textbf{Objective: Change the Working Directory Using an Absolute Path}\label{absolute}\\ 
 \textbf{Time Stamp:} 4:00pm 25 August\\
 \textbf{Actions:} Beginning with /Users/Emily, type 'cd' and then the path to the directory I want to make the working one e.g. /Users/Emily/Desktop/data-shell \\
 \textbf{Results:} When the example was used this was successful, as determined by using the same tests as for the previous objective.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} This allows me to make this the working directory from anywhere, even when I am inside one of the subdirectories of the directory I want to be the working one. Instead of /Users/Emily/, I can just use ~ (stands for current user's home directory)(can only be at the front of a command). Another shortcut is also - for the previous directory. e.g. cd -\\
+\textbf{Solutions/Notes:} This allows me to make this the working directory from anywhere, even when I am inside one of the subdirectories of the directory I want to be the working one. Instead of /Users/Emily/, I can just use \~{} (stands for current user's home directory)(can only be at the front of a command). Another shortcut is also - for the previous directory. e.g. cd -\\
 \vspace{5mm}
 \textbf{Activity: Absolute vs Relative Paths}\\ 
 Amanda could use these commands to navigate to her home directory
 \begin{itemize}
     \item 2. cd /
-    \item 5. cd ~
+    \item 5. cd \~{}
     \item 8. cd
 \end{itemize}
-Looking at the solutions, these are correct, but she could have also used 7. cd ~/data/.. (although this is unnessarily complicated) and 9. cd ..\\
+Looking at the solutions, these are correct, but she could have also used 7. cd \~{}/data/.. (although this is unnessarily complicated) and 9. cd ..\\
 \vspace{5mm}
 \textbf{Activity: Relative Path Resolution}\\
-The command will display 4. original/ pnas\textunderscore final/ pnas\textunderscore sub/. This is correct, as the .. is in references to a higher directory.\\
+The command will display 4. original/ pnas\textunderscore final/ pnas\textunderscore sub/. This is correct, as the .. is in reference to a higher directory.\\
 \vspace{5mm}
 \textbf{Activity: Reading Comprehension}\\
 I think 2. ls -r -F, will produce the output listed. Looking at the solution, this is correct, but 3. ls -r -F /Users/backup could also have been used.\\
@@ -454,12 +469,12 @@ I think 2. ls -r -F, will produce the output listed. Looking at the solution, th
 \vspace{5mm}
 \textbf{Objective: Renaming a File}\\ 
 \textbf{Time Stamp:} 7:42pm 25 August\\
-\textbf{Actions:} I first had to return to the data-shell directory by entering 'cd ~/Desktop/data-shell'. To rename draft.txt in the thesis directory to quotes.txt, enter 'mv thesis/draft.txt thesis/quotes.txt'. \\
+\textbf{Actions:} I first had to return to the data-shell directory by entering 'cd \~{}/Desktop/data-shell'. To rename draft.txt in the thesis directory to quotes.txt, enter 'mv thesis/draft.txt thesis/quotes.txt'. \\
 \textbf{Results:} This was successful as entering 'ls thesis' produced the response my\textunderscore file.txt and quotes.txt \\
 \textbf{Errors:} None. \\
 \textbf{Solutions/Notes:} The lesson says to use mv -i or mv --interactive to get a confirmation message before overwriting, but neither of these worked when I tested them on the quote.txt file.\\
 \vspace{5mm}
-\textbf{Objective: Moving a Files}\\ 
+\textbf{Objective: Moving a File}\\ 
 \textbf{Time Stamp:} 8:00pm 25 August\\
 \textbf{Actions:} The goal was to move quotes.txt into the current working directory (data-shell). I entered 'mv thesis/quotes.txt .' (the dot specifies the current directory; mv stands for move)\\
 \textbf{Results:} This was successful as entering 'ls thesis' produced only my\textunderscore file.txt as a response, and as per the lesson instructions, entering 'ls quotes.txt' produced quotes.txt as a response. \\
@@ -512,8 +527,8 @@ I tried entering 'rm -i thesis\textunderscore backup/quotations.txt' While -i di
 \textbf{Solutions/Notes:} I then tried entering 'cp planets.txt salmon.txt sunspot.txt backup/' to see if this would work with three files if the last argument was a directory. This worked successfully. I then tried deleting these three files using 'rm backup/planets.txt salmon.txt sunspot.txt'. This only deleted planets.txt. So I then tried 'rm backup/salmon.txt backup/sunspot.txt', and this successfully deleted the files.\\
 \vspace{5mm}
 \textbf{Activity: Wildcards - Listfilenames matching a pattern}\\
-I first made the data-shell/molecules directory the working one by entering 'cd /Users/Emily/Desktop/data-shell/molecules'. The Wildcards information box is very useful, but to summarise, *.pdb would match (in this directory) every file that ends with .pdb, whereas p*.pdb would only match pentane.pdb and propane.pdb. As ? only matches one character, ?ethane.pdb would match methane.pdb, ???ane.pdb could also be used, which matches cubane.pdb ethane.pdb octane.pdb\\
-The command which produce the output ethane.pdb methane.pdb in this directory, would be 1. ls *t*ane.pdb. Reviewing the solution the answer was actually 3. ls *t??ne.pdb. Upon reflection, this makes sense to me, as I didn't consider the files that weren't chosen when choosing my answer.\\
+I first made the data-shell/molecules directory the working one by entering 'cd /Users/Emily/Desktop/data-shell/molecules'. The Wildcards information box is very useful, but to summarise, *.pdb would match (in this directory) every file that ends with .pdb, whereas p*.pdb would only match pentane.pdb and propane.pdb. As ? only matches one character, ?ethane.pdb would match methane.pdb, ???ane.pdb could also be used, which matches cubane.pdb, ethane.pdb and octane.pdb\\
+The command which produces the output ethane.pdb methane.pdb in this directory, would be 1. ls *t*ane.pdb. Reviewing the solution the answer was actually 3. ls *t??ne.pdb. Upon reflection, this makes sense to me, as I didn't consider the files that we exluded from the search when choosing my answer.\\
 \vspace{5mm}
 \textbf{Activity: More on Wildcards}\\
 My responses to this activity were:\\
@@ -557,7 +572,7 @@ I think the first two options would achieve the outlined objective. The issue wi
 \textbf{Solutions/Notes:} This command prints the entire contents of the file to the screen. To view a file page by page, use the command 'less lengths.txt'. To go forward a page, press the space bar, and go back a page, press 'b'. To exit, press 'q'. Also, to get a specific number of lines enter, for example, 'head -n 1 filename.extension' (for the first line) or 'head -n 20 filename.extension' (for the first 20 lines).\\
 \vspace{5mm}
 \textbf{Activity: What Does Sort -n Do?}\\
-Looking at the outputs, the addition of -n, has sorted the contents of the file numerically. The solution confirms that 'the -n option specifies a numerical rather than an alphanumerical sort'.\\
+Looking at the outputs, the addition of -n, has sorted the contents of the file is ascending order in relation to the number at the start of each line. The solution confirms that 'the -n option specifies a numerical rather than an alphanumerical sort'.\\
 \vspace{5mm}
 \textbf{Objective: Sorting the Contents of a File Numerically and Then Putting this in a New File}\\ 
 \textbf{Time Stamp:} 6:50pm 26 August\\
@@ -588,7 +603,7 @@ The pipeline provided (for the data-shell/data directory) was 'cat animals.txt \
 The cut command can remove sections of each line (and is based on the expectation the lines will be separated into tab columns)(this is called a delimiter). In the command 'cut -d , -f 2 animals.txt', '-d' is used to indicate the comma as the delimiter character at where to cut, and the '-f' extract the second column. The uniq command deletes any consecutive double ups of lines in a file. The question said, what could I add to the 'cut -d , -f 2 animals.txt' command to find out what animals the file contains (without any duplicates in their names)? At first I was really unsure of the answer as I didn't really understand either what I was being asked to do, or exactly what the uniq command did (filters out adjacent matching lines in a file). When looking at the answer, I now understand that adding '\textbar{} sort \textbar{} uniq' to the end of the command, would allow the files to be sorted alphabetically, which would then allow the uniq command to identify and delete any double ups (as they would now be consecutive through the sorting). \\
 \vspace{5mm}
 \textbf{Activity: Which Pipe?}\\
-When -c is added to the uniq command, a count is provided of the number of times a line occurs in its input. Based on this to produce a table that shows the total count of each animal in the file animals.txt, I think option 4 (cut -d, -f 2 animals.txt \textbar{} sort \textbar{} uniq -c)would be appropriate This is correct.\\
+When -c is added to the uniq command, a count is provided of the number of times a line occurs in its input. Based on this, to produce a table that shows the total count of each animal in the file animals.txt, I think option 4 (cut -d, -f 2 animals.txt \textbar{} sort \textbar{} uniq -c)would be appropriate This is correct.\\
 \vspace{5mm}
 \textbf{Activity: Wildcard Expressions}\\
 In writing wildcards, putting things in brackets like this [ ] means either or, e.g. *[AB].txt matches files ending in A.txt or B.txt. These are my answers to the questions, in the case I wasn't able to use [].
@@ -619,22 +634,22 @@ done\\
 \textbf{Solutions/Notes:} The lesson suggests an indent for the third line to assist legibility. Each time the loop runs, it assigns a new file name to the filename variable (e.g. in this example, it assigns basilisk.dat then minotaur.dat then unicorn.dat) and runns the command. The variable name (\verb|$filename|) could be anything (e.g. temperature) but it is more beneficial to me to have it as something I can understand. Also, \verb|$filename| is the same as \verb|{$filename}| but different to \verb|${file}name|  \\
 \vspace{5mm}
 \textbf{Activity: Variables in Loops}\\
-I ran the first code (each line of what I entered separated by ;)(for datafile in *.pdb; do; ls *.pdb; done). The output of this, was a list of the filenames repeated six times. In then ran the second code (for datafile in *.pdb; do; ls \verb|$datafile|; done). The output for this was a single list of the files. I think this is because the first command is essentially saying, for each of the files ending in .pdb, list all the files ending in .pdb, whereas the second one is just saying for all the files ending in .pdb list the file name. I think this is correct.\\
+I ran the first code 'for datafile in *.pdb; do; ls *.pdb; done' (each line of what I entered separated by ;). The output of this, was a list of the filenames repeated six times. In then ran the second code (for datafile in *.pdb; do; ls \verb|$datafile|; done). The output for this was a single list of the files. I think this is because the first command is essentially saying, for each of the files ending in .pdb, list all the files ending in .pdb, whereas the second one is just saying for all the files ending in .pdb list the file name. I think this is correct based off what the solution says.\\
 \vspace{5mm}
 \textbf{Activity: Limiting Sets of Files}\\
 The output of the loop listed would be option 4. Only cubane.pdb is listed, as this is indicated by c*. If *c* was used in replacement of c*, octane.pdb would be listed (as this matches *c*) as well as cubane.pdb (as the * before the c can also be 0 like in this instance). Both of these responses are correct as highlighted in the solution.\\
 \vspace{5mm}
-\textbf{Activity:Saving to a File in a Loop - Part One}\\
+\textbf{Activity: Saving to a File in a Loop - Part One}\\
 The effect of this loop would be 4. None of the above, as the output would be saved to a file called alkanes.pdb. This response was incorrect. Option 1 was the correct one (Prints cubane.pdb, ethane.pdb, methane.pdb, octane.pdb, pentane.pdb and propane.pdb, and the text from propane.pdb will be saved to a file called alkanes.pdb.). Upon reviewing the solution this now makes sense to me.\\
 \vspace{5mm}
-\textbf{Activity:Saving to a File in a Loop - Part Two}\\
+\textbf{Activity: Saving to a File in a Loop - Part Two}\\
 While I originally thought option 1 was the correct output of the loop listed (All of the text from cubane.pdb, ethane.pdb, methane.pdb, octane.pdb, and pentane.pdb would be concatenated and saved to a file called all.pdb), I didn't realise that propane.pdb was not included in this option. Therefore option 3 is correct as it says all of the files (including propane.pdb) would be concatenated and saved to a file called all.pdb. This was correct.\\
 \vspace{5mm}
 \textbf{Objective: Run a More Complicated Loop}\\ 
 \textbf{Time Stamp:} 9:40pm 27 August\\
 \textbf{Actions:} The loop to be run will attempt to list the name of every file ending in .dat in the creatures directory, and then print lines 81-100 of these files. To do this I typed each of these lines and pressed enter:\\
 for filename in *.dat\\
-do]]
+do \\
 echo \verb|$filename|\\
 head -n 100 \verb|$filename| \textbar{} tail -n 20\\
 done\\
@@ -644,7 +659,7 @@ done\\
 \vspace{5mm}
 \textbf{Objective: Make a Copies of Original Files Using a Loop}\\ 
 \textbf{Time Stamp:} 10:00pm  27 August\\
-\textbf{Actions:} The aim of this objective is to make a copy of each of the files in the creatures directory, with the name of the copy being original-originalfilename.dat (e.g. the copy of basilisk.dat will be original-basilisk.dat). This cannot simply be achieved be entering 'cp *dat original-*.dat' as cp has received more than two output nd expects the last to be a directory to copy the files to (which it isn't). Therefore, to achieve this aim this loop was entered\\
+\textbf{Actions:} The aim of this objective is to make a copy of each of the files in the creatures directory, with the name of the copy being original-originalfilename.dat (e.g. the copy of basilisk.dat will be original-basilisk.dat). This cannot simply be achieved be entering 'cp *dat original-*.dat' as cp has received more than two outputs and expects the last to be a directory to copy the files to (which it isn't). Therefore, to achieve this aim this loop was entered\\
 for filename in *dat\\
 do\\
 cp \verb|$filename| original-\verb|$filename|\\
@@ -686,7 +701,7 @@ This produced directories labelled e.g. cubane-25, cubane-30, cubane-37 and cuba
 \textbf{Time Stamp:} 7:50pm 28 August\\
 \textbf{Actions:} The shell created will attempt to select lines 11-15 of the file octane.pdb in the molecules directory which has been set as the working one. Firstly, I created a new file called middle.sh which will be the shell script by entering 'nano middle.sh'. This opens and creates the file in nano within Terminal. I then entered 'head -n 15 octane.pdb \textbar{} tail -n 5'. I then saved the file by pressing control 'O' and then enter, and exited nano by pressing control 'X'. I then entered 'ls' to confirm the file had been created. To run the shell script, I entered 'bash middle.sh'. \\
 \textbf{Results:} This was successful as the lines 11-15 fro the file were printed to the screen, as they appear in the lesson. \\
-\textbf{Errors:} None/\\
+\textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
 \textbf{Objective: Edit the Shell Script from the Previous Objective to Run on Arbitrary Files}\\ 
@@ -708,7 +723,7 @@ This produced directories labelled e.g. cubane-25, cubane-30, cubane-37 and cuba
 \textbf{Actions:} I opened the shell script from the previous objective, entering 'nano middle.sh'. At the top, I added a comment by starting the line with '\verb|#|'. As suggested in the lesson, I entered\\
 \verb|#| Select lines from the middle of a file.\\
 \verb|#| Usage: bash middle.sh filename end\textunderscore line num\textunderscore lines\\
-I then saved this and exited nano.
+I then saved this and exited nano.\\
 \textbf{Results:} The addition of the comment was successful as when I ran the shell is still worked as intended, and when I opened it in nano again the comment appeared. \\
 \textbf{Errors:} Comments are very useful in assisting other people and myself identify what a shell script does. It is useful to include both what a shell script does and how it should be used as in this example. However, everytime I change a shell script, I need to make sure I change the comment. \\
 \textbf{Solutions/Notes:}\\
@@ -720,7 +735,7 @@ I then saved this and exited nano.
 \verb|#| Usage: bash sorted.sh one\textunderscore or\textunderscore more\textunderscore filenames.\\
 Underneath this I then entered the command\\
 wc -l \verb|"$@"| \textbar{} sort -n\\
-I then saved this and exited nano. I then entered 'bash sorted.sh *.pdb ../creatures/*.dat' to run the shell script.
+I then saved this and exited nano. I then entered 'bash sorted.sh *.pdb ../creatures/*.dat' to run the shell script.\\
 \textbf{Results:} This successfully sorted all the files ending in *pdb by their length.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
@@ -736,7 +751,7 @@ echo "Unique species in \verb|$file|:"\\
 \verb|#| Extract species names\\
 cut -d , -f 2 \verb|$file|\textbar{} sort \textbar{} uniq\\
 done\\
-Reading this made sense to me, but I realised I didn't remember as much of the information from the loops lesson as I would have liked, so I will now go back and review my notes from that lesson.
+Reading this made sense to me, but I realised I didn't remember as much of the information from the loops lesson as I would have liked, so I will now go back and review my notes from that lesson.\\
 \vspace{5mm}
 \textbf{Objective: Save Previous Commands in a File to Use for a Shell Script}\\ 
 \textbf{Time Stamp:} 9:10pm 28 August\\
@@ -748,11 +763,11 @@ Reading this made sense to me, but I realised I didn't remember as much of the i
 \textbf{Activity: Why Record Commands in the History Before Running Them?} \\
 I think commands are saved to the command log before being run so that if any errors occur during the running of the command, the command can still be recovered. The solution confirmed this was right stating, 'if a command causes something to crash or hang, it might be useful to know what that command was, in order to investigate the problem'.\\
 \vspace{5mm}
-\textbf{Activity: Variables in Shell Scripts} \\
-I think the correct answer is option 2. he first and the last line of each file ending in .pdb in the molecules directory. As the two ones would be in the place of the \verb|$2| and \verb|$3|, meaning the first and last lines of the files would be printed, and '*.pdb' means these would be printed for each file in the directory ending in .pdb. The solution confirms this to be correct.\\
+\textbf{Activity: Variables in Shell Scripts}\\
+I think the correct answer is option 2. The first and the last line of each file ending in .pdb in the molecules directory. This is because the two 1s would be in the place of the \verb|$2| and \verb|$3|, meaning the first and last lines of the files would be printed, and '*.pdb' means these would be printed for each file in the directory ending in .pdb. The solution confirms this to be correct.\\
 \vspace{5mm}
 \textbf{Activity: Find the Longest File With a Given Extension} \\
-I began this activity on 28 August and got really stuck and looked at the solution. I returned the next day and tried to answer the question from both what I could remember of the solution and by looking at my notes. I was able to get the answer, 'wc -l \verb|$1/*.$2| | sort -n | tail -n 2 | head -n 1'. Creating scripts is something I really need to work on. I didn't think to write comments with my script, the lesson suggested;\\
+I began this activity on 28 August and got really stuck and looked at the solution. I returned the next day and tried to answer the question from both what I could remember of the solution and by looking at my notes. I was able to get the answer, 'wc -l \verb|$1/*.$2| \textbar{} sort -n \textbar{} tail -n 2 \textbar{} head -n 1'. Creating scripts is something I really need to work on. I didn't think to write comments with my script, the lesson suggested;\\
 \verb|#| Shell script which takes two arguments:\\
 \verb|#| 1. a directory name\\
 \verb|#| 2. a file extension\\
@@ -856,15 +871,16 @@ When I re-checked the answers I had forgotten to include '-ow' before 'LittleWom
 \textbf{Activity: Matching and Subtracting} \\
 I think it would be option 1 'find data -name '*s.txt' \textbar{} grep -v net', as option 2 doesn't have *s.txt in quotations which is important and option 3 is searching for files ending in *s.txt that don't contain the word 'temp' rather than 'net'. I think the solution confirms this is correct. I tested all the options in the directory, 1 printed the location of all the files ending in .txt that don't contain net, option 2 didn't print anything and option 3 print a whole heap of information which I think was all the lines of all the files ending in .txt which don't contain temp. \\
 \vspace{5mm}
-The lesson notes there are ways to extract text drom data saved in other formats for processing in the Unix Shell. \\
+The lesson notes there are ways to extract text from data saved in other formats for processing in the Unix Shell. \\
 \vspace{5mm}
 \textbf{Activity: Pipeline Reading Comprehension} \\
-The script will first expand *.dat to be all the file names in the current directory ending in .dat. It will then list each of these files with the number of lines they contain (wc -l) ordering them from least amount of lines to most amount of lines (sort -n). This is correct as confirmed by the solution.\
+The script will first expand *.dat to be all the file names in the current directory ending in .dat. It will then list each of these files with the number of lines they contain (wc -l) ordering them from least amount of lines to most amount of lines (sort -n). This is correct as confirmed by the solution.\\
 \vspace{5mm}
 \textbf{Activity: Finding Files with Different Properties} \\
 I wasn't really sure so consulted the solution. It reads 'find ./ -type f -mtime -1 -user ahmed'. I didn't think to put './' to search in the current and directory below, but this command makes sense to me.\\ To answer the question in the activity, -mtime would have to be negative as 'man find' explains that it evaluates the difference between the entering of the command and the time the file was last updated in 24 hour periods, rounding them upwards. Therefore, as this specific command is seeking to find files modified in the last 24 hours, it would have to be a negative number (-1 specifically).\\
-\vspace{5mm}
 
+\section{Elaboration Testing}
+For the results of the Elaboration Testing, please see the Elaboration Document submitted to iLearn, CloudStor and in my GitHub Repository. To access it on OverLeaf, please use this link \url{https://www.overleaf.com/read/bkhpthjqbtdr}
 
 \pagebreak
 
@@ -873,8 +889,9 @@ I wasn't really sure so consulted the solution. It reads 'find ./ -type f -mtime
 
 \subsubsection{Useful Errors}
 \autoref{sec:underfull} Underfull /hbox (badness ****) in paragraph at lines **\\
-\autoref{sec:logcommand} Log Command Has Changed
-\autoref{sec:description} Commit From Overleaf not Appearing in GitHub
+\autoref{sec:logcommand} Log Command Has Changed\\
+\autoref{sec:description} Commit From Overleaf not Appearing in GitHub\\
+\autoref{sec:space} No Space in Text Behind Special Characters
 
 \subsubsection{Error: Overfull hbox (**pts too wide) in paragraph at lines **}
 \textbf{Errors:} This error keeps appearing down the left hand side of the document where the lines are shown.\\
@@ -915,7 +932,7 @@ Prior to attempting a solution, I asked advice from Brian on Slack.\\
 \subsubsection{Error: Not Being Able to Move Up a Directory After Changing Working Directory (Using a Relative Path)}
 \textbf{Time Stamp:} 3:20pm 25 August\\
 \textbf{Actions:} I typed 'cd . .' and pressed enter. \\
-\textbf{Results:} At first this didn't work and the response was 'command not found'. I then realised that there are not meant to be spaces between the dots and tried 'cd ..'. This worked and the prompt appeared with the parent (the directory containing) of the directory I had changed to the working directory. Also see Objective: Change the Working Directory Using an Absolute Path in \autoref{sec:absolute}\\
+\textbf{Results:} At first this didn't work and the response was 'command not found'. I then realised that there are not meant to be spaces between the dots and tried 'cd ..'. This worked and the prompt appeared with the parent (the directory containing) of the directory I had changed to the working directory. Also see Objective: Change the Working Directory Using an Absolute Path on page \pageref{absolute}\\
 \textbf{Notes:} To be able to see the special directory (..) when running ls, type 'ls -F -a' (show all). In the response, the single dot is the current working directory. '.bash\textunderscore profile' is the file containing shell configuration settings and other files may have dots in front of them (see Navigating Files and Directories lesson for more details). To summarise .. means 'the directory above the current one' and . means 'the current directory'.
 
 \subsubsection{Word Count Command Not Working}
