@@ -882,6 +882,171 @@ I wasn't really sure so consulted the solution. It reads 'find ./ -type f -mtime
 \section{Elaboration Testing}
 For the results of the Elaboration Testing, please see the Elaboration Document submitted to iLearn, CloudStor and in my GitHub Repository. To access it on OverLeaf, please use this link \url{https://www.overleaf.com/read/bkhpthjqbtdr}
 
+\section{OpenRefine for Social Science Data}
+\subsection{Introduction}
+\textbf{Objective: Install OpenRefine}\\ 
+\textbf{Time Stamp:} 2:07pm 6 September\\
+\textbf{Actions:} From the lesson, I followed the link to \url{http://openrefine.org}. In the left sidebar of this page, I selected download. Then on the page this took me to under OpenRefine 3.2, I clicked on Mac kit, which began automatically downloading. I then followed the instructions give on the site, by opening the file that had downloaded, dragging the OpenRefine icon to the Applications folder and double clicked it. \\
+\textbf{Results:} OpenRefine was downloaded successfully, and opened without any errors. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Download the Data File Required for the Lessons}\\ 
+\textbf{Time Stamp:} 2:10pm 6 September\\
+\textbf{Actions:} On the setup page of the lesson, I clicked the link to download the file to my computer.\\
+\textbf{Results:} The file was downloaded successfully, and I moved it to the folder on my desktop with my documents for this unit. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+
+\subsection{Working with OpenRefine}
+\textbf{Objective: Create a New Project}\\ 
+\textbf{Time Stamp:} During class 6 September\\
+\textbf{Actions:} I launched OpenRefine by clicking on the application in my Applications folder. In the sidebar, I clicked Create Project. I then selected Get Data from This Computer and then Choose Files. I navigated to where I saved the dataset, selected it and clicked Choose. Then I clicked Next. This took me to a page with a preview of the dataset. It is good to have a look at the preview to see whether it is appearing as you expect it to. OpenRefine should read excel files directly but it is good to use csv files. In the lower right hand side of the screen, is an option for 'line(s) as column headers' (along with other settings) - I have to let it know if I have more than one row as a heading. If I change any settings, click Update Preview. Then I clicked Create Prokect in the upper right hand corner. \\
+\textbf{Results:} The project was created successfully. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} To reopen the project after closing the browser, reopen the application and in the sidebar, select Open Project, and click on the name of the project (in blue) you want to open.\\
+\vspace{5mm}
+\textbf{Objective: Use a Text Facet for the Village Column}\\ 
+\textbf{Time Stamp:} During class 6 September\\\
+\textbf{Actions:} At the top of the village column, I clicked the down arrow to see the drop down menu. I selected Facet and the Text Facet.\\
+\textbf{Results:} This produced a list in the left panel of every unique value in the village column and the number of times it occurs. By clicking on name and count at the top of the list I was able to switch between sorting the list alphabetically and numerically by the number of times each value appears. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The problems with this data is the entry 49, and the spellings of Ruaca-Nhamuenda v Ruaca - Nhamuenda, Chirdozo v Chirodzo and Ruca v Ruaca. To edit these, I could hover the mouse over the individual name, click edit and then change the name, but the lesson will now show a better approach to fixing these issues. \\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+1. There are 19 different values in the interview\textunderscore date column.\\
+2. The column is formatted as text, as we haven't yet told OpenRefine that it isn't text (text is the default).\\
+3. To change the format of the column to dates, I went to the column header and selected the drop down menu, clicking Edit Cells, Common Transforms, and then To Date. This turned the column green.\\
+4. To see when most of the interviews were collected, I again selected the drop down menu, and clicked Timeline Facet. This produced a timeline display in the side panel. The date order is YEAR MONTH DAY TIME. The graph shows that most of the interviews were collected November 2016. I can move the handles at the end of the graph to focus the records being looked at, as it will only display those from the period highlighted in the graph. I can drag this along.\\
+To learn more about facets go to \url{https://github.com/OpenRefine/OpenRefine/wiki/Faceting} and the Examining Numbers in Open Refine Lesson (\autoref{sec:numbers})\\
+\vspace{5mm}
+\textbf{Objective: Use a Cluster to Detect Possible Typing Errors in the Village Column}\\ 
+\textbf{Time Stamp:} During class 6 September\\\
+\textbf{Actions/Results:} In the village Text Facet in the side panel I created in one of the previous objectives, I clicked the cluster button. A pop up appeared. I made sure the key collision method was selected and then played around with the keying function. I selected the metaphone3 keying function which identified two clusters. I selected the Merge? tick boxes beside these two clusters and selected the Merge Selected and Recluster button. This merged the two clusters. Selecting the various keying functions identified no more clusters. Closing the pop up, in the Text Facet, I edited Chirdozo to Chirodzo and Ruaca-Nhamuenda to Ruaca (picking the one with the least amount of enteries and changing it to the one with more, indicating it is the correct spelling). This successfully resulted in four total clusters (Chirodzo, God, Ruaca and 49). \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} If I have a big messy data set, start by using the clustering algorithms to see what will automatically merge. However, this may not catch everything and I will have to manually edit as in this exercise. For details on how the algoritms work, see \url{https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth}\\
+\vspace{5mm}
+\textbf{Objective: Transform Data in the items\textunderscore owned Column}\\ 
+\textbf{Time Stamp:} During class 6 September\\
+\textbf{Actions:} I went to the items\textunderscore owned column, selected the drop down menu, clicked Edit Cells and then Transform ... This opened a pop up window with a box to enter a GREL expression (general refine expressing language). The aim will be to remove [ from the beginning of all the entries. To do this I entered value.replace("[", “”) and clicked OK (this says  replace the left bracket with nothing)(a preview of what this will do appeared in the second value column in the preview box below).\\
+\textbf{Results:} . \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} When writing GREL in future, whenever I have trouble just search for and copy the code of others and use it.\\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+From the items\textunderscore owned column remove
+\begin{enumerate}
+    \item The single quote marks - I entered value.replace("'","") and pressed OK.
+    \item The right square brackets - I entered value.replace("]","") and pressed OK.
+    \item The spaces - I entered value.replace(" ","") and pressed OK.
+\end{enumerate}
+\vspace{5mm}
+\textbf{Objective: Use a Text Facet in the items\textunderscore owned Column to See the Items Currently Owned}\\ 
+\textbf{Time Stamp:} 10:27pm 6 September\\
+\textbf{Actions:} I clicked the drop down menu at the top of the items\textunderscore owned column and clicked Facet and then Custom text facet ... In the Expression box I entered value.split(";") and clicked OK.\\
+\textbf{Results:} This successfully produced a new text facet box in the left panel.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+Carrying on from the previous objective, in the text facet box I selected Count to order the values numerically. The two ones at the top were mobile\textunderscore phone (86) and radio (86) meaning they were most commonly owned, while the two ones appearing at the bottom were computer (2) and car (3) meaning they were least commonly owned.\\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+These were the steps I followed to perform the same clean up steps and customized text faceting for the months\textunderscore lack \textunderscore food column:\\
+I went to the months\textunderscore lack \textunderscore food column, selected the drop down menu and clicked Edit Cells and then Transform ...
+ \begin{enumerate}
+    \item I entered value.replace("[","") to remove each of the left square brackets.
+    \item I entered value.replace("]","") to remove each of the right square brackets.
+    \item I entered value.replace("'","") to remove each of the single quote marks.
+    \item I entered value.replace(" ","") to remove each of the spaces.
+    \end{enumerate}
+To create the custom text facet I again selected the drop down menu, clicked Facet and then Custom text facet ... In the expression box I entered value.split(";") and clicked OK.\\
+To find the most common month people lacked food, in the text facet I clicked count. The most frequently occurring was November (71) meaning this was the most common month people lacked food.\\
+After completing this activity, the solution told me I could have combined the replace statements by entering value.replace("[", "").replace("]", "").replace(" ", "").replace("'", "").\\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+The steps I took to complete this exercise were as follows:
+\begin{itemize}
+    \item I went to the months\textunderscore no\textunderscore water column and selected the drop down menu, Edit Cells and then Transform... I tried entering all the replace statements in one go as suggested in the solution to the previous exercise by entering value.replace("[", "").replace("]", "").replace(" ", "").replace("'", "") and selecting OK.
+    \item I went to the liv\textunderscore owned column and selected the drop down menu, Edit Cells and then Transform... Instead of typing in the Expression box, I went to the History tab and clicked Reuse (which appears in blue) next to the GREL expression I used for the months\textunderscore no\textunderscore water column. I then went to the Preview tab to check this would do what I wanted it to, and then clicked OK.
+    \item I repeated the previous step for the res\textunderscore change and no\textunderscore food\textunderscore mitigation columns.
+\end{itemize}
+\vspace{5mm}    
+\textbf{Objective: Use Undo and Redo (Activity)}\\ 
+\textbf{Time Stamp:} 11:00pm 6 September\\
+\textbf{Actions/Results:} In the top left hand side of the screen is Undo/Redo (directly next to Facet/Filter). I clicked Undo/Redo. In the side panel, this produced a numbered list of all the changes I have made, with the most recent being at the bottom of the list (with the highest number). I wanted to try to go back to step 13. Text transform on 86 cells in column months\textunderscore lack\textunderscore food: grel:value.replace(" ","") so I clicked on this number. This highlighted number 13 dark blue, as well as highlighted changes 14-17 light blue and made the text grey. I looked at the column and this had not actually undone step 13 (removed the spaces), but undone steps 14-17. If I clicked on step 12 this resulted in the spaces reappearing in the column. To redo these steps, I clicked on step 17 and then looked at the no\textunderscore food\textunderscore mitigation column. The changes to this column had been successfully reapplied.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} This site (\url{https://github.com/OpenRefine/OpenRefine/wiki/History} informed me that after changes have been undone, as soon as I complete a new one, the changes I undid will be removed from the Undo/Redo history and cannot be redone anymore.\\
+\vspace{5mm}
+\textbf{Objective: Trim Leading and Trailing Whitespace}\\ 
+\textbf{Time Stamp:} 11:12pm 6 September \\
+\textbf{Actions:} I creared a text facet for the respondent\textunderscore wall \textunderscore type column using the same process as in previous objectives. This showed six choices. Some of the values that appear look the same but actually have leading or trailing white space (e.g. burntbricks and muddaub). To remove these I went to the drop down menu at the top of the column, clicked Edit cells, Common transforms and then Trim leading and trailing whitespace. \\
+\textbf{Results:} This successfully now only showed four choices in the text facet. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+
+
+\subsection{Filtering and Sorting with OpenRefine}
+\textbf{Objective: }\\ 
+\textbf{Time Stamp:} \\
+\textbf{Actions:}.\\
+\textbf{Results:} . \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+text\\
+\vspace{5mm}
+
+\subsection{Examining Numbers in OpenRefine}\label{sec:numbers}
+\textbf{Objective: }\\ 
+\textbf{Time Stamp:} \\
+\textbf{Actions:}.\\
+\textbf{Results:} . \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+text\\
+\vspace{5mm}
+
+\subsection{Using Scripts}
+\textbf{Objective: }\\ 
+\textbf{Time Stamp:} \\
+\textbf{Actions:}.\\
+\textbf{Results:} . \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+text\\
+\vspace{5mm}
+
+\subsection{Exporting and Saving Data from OpenRefine}
+\textbf{Objective: }\\ 
+\textbf{Time Stamp:} \\
+\textbf{Actions:}.\\
+\textbf{Results:} . \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+text\\
+\vspace{5mm}
+
+\subsection{Other Resources in OpenRefine}
+\textbf{Objective: }\\ 
+\textbf{Time Stamp:} \\
+\textbf{Actions:}.\\
+\textbf{Results:} . \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+text\\
+\vspace{5mm}
+
 \pagebreak
 
 \section{Errors}
