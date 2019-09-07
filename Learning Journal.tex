@@ -979,25 +979,53 @@ The steps I took to complete this exercise were as follows:
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} This site (\url{https://github.com/OpenRefine/OpenRefine/wiki/History} informed me that after changes have been undone, as soon as I complete a new one, the changes I undid will be removed from the Undo/Redo history and cannot be redone anymore.\\
 \vspace{5mm}
-\textbf{Objective: Trim Leading and Trailing Whitespace}\\ 
+\textbf{Objective: Trim Leading and Trailing Whitespace}\\
 \textbf{Time Stamp:} 11:12pm 6 September \\
 \textbf{Actions:} I creared a text facet for the respondent\textunderscore wall \textunderscore type column using the same process as in previous objectives. This showed six choices. Some of the values that appear look the same but actually have leading or trailing white space (e.g. burntbricks and muddaub). To remove these I went to the drop down menu at the top of the column, clicked Edit cells, Common transforms and then Trim leading and trailing whitespace. \\
 \textbf{Results:} This successfully now only showed four choices in the text facet. \\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 
-
 \subsection{Filtering and Sorting with OpenRefine}
-\textbf{Objective: }\\ 
-\textbf{Time Stamp:} \\
-\textbf{Actions:}.\\
-\textbf{Results:} . \\
+\textbf{Objective: Filter the Respondent\textunderscore roof\textunderscore type Column}\\ 
+\textbf{Time Stamp:} 9:45am 7 September\\
+\textbf{Actions:} I went to the Respondent\textunderscore roof\textunderscore type column and from the drop down menu at the top of column selected Text filter. This produced a text box to type into in the left panel. As instructed in the lesson, I typed 'mabat' and pressed enter.\\
+\textbf{Results:} This produced a change in the window with the data. The top now said '58 matching rows' and it successfully only showed the enteries that have a mabat somewhere in the  Respondent\textunderscore roof\textunderscore type column. I then changed Show to 50 so I could see the majority of the matching rows (at first it only showed me 10). To go to the next page of results, click next in the top right hand corner. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} To remove a filter, just click 'x' on the filter in the left hand panel.\\
+\vspace{5mm}
+\textbf{Exercise}\\ 
+The roof types that are selected by this procedure are mabatisloping and mabatipitched (I identified this by just looking at the column but the solution says to use a text facet so I created one to double check my response). To restrict this to only one roof type you could enter either mabatisloping or mabatipitched in the filtering text box (the solution says just to include more letters).\\
+\vspace{5mm}
+\textbf{Objective: Use Include and Exclude Entries in a Facet (Exercise)}\\ 
+\textbf{Time Stamp:} 10:00am 7 September\\
+\textbf{Actions:} In the text facet created in the previous exercise, if I hover over one of the names I can see edit and include. I hovered over mabatipitched and clicked include.\\
+\textbf{Results:} This put mabatipitched in bold orange text in the text facet and only showed the 10 enteries containing mabatipitched in the window with the data. Now next to mabatipitched in the text facet was exclude. If I clicked exclude, it went back to showing the total 58 results with both mabatipitched and mabatisloping. I then tried including both mabatipitched and mabatisloping, and this put both in orange and bold. So in future, if I have more than two values and need to include more than one I will be able to do this. \\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Exercise}\\ 
-text\\
+\textbf{Objective: Sort the Data in the gps\textunderscore Altitude (Exercise)}\\ 
+\textbf{Time Stamp:} 10:20am 7 September\\
+\textbf{Actions:} To sort the data in a column, go to the drop down menu at the top of it, and select Sort... I am able to sort by 'text, numbers, dates or booleans (TRUE or FALSE values)' and 'specify what order to put Blanks and Errors in the sorted results'. So I went to the gps\textunderscore Altitude and selected Sort... I selected numbers and left it as smallest first, and the order as Valid values, Errors and then Blanks. I clicked OK.\\
+\textbf{Results:} This sorted the results in ascending order of the number value in the gps\textunderscore Altitude column. If I go back to the drop down menu for this column, Sort... has been replaced by Sort (informing me I have already sorted the column). Selecting sort now gives me these options: 1. Sort... (modify my original sort), 2. Reverse (reverse the order of the sort) and 3. Remove sort (undo the sort).\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The first ten numbers were 0. The exercise asks whether I think these are incorrect but I'm not really sure (couldn't the altitude just be 0 (sea level)?). The solution informed me 'The altitudes are more likely ‘missing’ than incorrect. The survey is delivered by Smartphone with the gps information added automatically by the app. The lack of an altitude value suggests that the smartphone was unable to provide it and it defaulted to 0.' This makes sense to me.\\
 \vspace{5mm}
+\textbf{Objective: Sorting by Multiple Columns (Exercise: Find What Village was Meant by 49 in the Village Column)}\\ 
+\textbf{Time Stamp:} 10:50am 7 September\\
+\textbf{Actions:} The lesson explains 'You can sort by multiple columns by performing sort on additional columns. The sort will depend on the order in which you select columns to sort. To restart the sorting process with a particular column, check the sort by this column alone box in the Sort pop-up menu'.\\
+In light of this, I then followed the instructions to complete the exercise of finding what village was meant by 49 in the village column. These were the steps I followed:
+\begin{enumerate}
+    \item I went to the gps\textunderscore Longitude column and sorted by numbers, selecting largest first.
+    \item I then repeated these steps on the gps\textunderscore Lattitude column.
+    \item I then went to the village column and in the drop down menu selected Edit column and then Move column to end.
+    \item I then went to the end of the table and scrolled through until I found the entry with 49. Comparing the longitude and latitude of the entry with 49 to those of the entries above and below, I thought it most closely matched the latitude and longitude of Ruaca thoug was also very close to Chirodzo.
+    \item I move the village column to the start of the table by repeating step 3, but selected Move column to beginning rather tha end.
+    \item I then went to the interview\textunderscore date column and in the drop down menu, selected Sort... I selected dates and checked sort by this column alone box and clicked OK. The 49 entry was completed on 2016/11/17, along with all the other Chirodzo interviews, indicating 49 refers to Chirodzo when this result is compared to the results of sorting the GPS coordinates.
+\end{enumerate}
+\textbf{Results:} After seeing 49 referenced Chirodzo, I created a text facet for the village column. I then edited 49 to be Chirodzo. There are now only three village names.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
 
 \subsection{Examining Numbers in OpenRefine}\label{sec:numbers}
 \textbf{Objective: }\\ 
