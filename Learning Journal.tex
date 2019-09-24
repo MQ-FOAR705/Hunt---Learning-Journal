@@ -1125,6 +1125,126 @@ Something I learnt from \url{http://openrefine.org/} was that data from the inte
 
 \pagebreak
 
+\subsection{R for Social Scientists}
+\subsection{Setup}
+\textbf{Objective: Install R}\\ 
+\textbf{Time Stamp:} 5:40pm 24 September\\
+\textbf{Actions:} I followed this link from the lesson \url{https://cran.r-project.org/bin/macosx/}. I selected the R-3.6.1.pkg file which was the first under Latest Release. This downloaded a file which I then clicked on. I then followed the prompts to install R.\\
+\textbf{Results:} This appeared to install the software successfully as when I went to my Applications folder, R was there.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} \\
+\vspace{5mm}
+\textbf{Objective: Install XQuartz}\\ 
+\textbf{Time Stamp:} 5:51pm 24 September\\
+\textbf{Actions:} As this was suggested by the lesson, I went to \url{https://www.xquartz.org/} and clicked on the link under Quick Download, which downloaded a file. I opened the file and followed the prompts to install XQuartz.\\
+\textbf{Results:} This successfully installed XQuartz in the Utilities folder in the Applications folder.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Download RStudio}\\ 
+\textbf{Time Stamp:} 6:00pm 24 September \\
+\textbf{Actions:} I followed the link on the lesson site to \url{https://www.rstudio.com/products/rstudio/download/#download}. Under Installers I clicked RStudio 1.2.5001 - macOS 10.12+ (64-bit). This downloaded a file which I then opened. I then dragged the RStudio icon to the Applications folder shortcut.\\
+\textbf{Results:} This successfully saved the application in the Applications folder. When I opened the application I received the message: 'The "git" command requires the command line developer tools, Would you like to install the tools now?'. I choose Install, which Downloaded the software and then produced a message saying the software was installed. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Install the tidyverse Package}\label{Setup}\\ 
+\textbf{Time Stamp:} 6:12pm 24 September\\
+\textbf{Actions:} I copied and pasted 'install.packages(c("tidyverse"))' into the console in RStudio.\\
+\textbf{Results:} This produced a large amount of red text. The final lines read: downloaded 87 KB. The downloaded binary packages are in /var/folders/4z/q7q2ynbn2753q4zlk2lfx4\textunderscore m0000gn/T//RtmpoGKmU9/downloaded\textunderscore packages\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+
+\subsection{Before We Start}
+\textbf{Objective: Create a New Prokect/Working Directory}\\ 
+\textbf{Time Stamp:} 7:55pm 24 September\\
+\textbf{Actions:} I went to File in the menu bar and clicked New Project. A pop up appeared and I selected New Directory and then New Project. Under Directory name: I entered data\textunderscore carpentry\textunderscore R, and for Create project as subdirectory of: I selected browse and then navigated to the desktop and clicked Open. This put \~/Desktop in the text box. I then selected Create Project. \\
+\textbf{Results:} This successfully created the project which was saved on my Desktop.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} 'The working directory is an important concept to understand. It is the place where R will look for and save files. When you write code for your project, your scripts should refer to files in relation to the root of your working directory and only to files within this structure'. To check it I can used getwd(). To change it I can go to the file browser panel in the bottom right hand corner, navigate to where I want the working directory to be, select the blue gear/cog icon and click Set As Working Directory, or I could use setwd("/path/to/working/directory").\\
+\vspace{5mm}
+\textbf{Objective: Create a New File}\\ 
+\textbf{Time Stamp:} 8:00pm 24 September\\
+\textbf{Actions:} I went to File in the menu bar, clicked New File and then R Script. In then clicked the Save icon in the toolbar and saved it as script.R as instructed in the lesson.\\
+\textbf{Results:} This successfully saved the file, as it appeared in the data\textunderscore carpentry\textunderscore R folder when I looked through GUI. It also appeared in the bottom right hand pane which shows the content of the working directory.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} To see a description of what each of the panes are and a recommended way to organise the working directory please see the lesson. The lesson says these can be customised by going to Tools, Global Options and then Pane Layout.\\
+\vspace{5mm}
+\textbf{Objective: Setting Folders in the Working Directory}\\ 
+\textbf{Time Stamp:} 8:35pm 24 September\\
+\textbf{Actions:} I entered dir.create("data") into the console and clicked enter. \\
+\textbf{Results:} This created a folder called data in the working directory which appeared in the file pane. I then repeated this to create a folder called data\textunderscore output and fig\textunderscore output, which were created successfully.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} I could also have done this by clicking New Folder in the bottom right hand pane.\\
+\vspace{5mm}
+\textbf{Objective: Download the Dataset Directly From R}\\ 
+\textbf{Time Stamp:} 8:42pm 24 September\\
+\textbf{Actions:} I copied this code from the lesson and pasted it into the console and pressed enter:\\ download.file("https://ndownloader.figshare.com/files/11492171","data/SAFI\textunderscore clean.csv", mode \verb|=| "wb")\\
+\textbf{Results:} This saved the dataset in the data folder as confirmed by clicking on the data folder in the bottom right hand panel and it showed the dataset in its contents. I returned to viewing the working directory by clicking the green up arrow.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Notes from Interacting with R:} 
+\begin{itemize}
+    \item If I type and execute commands (by pressing enter) in the console, they will be forgotten when I close the RStudio session. If I want it to be reproducible, I should type into the script editor.
+    \item To execute commands from the script editor I can press Command and Return together (this will execute the selected text or the current line after copying to the console). For more shortcuts see the link to the pdf in the lesson.
+    \item To jump between the console and script panes, hold down Control and 1, or Control and 2.
+    \item The console will show \textgreater{} when waiting for a complete new command, or a + if I haven't finished entering a command (the lesson said it will likely be because I haven't closed a parenthesis or quotation)
+    \item To cancel an incomplete command, within the console press the escape button and this will make \textgreater{} reappear
+\end{itemize}
+\vspace{5mm}
+\textbf{Objective: Install an Additional Package Using the Packages Tab (Exericse)}\\ 
+\textbf{Time Stamp:} 9:38pm 24 August\\
+\textbf{Actions:} In the bottom right hand panel, I clicked on the Packages tab. I then clicked on the Install icon and in the pop up that appeared, I typed in tidyverse and selected it from the list that appeared. I left Install dependencies ticked, and then clicked Install.\\
+\textbf{Results:} The line 'install.packages("tidyverse")' appeared in the console, and then a number of lines appeared. The final line was the same as when I tried to install the package in the Setup Lesson on page \pageref{Setup}  \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+
+\subsection{Introduction to R}
+\textbf{Objective: }\\ 
+\textbf{Time Stamp:} \\
+\textbf{Actions:} \\
+\textbf{Results:}\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity: }\\ 
+text\\
+
+\subsection{Starting with Data}
+\textbf{Objective: }\\ 
+\textbf{Time Stamp:} \\
+\textbf{Actions:} \\
+\textbf{Results:}\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity: }\\ 
+text\\
+
+\subsection{Introducing dplyr and tidyr}
+\textbf{Objective: }\\ 
+\textbf{Time Stamp:} \\
+\textbf{Actions:} \\
+\textbf{Results:}\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity: }\\ 
+text\\
+
+\subsection{Data visualisation with ggplot2}
+\textbf{Objective: }\\ 
+\textbf{Time Stamp:} \\
+\textbf{Actions:} \\
+\textbf{Results:}\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Activity: }\\ 
+text\\
+
+\pagebreak
 
 \section{Errors}
 \subsection{Overleaf}
