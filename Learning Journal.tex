@@ -1035,51 +1035,54 @@ In light of this, I then followed the instructions to complete the exercise of f
 \textbf{Solutions/Notes:}\\
 
 \subsection{Examining Numbers in OpenRefine}\label{sec:numbers}
-\textbf{Objective: }\\ 
-\textbf{Time Stamp:} \\
-\textbf{Actions:}.\\
-\textbf{Results:} . \\
+\textbf{Objective: Changing Cells from Text to Numbers in the years\textunderscore farm (Activity)}\\ 
+\textbf{Time Stamp:} 2:44pm 13 September (in class)\\
+\textbf{Actions:} I went to the drop down menu at the top of the years\textunderscore farm column and selected Edit Cells, Common transforms and then To number.\\
+\textbf{Results:} This changed the text in the column to green and right justified it, indicating the data had been successfully changed to numbers. I then repeated this in the no\textunderscore members, yrs\textunderscore liv, and buildings\textunderscore in\textunderscore compound columns.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} This can only work on columns which include numerals (0-9).\\
+\vspace{5mm}
+\textbf{Objective: Use a Numeric Facet Facet in a Column with Some Non-Numeric Values (Activity)}\\ 
+\textbf{Time Stamp:} 2:46pm 13 September (in class)\\
+\textbf{Actions/Results:} In the buildings\textunderscore in\textunderscore compound column, I edited two data entries to be text (abc) and one that was blank. I then applied a numeric facet to this column which appeared successfully. Underneath the graph in the facet are some check boxes. I unchecked numeric and left non-numeric and blank checked. This showed me the two data enteries I had changed. I then undid the changes I had made. This removed the appropriated check boxes from the facet. I then closed the facet.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
-\vspace{5mm}
-\textbf{Exercise}\\ 
-text\\
 \vspace{5mm}
 
 \subsection{Using Scripts}
-\textbf{Objective: }\\ 
-\textbf{Time Stamp:} \\
-\textbf{Actions:}.\\
-\textbf{Results:} . \\
+\textbf{Objective: Saving the Changes I Have Made to Use on Another Dataset}\\ 
+\textbf{Time Stamp:} 2:55pm 13 September (in class)\\
+\textbf{Actions:} In the Undo/Redo tab, I clicked Extract... This produced a script in the right panel. I can deselect steps I don't want to include, but for this exercise I kept them all selected. I then copied this and pasted into a text editor (I used TextWrangler). I then saved this file (the lesson says to make sure it is in plain text format).\\
+\textbf{Results:} The file successfully saved on my desktop at a .txt file with the included script. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} If I were to use notepad for my text editor, I can go to language and select json, and this would highlight the different parts of the script in different colours.\\
+\vspace{5mm}
+\textbf{Objective: Importing a Script to Use on Another Dataset}\\ 
+\textbf{Time Stamp:} 2:55pm 13 September (in class)\\
+\textbf{Actions:} I created a new project with the original data (which hasn't been changed through the cleaning OpenRefine). I made sure to call the new project something different to the original one (I added test\textunderscore 2 to the end of the file name). I went to the Undo/Redo tab and clicked Apply. I then pasted the copied text from the text file I had saved in the last objective. I then selected Perform operations. \\
+\textbf{Results:} This successfully applied all the steps I had applied to the other dataset. \\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
-\vspace{5mm}
-\textbf{Exercise}\\ 
-text\\
 \vspace{5mm}
 
 \subsection{Exporting and Saving Data from OpenRefine}
-\textbf{Objective: }\\ 
-\textbf{Time Stamp:} \\
-\textbf{Actions:}.\\
-\textbf{Results:} . \\
+\textbf{Objective: Export a Project (Activity)}\\ 
+\textbf{Time Stamp: 11:40am 24 September} \\
+\textbf{Actions/Results:} In the top right hand corner I clicked the Export drop down menu and then clicked Export project. A window appeared with the option to either Export to local or Export to Google Drive. I left Export to local selected and then clicked Export. This downloaded a zipped file to my downloads folder. I unzipped the file and looked at the contents of the folder in GUI. It contained three files (data.zip, metadata.json and metadata.old.json) and a folder (history - which contained a number of files ending in change.zip). The lesson asks me what I think each of these files are. I think data.zip would be a copy of the data with the changes made to it and all the files in the history folder are individual files for all the changes I made. I am unsure what metadata.json and metadata.old.json would be (perhaps metadata info about the original data and after changes has been made)(opening these files doesn't really help me). The lesson informs me the history folder contains a collection of zip files which each contain a change.txt file which are the records of each individual transformation I made. What I said about the data.zip file was wrong, it is actually a copy of the raw data.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} This is useful for if I want to move a project to another computer, I can also save it to GitHub. The lesson also notes it is helpful 'if you wanted to send your raw data and cleaning steps to a collaborator, or share this information as a supplement to a publication'.\\
+\vspace{5mm}
+\textbf{Objective: Exporting Cleaned Data}\\ 
+\textbf{Time Stamp:} 11:55am 24 September \\
+\textbf{Actions:} To export just a copy of the cleaned data, I went to the Export drop down menu and selected Comma-separated value (csv). This saved the file in my Downloads folder.\\
+\textbf{Results:} Opening the csv file successfully opened the file with the cleaned data in Numbers (which is the default for my computer). I then opened the file in Excel. Saving the data as a csv file did not keep the formatting from OpenRefine (e.g. which columns are numbers).\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
-\vspace{5mm}
-\textbf{Exercise}\\ 
-text\\
 \vspace{5mm}
 
 \subsection{Other Resources in OpenRefine}
-\textbf{Objective: }\\ 
-\textbf{Time Stamp:} \\
-\textbf{Actions:}.\\
-\textbf{Results:} . \\
-\textbf{Errors:} None.\\
-\textbf{Solutions/Notes:}\\
-\vspace{5mm}
-\textbf{Exercise}\\ 
-text\\
+This lesson has some valuable resources for working with OpenRefine. The link to the lesson is \url{https://datacarpentry.org/openrefine-socialsci/07-resources/index.html}.\\
+Something I learnt from \url{http://openrefine.org/} was that data from the internet can essentially be imported into OpenRefine, with there being a video with how to do this.
 \vspace{5mm}
 
 \pagebreak
