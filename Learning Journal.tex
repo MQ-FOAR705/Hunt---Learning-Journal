@@ -2,6 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{ragged2e}
 \usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
 
 
 \title{\textbf{LEARNING JOURNAL}}
@@ -1035,7 +1037,7 @@ In light of this, I then followed the instructions to complete the exercise of f
 \textbf{Solutions/Notes:}\\
 
 \subsection{Examining Numbers in OpenRefine}\label{sec:numbers}
-\textbf{Objective: Changing Cells from Text to Numbers in the years\textunderscore farm (Activity)}\\ 
+\textbf{Objective: Change Cells from Text to Numbers in the years\textunderscore farm (Activity)}\\ 
 \textbf{Time Stamp:} 2:44pm 13 September (in class)\\
 \textbf{Actions:} I went to the drop down menu at the top of the years\textunderscore farm column and selected Edit Cells, Common transforms and then To number.\\
 \textbf{Results:} This changed the text in the column to green and right justified it, indicating the data had been successfully changed to numbers. I then repeated this in the no\textunderscore members, yrs\textunderscore liv, and buildings\textunderscore in\textunderscore compound columns.\\
@@ -1044,23 +1046,23 @@ In light of this, I then followed the instructions to complete the exercise of f
 \vspace{5mm}
 \textbf{Objective: Use a Numeric Facet Facet in a Column with Some Non-Numeric Values (Activity)}\\ 
 \textbf{Time Stamp:} 2:46pm 13 September (in class)\\
-\textbf{Actions/Results:} In the buildings\textunderscore in\textunderscore compound column, I edited two data entries to be text (abc) and one that was blank. I then applied a numeric facet to this column which appeared successfully. Underneath the graph in the facet are some check boxes. I unchecked numeric and left non-numeric and blank checked. This showed me the two data enteries I had changed. I then undid the changes I had made. This removed the appropriated check boxes from the facet. I then closed the facet.\\
+\textbf{Actions/Results:} In the buildings\textunderscore in\textunderscore compound column, I edited two data entries to be text (abc) and one to be blank. I then applied a numeric facet to this column which appeared successfully. Underneath the graph in the facet were some check boxes. I unchecked numeric and left non-numeric and blank checked. This showed me the two data enteries I had changed. I then undid the changes I had made. This removed the appropriate check boxes from the facet. I then closed the facet.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
 
 \subsection{Using Scripts}
-\textbf{Objective: Saving the Changes I Have Made to Use on Another Dataset}\\ 
+\textbf{Objective: Save the Changes I Have Made to Use on Another Dataset}\\ 
 \textbf{Time Stamp:} 2:55pm 13 September (in class)\\
 \textbf{Actions:} In the Undo/Redo tab, I clicked Extract... This produced a script in the right panel. I can deselect steps I don't want to include, but for this exercise I kept them all selected. I then copied this and pasted into a text editor (I used TextWrangler). I then saved this file (the lesson says to make sure it is in plain text format).\\
-\textbf{Results:} The file successfully saved on my desktop at a .txt file with the included script. \\
+\textbf{Results:} The file successfully saved on my desktop as a .txt file with the included script. \\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} If I were to use notepad for my text editor, I can go to language and select json, and this would highlight the different parts of the script in different colours.\\
 \vspace{5mm}
-\textbf{Objective: Importing a Script to Use on Another Dataset}\\ 
+\textbf{Objective: Import a Script to Use on Another Dataset}\\ 
 \textbf{Time Stamp:} 2:55pm 13 September (in class)\\
 \textbf{Actions:} I created a new project with the original data (which hasn't been changed through the cleaning OpenRefine). I made sure to call the new project something different to the original one (I added test\textunderscore 2 to the end of the file name). I went to the Undo/Redo tab and clicked Apply. I then pasted the copied text from the text file I had saved in the last objective. I then selected Perform operations. \\
-\textbf{Results:} This successfully applied all the steps I had applied to the other dataset. \\
+\textbf{Results:} This successfully applied all the steps I had applied to the other dataset to the new one. \\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
@@ -1070,14 +1072,14 @@ In light of this, I then followed the instructions to complete the exercise of f
 \textbf{Time Stamp: 11:40am 24 September} \\
 \textbf{Actions/Results:} In the top right hand corner I clicked the Export drop down menu and then clicked Export project. A window appeared with the option to either Export to local or Export to Google Drive. I left Export to local selected and then clicked Export. This downloaded a zipped file to my downloads folder. I unzipped the file and looked at the contents of the folder in GUI. It contained three files (data.zip, metadata.json and metadata.old.json) and a folder (history - which contained a number of files ending in change.zip). The lesson asks me what I think each of these files are. I think data.zip would be a copy of the data with the changes made to it and all the files in the history folder are individual files for all the changes I made. I am unsure what metadata.json and metadata.old.json would be (perhaps metadata info about the original data and after changes has been made)(opening these files doesn't really help me). The lesson informs me the history folder contains a collection of zip files which each contain a change.txt file which are the records of each individual transformation I made. What I said about the data.zip file was wrong, it is actually a copy of the raw data.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} This is useful for if I want to move a project to another computer, I can also save it to GitHub. The lesson also notes it is helpful 'if you wanted to send your raw data and cleaning steps to a collaborator, or share this information as a supplement to a publication'.\\
+\textbf{Solutions/Notes:} This is useful for if I want to move a project to another computer. I can also save it to GitHub. The lesson also notes it is helpful 'if you wanted to send your raw data and cleaning steps to a collaborator, or share this information as a supplement to a publication'.\\
 \vspace{5mm}
 \textbf{Objective: Exporting Cleaned Data}\\ 
 \textbf{Time Stamp:} 11:55am 24 September \\
 \textbf{Actions:} To export just a copy of the cleaned data, I went to the Export drop down menu and selected Comma-separated value (csv). This saved the file in my Downloads folder.\\
 \textbf{Results:} Opening the csv file successfully opened the file with the cleaned data in Numbers (which is the default for my computer). I then opened the file in Excel. Saving the data as a csv file did not keep the formatting from OpenRefine (e.g. which columns are numbers).\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:}\\
+\textbf{Solutions/Notes:} I saved this file to GitHub as Hunt\textunderscore Cleaned\textunderscore Data\textunderscore OpenRefine\textunderscore Lesson.csv\\
 \vspace{5mm}
 
 \subsection{Other Resources in OpenRefine}
@@ -1114,18 +1116,18 @@ Something I learnt from \url{http://openrefine.org/} was that data from the inte
 \textbf{Actions:} I clicked on the note I wanted to add the description to and this produced a pop up with a number of settings for the note. In the description box I added the acceptance criteria from my design document for that user story. I then clicked Save.\\
 \textbf{Results:} This successfully added the description to the note as when I clicked on the note again it appeared in the description box. Also, when the cards are viewed on the board, little lines appear on the notes which contain a description. I repeated these steps for all of my user stories and their corresponding acceptance criteria.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:}\\
+\textbf{Solutions/Notes:} I later went back and re-entered each of these as an individual item in a to do list on the card, by clicking on the note and clicking the to-do list option.\\
 
 \subsection{Objective: Export a Board}
 \textbf{Time Stamp:} 7:30pm 12 September\\
 \textbf{Actions:} When viewing the board, I went to the top right hand corner and clicked See Menu, ...More and then Print and Export. Firstly , I clicked Print, Save as PDF, navigated to where I wanted to save it and clicked Save. Secondly, I clicked Export as json, which took me to a new page. In the menu bar, I selected File, Save Page As..., navigated to where I wanted to save it and then clicked Save.\\
-\textbf{Results:} This exported the board as both a pdf and json file. \\
+\textbf{Results:} This succesffully exported the board as both a pdf and json file. \\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 
 \pagebreak
 
-\subsection{R for Social Scientists}
+\section{R for Social Scientists}
 \subsection{Setup}
 \textbf{Objective: Install R}\\ 
 \textbf{Time Stamp:} 5:40pm 24 September\\
@@ -1151,7 +1153,7 @@ Something I learnt from \url{http://openrefine.org/} was that data from the inte
 \textbf{Objective: Install the tidyverse Package}\label{Setup}\\ 
 \textbf{Time Stamp:} 6:12pm 24 September\\
 \textbf{Actions:} I copied and pasted 'install.packages(c("tidyverse"))' into the console in RStudio.\\
-\textbf{Results:} This produced a large amount of red text. The final lines read: downloaded 87 KB. The downloaded binary packages are in /var/folders/4z/q7q2ynbn2753q4zlk2lfx4\textunderscore m0000gn/T//RtmpoGKmU9/downloaded\textunderscore packages\\
+\textbf{Results:} This produced a large amount of red text. The final lines read: downloaded 87 KB. The downloaded binary packages are in\\ /var/folders/4z/q7q2ynbn2753q4zlk2lfx4\textunderscore m0000gn/T//RtmpoGKmU9/downloaded\textunderscore packages\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 
@@ -1161,7 +1163,7 @@ Something I learnt from \url{http://openrefine.org/} was that data from the inte
 \textbf{Actions:} I went to File in the menu bar and clicked New Project. A pop up appeared and I selected New Directory and then New Project. Under Directory name: I entered data\textunderscore carpentry\textunderscore R, and for Create project as subdirectory of: I selected browse and then navigated to the desktop and clicked Open. This put \~/Desktop in the text box. I then selected Create Project. \\
 \textbf{Results:} This successfully created the project which was saved on my Desktop.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} 'The working directory is an important concept to understand. It is the place where R will look for and save files. When you write code for your project, your scripts should refer to files in relation to the root of your working directory and only to files within this structure'. To check it I can used getwd(). To change it I can go to the file browser panel in the bottom right hand corner, navigate to where I want the working directory to be, select the blue gear/cog icon and click Set As Working Directory, or I could use setwd("/path/to/working/directory").\\
+\textbf{Solutions/Notes:} From the lesson: 'The working directory is an important concept to understand. It is the place where R will look for and save files. When you write code for your project, your scripts should refer to files in relation to the root of your working directory and only to files within this structure'. To check it I can used getwd(). To change it I can go to the file browser panel in the bottom right hand corner, navigate to where I want the working directory to be, select the blue gear/cog icon and click Set As Working Directory, or I could use setwd("/path/to/working/directory").\\
 \vspace{5mm}
 \textbf{Objective: Create a New File}\\ 
 \textbf{Time Stamp:} 8:00pm 24 September\\
@@ -1243,6 +1245,42 @@ text\\
 \vspace{5mm}
 \textbf{Activity: }\\ 
 text\\
+
+\pagebreak
+
+\section{Proof of Concept Work}
+
+\subsection{Voyant}
+I spoke to Shawn in consultation hours after class in Week 7. He expressed concern over the future availability of the software/applications I had chosen (ScriptThreads and ClipNotes) and potential difficulties that may arise in trying to get them to 'speak to each other'. Voyant was suggested as a potential alternative to ScriptThreads. If Voyant is an appropriate tool, I may have to go back and redo some of my previous work (such as user stories, etc.)\\
+\vspace{5mm}
+\textbf{Objective: Enter a Script Into Voyant}\\ 
+\textbf{Time Stamp: 10:00am 4 October} \\
+\textbf{Actions:} I went to \url{https://voyant-tools.org/}, and then clicked Upload. I selected a .txt file from my desktop containing the script for the film, \textit{His Girl Friday}(1940) which a number a sites informed me is in the public domain. \\
+\textbf{Results:} This produced this screen:\\
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=10cm]{Voyant_Result.png}
+    \caption{Result of Uploading \textit{His Girl Friday}(1940) Script to Voyant}
+\end{figure}
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} My challenge now will be to determine how Voyant works and what each part of it is showing, and how I can adjust these.\\
+\vspace{5mm}
+\textcolor{blue}{Note: This is a really valuable source for how to use Voyant which I will use in completing future objectives} \url{https://voyant-tools.org/docs/#!/guide/tutorial}\\
+\vspace{5mm}
+\textbf{Objective: Exclude a Word From A Tool}\\ 
+\textbf{Time Stamp:} 10:30am 4 October\\
+\textbf{Actions:} I want to be able to omit a word from analysis by a tool (as well as all of the tools). I decided to work with the Cirrus tool. I hovered the mouse over the top of the Cirrus window. I then clicked on the icon to 'Define options for this tool'. In the options pop-up that appeared, I clicked on edit list. I added the word 'shot' to a new line as this word appeared quite frequently, but didn't really tell me anything about the script. I then clicked save. According to the guide having apply globally ticked should apply this to all the tools. I left apply globally ticked and then clicked the blue confirm button.\\
+\textbf{Results:} This successfully removed 'shot' from Cirrus as well as the other tools (such as the summary and trends one)\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Save a Corpus to Continue Working on Later}\\ 
+\textbf{Time Stamp:} 10:38am 4 October\\
+\textbf{Actions:} I went to the top right hand corner of the page, and clicked on the icon with the little box and arrow. I left selected, 'a URL for this view (tools and data)'. If I clicked the down arrow, there were also options for 'an HTML snippet embedding this view in another web page' or 'a bibliographic reference for this view'. I then clicked Export. This then opened the page I was viewing in another window. I copied this page's URL (\url{https://voyant-tools.org/?corpus=e21e2f42ea8228e5b104ddbbcbec9b21&stopList=keywords-651ab448fa5fefbff70938da9de39bfc&panels=cirrus,reader,trends,summary,contexts}\\
+\textbf{Results:} When I pasted this link into a new Chrome window, it opened my corpus successfully. I can also export individual tools by going to the top right hand corner of the tool and following the same process outlined above.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} Something I need to consider in the future is whether I need to re-export the link everytime I make changes (the answer to this is yes: I do, as I excluded a word for a tool and then re-entered the link above, and the change wasn't reflected).\\
+\vspace{5mm}
 
 \pagebreak
 
