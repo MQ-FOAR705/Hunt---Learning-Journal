@@ -1203,15 +1203,200 @@ Something I learnt from \url{http://openrefine.org/} was that data from the inte
 \textbf{Solutions/Notes:}\\
 
 \subsection{Introduction to R}
-\textbf{Objective: }\\ 
-\textbf{Time Stamp:} \\
-\textbf{Actions:} \\
-\textbf{Results:}\\
+\textbf{Objective: Get Output By Typing Math}\\ 
+\textbf{Time Stamp: 7:43pm 5 October} \\
+\textbf{Actions/Results:} Like in the lesson, I typed '3 + 5' into the console and pressed enter. The response was '[1] 8'. I then tried '12/7' and the response was '[1] 1.714286'.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Activity: }\\ 
-text\\
+\textbf{Objective: Assign A Value To An Object}\\ 
+\textbf{Time Stamp:} 7:47pm 5 October\\
+\textbf{Actions:} I wrote 'area\textunderscore hectares \textless - 1.0' in the console and pressed enter. \\
+\textbf{Results:} The console did not print anything and a \textgreater{} appeared on a new line (indicating it was successful). Also, in the top right hand pane, under Global Environment, a list labelled 'values' appeared with the object and value I had just created. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} area\textunderscore hectares is the object, \textless - is the assignment operator ('it assigns values on the right to objects on the left'), and 1.0 is the value the object is being assigned. A shortcut to typing \textless - is holding down option and -. When naming an object, try not to make it too long, don't start it with a number, avoid dots, and function names cannot be used (see the lesson for a complete list of these). R is case sensitive. If I want the styling of my code to be automatically checked, I can install the lintr package. In the lesson, object and variable are used interchangeably, though they may have different meanings in other coding languages.\\
+\vspace{5mm}
+\textbf{Objective: Print The Value Of An Object}\\ 
+\textbf{Time Stamp:} 8:06pm 5 October\\
+\textbf{Actions:} I tried two ways of printing the value of an object. First, I tried putting it in brackets, entering '(area\textunderscore hectares \textless - 1.0)'. Then I justed entered, 'area\textunderscore hectares'.\\
+\textbf{Results:} Both successfully printed '[1] 1'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Do Arithmetic With An Object}\\ 
+\textbf{Time Stamp:} 8:10pm 5 October\\
+\textbf{Actions:} I typed '2.47 * area\textunderscore hectares' into the console and pressed enter.\\
+\textbf{Results:} The correct result (2.47) was successfully printed.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\textbf{Objective: Change an Objects Value}\\ 
+\textbf{Time Stamp:} 8:13pm 5 October\\
+\textbf{Actions/Results:} I typed 'area\textunderscore hectares \textless - 2.5' into the console and pressed enter. This successfully changed the value of the object to 2.5, as this was change was reflected in the values list in the upper right hand pane. I then tried to do math with this new value and entered '2.47 * area\textunderscore hectares'. This successfully printed '[1] 6.175'. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Prove That Assigning A Value To One Object Does Not Change The Values Of Other Objects (Activity)}\\ 
+\textbf{Time Stamp:} 8:19pm 5 October\\
+\textbf{Actions:} Firstly, I entered 'areas\textunderscore acres \textless - 2.47 * area\textunderscore hectares' and pressed enter. This created a new value in the list with area\textunderscore acres having a value of 6.175. I then switched to the History tab in the top right hand pane so I could not see the results of the next step. I then entered 'area\textunderscore hectares \textless - 50' and pressed enter. I think the content of area\textunderscore acres will remain 6.175\\
+\textbf{Results:} I switched back to the Environment tab which confirmed the value of area\textunderscore acres had remained 6.175, demonstrating that assigning a value to one object does not change the values of other objects. I would have to rerun 'areas\textunderscore acres \textless - 2.47 * area\textunderscore hectares' to change the value of area\textunderscore acres.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+Up until this point I had been working in the console, but now realised I should have been working in the Source pane. I will work in the source pane from now on. To add anything I have typed into the console to the source, go to the History tab in the top right hand pane. Select the relevant commands and click the To Source button.\\ 
+\vspace{5mm}
+\textbf{Objective: Add a Comment}\\ 
+\textbf{Time Stamp:} 9:02pm 5 October\\
+\textbf{Actions:} To add a comment, insert a \# and anything on that line to the right of the \# is a comment. I then entered the lines with comments in the Source panel as they appear in the lesson. These are: \\
+area\textunderscore hectares \textless - 1.0 \# land area in hectares\\
+area\textunderscore acres \textless - area\textunderscore hectares * 2.47 \# convert to acres\\
+area\textunderscore acres \# print land area in acres\\
+I then selected all of the lines and pressed option and enter and this successfully printed [1] 2.47 in the console.\\
+\textbf{Results:} The comments were successfully added and turned into green text.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} To easily turn a line into a comment, put the cursor anywhere on the line and press control, shift and C all at the same time. I can also select multiple lines and press these buttons to make them all comments.\\
+\vspace{5mm}
+\textbf{Objective: Create Two Variables (Length and Width) and a Third Variable Based On The First Two (Area), and Show That Changing One Of The First Two Variables Doesn't Affect the Third}\\ 
+\textbf{Time Stamp:} 9:19pm 5 October\\
+\textbf{Actions/Results:} I entered into the source, \\
+length \textless - 5.0\\
+width  \textless - 6.0\\
+area \textless - length * width\\
+I then selected these lines and pressed option and enter to run them which added these new values to the list. I then typed 'area' and ran this which printed '[1] 30'. I then entered into the Source\\
+length \textless - 7.0\\
+area\\
+and ran all of the lines. This still printed '[1] 30' which confirmed changing one value doesn't change another. After the last line I entered, I added the comment '\# proves changing one value doesn't impact another (activity)'\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Use The Round() Function}\\ 
+\textbf{Time Stamp:} 4:26pm 5 October\\
+\textbf{Actions:} I entered round(3.14159) into the source pane and pressed option and enter.\\
+\textbf{Results:} This produced the result, '[1] 3'. As I typed round, a text box appeared with information about how to use the function.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson explains that functions 'automate more complicated sets of commands', and require input (called an argument). 'Functions 'often (but not always) return a value' and 'executing a function (‘running it’) is called calling the function'.\\
+\vspace{5mm}
+\textbf{Objective: Use args(round) to Get Help For The round() Function}\\ 
+\textbf{Time Stamp:} 4:36pm 5 October\\
+\textbf{Actions:} I entered 'args(round)' and ran it .\\
+\textbf{Results:} This produced this result:\\
+function (x, digits = 0)\\
+NULL\\
+The x is the number which I want to be rounded, and digits = is where I put the number of digits I want it to be rounded to.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson notes I could also have used '?round' to get help.\\
+\vspace{5mm}
+\textbf{Objective: Test Arguments In The round() Function}\\ 
+\textbf{Time Stamp:} 4:30pm 8 October\\
+\textbf{Actions:} Firstly, using the information from the previous objective, I entered 'round(3.14159, digits = 2)'. The lesson then said if I 'provide arguments in the exact same order as they are defined you don't have to name them', so I then entered 'round(3.14159, 2)'. Finally, I entered 'round(digits = 2, x = 3.14159)', as the lesson says if I 'do name the arguments, you can switch their order'.\\
+\textbf{Results:} All of these successfully returned a result of '[1] 3.14'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Use ?round (Activity)}\\ 
+\textbf{Time Stamp:} 4:39pm 8 October\\
+\textbf{Actions/Results:} I entered '?round' into the console as instructed and looked at the information in the Help pane in the bottom right hand corner of the screen. A function that exists which is similar to round is signif (which rounds a number to the specified number of significant figures rather than decimal places). The digits parameter 'indicat(es) the number of decimal places (round) or significant digits (signif) to be used'\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Create A Vector Of Household Members Of Interviewees }\\ 
+\textbf{Time Stamp:} 4:48pm 8 October\\
+\textbf{Actions:} The lesson explains that a vector is 'composed by a series of values, which can be either numbers or characters', which can be assigned to the vector using the c() function. The vector for this objective will contain the numbers of the household members for each household interviewed. To create it, I entered 'hh\textunderscore members \textless - c(3, 7, 10, 6)'. To check this was created successfully, I then entered 'hh\textunderscore members'. \\
+\textbf{Results:} The vector was added to the values list (the column with its contents started with 'num [1:4]') and when I ran 'hh\textunderscore members', the values I had assigned to the vector were successfully shown.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Create A Vector With Values Comprised Of Characters}\\ 
+\textbf{Time Stamp:} 4:54pm 8 October\\
+\textbf{Actions:} To create 'a vector of the building material used to construct our interview respondents’ walls', I entered 'respondent\textunderscore wall \textunderscore type \textless - c("muddaub", "burntbricks", "sunbricks")'. Again, I then ran 'respondent\textunderscore wall \textunderscore type' to check whether this was successful.\\
+\textbf{Results:} The values I had added to the vector were successfully printed when I ran 'respondent\textunderscore wall \textunderscore type'. Also, the vector was added to the values list (the column with its contents started with 'chr [1:3]') \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson notes the quote marks around the muddaub etc. are really important.\\
+\vspace{5mm}
+\textbf{Objective: Use Functions (length(), class() and str()) To Inspect The Contents Of A Vector}\\ 
+\textbf{Time Stamp:} 5:06pm 8 October\\
+\textbf{Actions/Results:} I entered 'length(hh\textunderscore members) and then repeated this for the wall types vector. This successfully printed 4 and 3 respectively (the number of elements in each vector)\\
+I then entered 'class(hh\textunderscore members) and then repeated this for the wall types vector. This successfully printed "numeric" and "character" respectively (the class (the type of element) of each object(vector))\\
+I then entered 'str(hh\textunderscore members) and then repeated this for the wall types vector. This successfully printed 'num [1:4] 3 7 10 6' and 'chr [1:3] "muddaub" "burntbricks" ...' respectively (providing an overview of the structure of an object (vector) and its elements)\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Add Elements To A Vector Using The c() Function}\\ 
+\textbf{Time Stamp:} 5:20pm 8 October\\
+\textbf{Actions:} Firstly, I created a new vector (containing the possessions owned by interviewees) by entering 'possessions \textless - c("bicycle", "radio", "television)'. To add mobile\textunderscore phone to the end of the possessions vector, I entered 'possessions \textless - c(possessions, "mobile\textunderscore phone")' with the comment 'add to the end of the vector'. To add car to the start of the possessions vector, I entered 'possessions \textless - c("car", possessions)' with the comment 'add to the beginning of the vector'. To check whether this was successful, I ran 'possessions'.\\
+\textbf{Results:} This printed the contents of the vector in their intended order.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise: Atomic Vectors}\\ 
+The lesson explains that an atomic vector 'is a linear vector of a single type'. There are six main atomic vector types that R uses: character, numeric, logical, integer, complex and raw. The lesson asks what I think will happen if I tried to mix these types in a single vector, and I am not sure. The solution says, 'R implicitly converts them to all be the same type'.\\
+\vspace{5mm}
+\textbf{Exercise: What Happens When Types Are Mixed}\\ 
+I created and ran the class() function for each of these vectors. In the order they appear in the lesson, they were character, numeric, character and character. The lesson says R converts the contents of the vectors ' to find a “common denominator” that doesn’t lose any information'.\\
+\vspace{5mm}
+\textbf{Exercise: How Many Values in combined\textunderscore logical are "TRUE" (as a character) In The Example}\\ 
+I believe there would only be one instance of "TRUE" as a character in combined\textunderscore logical, as the TRUE from num\textunderscore logical would have been converted to a number. The answer confirms this is correct, saying the TRUE from num\textunderscore logical would have been 'converted into a 1 before it gets converted into "1" in combined\textunderscore logical'. I hadn't considered that the data would be coerced again when put into combined\textunderscore logical, but my answer was still correct. I think in the hierarchy of data type coercion, character would be preferred over numeric, but I'm unsure of the other types. This source (\url{https://learning.oreilly.com/library/view/r-in-a/9781449358204/ch05s08.html} says the order is ' roughly logical \textless{} integer \textless{} numeric \textless{} complex \textless{} character \textless{} list.'\\
+\vspace{5mm}
+\textbf{Objective: Extract Values From a Vector (Subsetting Vectors)}\\ 
+\textbf{Time Stamp:} 7:09pm 8 October\\
+\textbf{Actions/Results:} The lesson says to 'extract one or several values from a vector, we must provide one or several indices in square brackets'. So having previously created the respondent wall type vector, I ran 'respondent\textunderscore wall\textunderscore type [2]'. This successfully printed "burntbricks". To test the use of several indicies, I then ran 'respondent\textunderscore wall\textunderscore type [c(3, 2]'. This successfully printed '"sunbricks" and "burntbricks"'\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} Indices in R start at 1 (not 0 like programming languages in the C family).\\
+\vspace{5mm}
+\textbf{Objective: Repeat Indicies When Extracting Values From A Vector And Creating A New One}\\ 
+\textbf{Time Stamp:} 7:23pm 8 October\\
+\textbf{Actions:} To create a new vector (more\textunderscore respondent\textunderscore wall\textunderscore type), with more elements than the original wall type vector, I entered 'more\textunderscore respondent\textunderscore wall\textunderscore type \textless - respondent\textunderscore wall\textunderscore type[c(1, 2, 3, 2, 1, 3)]'. To test whether this was successful, I then ran 'more\textunderscore respondent\textunderscore wall\textunderscore type'.\\
+\textbf{Results:} This successfully printed the contents of the new object (as they appear in the lesson).\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Use A Logical Vector In Subsetting (Conditional Subsetting)}\\ 
+\textbf{Time Stamp:} 7:49pm 8 October\\
+\textbf{Actions/Results:} The lesson explains that using TRUE will select the element with the same index and FALSE will not. For example, in the previously created hh\textunderscore members vector (containing the values 3, 7, 10, 6), running 'hh\textunderscore members [c(TRUE, FALSE, TRUE, TRUE)]' should print '3 10 6'. I tried this and got this result. The lesson then explains 'typically,these logical vectors are not typed by hand, but are the output of other functions or logical tests'. So, I then ran 'hh\textunderscore members \textgreater{} 5' which printed 'FALSE TRUE TRUE TRUE' (it returned 'logicals with TRUE for the indices that meet the condition'. To then only select the values above 5, I entered 'hh\textunderscore members[hh\textunderscore members \textgreater{} 5]' which successfully produced '7 10 6'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Combine Multiple Tests When Subsetting Vectors}\\ 
+\textbf{Time Stamp:} 8:01pm 8 October\\
+\textbf{Actions/Results:} The first way tests can be combined is using \textbar{}, meaning at least one of the conditions is true. To test this I entered 'hh\textunderscore members[hh\textunderscore members \textless{} 3 \textbar{} hh\textunderscore members \textgreater{} 5]', which should produce values that are less than three, as well as those which are greater than five. This successfully printed '7 10 6'. For 3 to be printed, I would have to have entered \textless = \\
+The second way tests can be combined is using \&, meaning both conditions are true. To test this, I ran 'hh\textunderscore members[hh\textunderscore members \textgreater = 7 \& hh\textunderscore members == 3]'. This returned 'numeric(0)'. The lesson explains == 'is a test for numerical equality between the left and right hand sides, and should not be confused with the single = sign, which performs variable assignment (similar to <-)'\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Search For Certain Strings In A Vector}\\ 
+\textbf{Time Stamp:} 8:43pm 8 October\\
+\textbf{Actions/Results:} To search for the values "car" and "radio" in the possessions vector created previously I entered 'possessions[possessions == "car" \textbar{} possessions == "bicycle"]'. This printed '"car" "bicycle"', confirming these were strings in the vector.\\
+However, the lesson also notes the function \%in\% can be used to 'test if any of the elements of search vector are found'. So I entered 'possessions \%in\% c("car", "bicycle", "motorcycle", "truck", "boat")' to test whether these appeared in the vector. This successfully printed 'TRUE TRUE FALSE FALSE FALSE'. \\
+The final search suggested in the lesson is 'possessions[possessions \%in\% c("car", "bicycle", "motorcycle", "truck", "boat")]'. This search successfully printed '"car" "bicycle"'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Enter A Vector With Missing Data}\\ 
+\textbf{Time Stamp:} 8:54pm 8 October\\
+\textbf{Actions:} The lesson explains that missing data is represented in vectors as NA. So, as instructed in the lesson I entered 'rooms \textless - c(2, 1, 1, NA, 4)'. \\
+\textbf{Results:} This successfully created the vector, as it appeared accurately in the values list.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Use The Argument na.rm=TRUE To Calculate Results Ignoring The Missing Values}\\ 
+\textbf{Time Stamp:} 9:01pm 8 October\\
+\textbf{Actions:} If I am working with vectors which include NA, most functions will return NA. For example, when I entered 'mean(rooms)' and 'max(rooms)', they both returned NA. I then tried 'mean(rooms, na.rm = TRUE)' and 'max(room, na.rm = TRUE)' so the NA values in the vectors would be ignored.\\
+\textbf{Results:} This was successful, returning 2 and 4 respectively.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Use Other Functions Related To NA Values}\\ 
+\textbf{Time Stamp:} 9:05pm 8 October\\
+\textbf{Actions/Results:} Firstly, the lesson explains the is.na() function can be used to extract elements from a vector which are not missing values. So, I entered 'rooms[!is.na(rooms)]' which successfully printed '2 1 1 4'.\\
+Secondly, the lesson states the na.omit() function can be used to return 'the object with incomplete cases removed. The returned object is an atomic vector of type `"numeric"` (or `"double"`)'. I entered 'na.omit(rooms)' which successfully printed the result as it appears in the lesson ([1] 2 1 1 4; attr(,"na.action"); [1] 4; attr(,"class"); [1] "omit").\\
+Finally, the lesson says that the complete.cases() function can be used to 'extract those elements which are complete cases. The returned object is an atomic vector of type `"numeric"` (or `"double"`)'. I entered 'rooms[complete.cases(rooms)]' which printed '2 1 1 4'. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise: Vector Of Rooms With NAs}\\ 
+1. Firstly I created the vector with the NAs by entering ' rooms \lessthan - c (1, 2, 1, 1, NA, 3, 1, 3, 2, 1, 1, 8, 3, 1, NA, 1)'. I then entered 'rooms\textunderscore without \lessthan - rooms[!us.na(rooms)]' to create a new vector with the NAs removed. The solution confirmed this was the correct response (I could have alternatively used 'rooms\textunderscore without \textless - na.omit(rooms)').\\
+2. I misunderstood this step, thinking I had to find the median of the new vector I had created without the NAs, so I entered 'median(rooms\textunderscore without)'. However, the solution said I should have entered 'median(rooms, na.rm = TRUE)'. I still got the same result of 1.\\
+3. To figure out how many households use more than 2 rooms for sleeping, I tried entering 'rooms\textunderscore without [rooms\textunderscore without \textgreater 2]' which listed '3 3 8 3' in response. I knew this was incorrect as the questioned asked for the number of households, not the actual rooms of each, and again I used the new vector. The answer was 'rooms\textunderscore above\textunderscore 2 \textless - rooms\textu no\textunderscore na[rooms\textunderscore no\textunderscore na \textgreater{} 2]
+length(rooms\textunderscore above\textunderscore 2)'. The result of this was 4.\\
 
 \subsection{Starting with Data}
 \textbf{Objective: }\\ 
@@ -1221,7 +1406,7 @@ text\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Activity: }\\ 
+\textbf{Exercise: }\\ 
 text\\
 
 \subsection{Introducing dplyr and tidyr}
@@ -1232,18 +1417,7 @@ text\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Activity: }\\ 
-text\\
-
-\subsection{Data visualisation with ggplot2}
-\textbf{Objective: }\\ 
-\textbf{Time Stamp:} \\
-\textbf{Actions:} \\
-\textbf{Results:}\\
-\textbf{Errors:} None.\\
-\textbf{Solutions/Notes:}\\
-\vspace{5mm}
-\textbf{Activity: }\\ 
+\textbf{Exercise: }\\ 
 text\\
 
 \pagebreak
