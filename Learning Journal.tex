@@ -1170,7 +1170,7 @@ Something I learnt from \url{http://openrefine.org/} was that data from the inte
 \textbf{Actions:} I went to File in the menu bar, clicked New File and then R Script. In then clicked the Save icon in the toolbar and saved it as script.R as instructed in the lesson.\\
 \textbf{Results:} This successfully saved the file, as it appeared in the data\textunderscore carpentry\textunderscore R folder when I looked through GUI. It also appeared in the bottom right hand pane which shows the content of the working directory.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:} To see a description of what each of the panes are and a recommended way to organise the working directory please see the lesson. The lesson says these can be customised by going to Tools, Global Options and then Pane Layout.\\
+\textbf{Solutions/Notes:} To see a description of what each of the panes are and a recommended way to organise the working directory please see the lesson. The lesson says these can be customised by going to Tools, Global Options and then Pane Layout. To see all panes, go to View, Panes and then click View All Panes.\\
 \vspace{5mm}
 \textbf{Objective: Setting Folders in the Working Directory}\\ 
 \textbf{Time Stamp:} 8:35pm 24 September\\
@@ -1198,7 +1198,22 @@ Something I learnt from \url{http://openrefine.org/} was that data from the inte
 \textbf{Objective: Install an Additional Package Using the Packages Tab (Exericse)}\\ 
 \textbf{Time Stamp:} 9:38pm 24 August\\
 \textbf{Actions:} In the bottom right hand panel, I clicked on the Packages tab. I then clicked on the Install icon and in the pop up that appeared, I typed in tidyverse and selected it from the list that appeared. I left Install dependencies ticked, and then clicked Install.\\
-\textbf{Results:} The line 'install.packages("tidyverse")' appeared in the console, and then a number of lines appeared. The final line was the same as when I tried to install the package in the Setup Lesson on page \pageref{Setup}  \\
+\textbf{Results:} The line 'install.packages("tidyverse")' appeared in the console, and then a number of lines appeared. The final line was the same as when I tried to install the package in the Setup Lesson on page \pageref{Setup} \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{NOTES FROM CLASS}\\
+\textbf{Objective: Commit An R Script}\\ 
+\textbf{Time Stamp:} In class\\
+\textbf{Actions:} I went to Tools in the menu bar, Version Control and then Commit. I then wrote a commit message, selected all the items in the top left hand pane, and clicked the Commit button.\\
+\textbf{Results:} This was successful.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} In my notes, I have this: 'copy two lines, go to terminal, git config - -global user.email “put email in quotes”', but neither my terminal history from my computer or within RStudio record me doing this.\\
+\vspace{5mm}
+\textbf{Objective: Commit An R Script}\\ 
+\textbf{Time Stamp:} In class\\
+\textbf{Actions:} In the terminal in RStudio, I entered 'ls -al', which listed a .git directory among others. In GitHub, I then created a new repository, which I am the owner of (not FOAR705), and called it R\textunderscore Studio\textunderscore Lessons. On the next page, I selected skip initialise and then Create Repository. I then copied the text under the heading 'Push an existing repository from the command line'. I pasted this text into the terminal in RStudio, and then entered my username and password (which didn't appear when I typed it). I then committed my script again (selecting staged in the commit page). After I did this, I went to Tools, Version Control and then selected Push Branch.  \\
+\textbf{Results:} I went to the repository page in GitHub, and my commit appeared successfully.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 
@@ -1454,7 +1469,42 @@ I spoke to Shawn in consultation hours after class in Week 7. He expressed conce
 \textbf{Results:} When I pasted this link into a new Chrome window, it opened my corpus successfully. I can also export individual tools by going to the top right hand corner of the tool and following the same process outlined above.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} Something I need to consider in the future is whether I need to re-export the link everytime I make changes (the answer to this is yes: I do, as I excluded a word for a tool and then re-entered the link above, and the change wasn't reflected).\\
+
+\pagebreak
+
+\subsection{oTranscribe}
+This is a tool I plan to use in my proof of concept which allows you to transcribe notes while watching a video. While there is an online version, you can also download it from GitHub (\url{https://github.com/oTranscribe/oTranscribe}).
 \vspace{5mm}
+\textbf{Objective: Download The Repository From GitHub}\\ 
+\textbf{Time Stamp:} 5:15pm 9 October\\
+\textbf{Actions:} From GitHub I downloaded the current zip archive by clicking the link for this. I then unzipped the folder that downloaded and moved it to my Desktop.\\
+\textbf{Results:} The contents of the repository downloaded successfully, as confirmed when I inspected the contents of the folder through GUI and compared it to GitHub.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Install node.js and npm}\\ 
+\textbf{Time Stamp:} 6:05pm 9 October\\
+\textbf{Actions:} I followed the link from the GitHub information to install node.js and npm, which took me to \url{https://nodejs.org/en/}. I selected the button, '10.16.3 LTS - Recommended for most Users', which began a download. I then opened the downloaded file and followed the prompts to install it.\\
+\textbf{Results:} I received this message:\\
+This package has installed:\\
+Node.js v10.16.3 to /usr/local/bin/node\\
+npm v6.9.0 to /usr/local/bin/npm \\
+Make sure that /usr/local/bin is in your \$PATH.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Run npm install}\\ 
+\textbf{Time Stamp:} 6:55pm 9 October\\
+\textbf{Actions/Results:} In terminal I entered 'npm install'. This created a file called package-lock.json in the /Users/Emily directory. However, reading the instructions again I think I was supposed to run this command from within the src folder in the downloaded repository folder. I first deleted the json file and then made the src folder the working directory in the terminal. I then ran 'npm install' again, and this printed a loading bar and then a lot of text. Looking through GUI, I believe this was successful as in the repository folder on my desktop a folder was created called node\textunderscore modules. The final line of the printed text in terminal was 'added 1107 packages from 1197 contributors and audited 7173 packages in 158.822s; found 742 vulnerabilities (232 low, 53 moderate, 454 high, 3 critical)'. I then ran 'npm audit fix'. This again printed a lot of text, with the final lines being '39 vulnerabilities required manual review and could not be updated; 7 package updates for 37 vulns involved breaking changes; (use `npm audit fix --force` to install breaking changes; or refer to `npm audit` for steps to fix these manually; run npm audit fix to fix them, or npm audit for details''. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Run build\textunderscore prod}\\ 
+\textbf{Time Stamp:} 7:50pm 9 October\\
+\textbf{Actions:} \\
+\textbf{Results:} See Errors\\
+\textbf{Errors:} I received this message, 'make: *** No rule to make target `build\textunderscore prod'.  Stop.' I will go to consultation hours to get assistance in getting this to work.\\
+\textbf{Solutions/Notes:} \\
 
 \pagebreak
 
