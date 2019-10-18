@@ -1414,6 +1414,52 @@ Finally, the lesson says that the complete.cases() function can be used to 'extr
 length(rooms\textunderscore above\textunderscore 2)'. The result of this was 4.\\
 
 \subsection{Starting with Data}
+\textbf{Objective: Load The Data To R's Memory}\\ 
+\textbf{Time Stamp:} 8:19pm 11 October\\
+\textbf{Actions:} The lesson says before the data can be loaded, I have to load the tidyverse package, so I ran 'library(tidyverse)' (this printed some information under the headings attaching packages and conflicts). The next step is loading the data and telling R the missing data is represented by NULL so it can reformat it as NA. To do this, I ran 'interviews <- read\textunderscore csv("data/SAFI\textunderscore clean.csv", na = "NULL")' \\
+\textbf{Results:} This printed information of the different columns in red, green and blue text.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson says this doesn't show the data because assignments don't display anything. To display the data, see the next objective.\\
+\vspace{5mm}
+\textbf{Objective: See The Contents Of The Data Which Has Been Loaded}\\ 
+\textbf{Time Stamp:} 8:27pm 11 October\\
+\textbf{Actions/Results:} Firstly, I ran 'interviews'. This printed the first four columns of the table and the first ten rows of each of these columns. Underneath this, the names of the columns which had not been printed were listed and it was noted that their are 121 more rows. The lesson also says to try entering 'view(interviews)'. I did this, an in the top left hand pane a new tab was opened with the entire table. I finally tried entering 'head(interviews)'. This printed the same as entering 'interviews' in the console, but only the first six rows of the table.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson notes that read\textunderscore csv() 'assumes that fields are delineated by commas'. If I have data delineated in other ways, see the lesson.\\
+\vspace{5mm}
+\textbf{Objective: See The Class Of An Object}\\ 
+\textbf{Time Stamp:} 8:42pm 11 October\\
+\textbf{Actions:} The lesson explains that 'data frames are the de facto data structure for tabular data in R, and what we use for data processing, statistics, and plotting', and that each "column" of data has to contain a single type of data. Using read\textunderscore csv() generates a data frame, and a 'tibble  is an extension of R data frames used by the tidyverse. When the data is read using read\textunderscore csv(), it is stored in an object of class tbl\textunderscore df, tbl, and data.frame'. To see the class of the interviews object, I ran 'class(interviews)'.\\
+\textbf{Results:} This printed '"spec\textunderscore tbl\textunderscore df" "tbl\textunderscore df" "tbl" "data.frame" '. The lesson notes, 'as a tibble, the type of data included in each column is listed in an abbreviated fashion below the column names'. When I look back at what was printed for the 'head(interviews)' and 'interviews' commands, I can now see the abbreviations for the data types of each column. \textless chr \textgreater refers to characters, and \textless dttm \textgreater references a date and time format. When I looked it up, \textless dbl \textgreater is double class.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Inspect Data Frames}\\ 
+\textbf{Time Stamp:} 9:02pm 11 October\\
+\textbf{Actions/Results:} The lesson lists a number of functions to extract information from data frames. I have copied them here and what the lesson says they do, and listed what was printed when I ran them (where possible).\\
+Size
+\begin{itemize}
+    \item dim(interviews) - returns a vector with the number of rows in the first element, and the number of columns as the second element (the dimensions of the object). This printed '131 14' when I ran it.
+    \item nrow(interviews) - returns the number of rows. This printed '131' when I ran it.
+    \item ncol(interviews) - returns the number of columns. This printed '14' when I ran it.
+\end{itemize}
+Content
+\begin{itemize}
+    \item head(interviews) - shows the first 6 rows. This behaved as intended.
+    \item tail(interviews) - shows the last 6 rows. This behaved as intended.
+\end{itemize}
+Names
+\begin{itemize}
+    \item names(interviews) - returns the column names (synonym of colnames() for data.frame objects). I ran both of these commands and they both printed a list of all the column titles in quotation marks.
+\end{itemize}
+Summary
+\begin{itemize}
+    \item str(interviews) - structure of the object and information about the class, length and content of each column. This printed the name of each column, its type and the first few entries, as well as another list below of each of the columns and their data type.
+    \item summary(interviews) - summary statistics for each column. For each of the numerical columns it printed the minimum value, 1st quartile, median, mean, 3rd quartile, and maximum value. For character columns, it listed the class and mode (both character), and the length.
+\end{itemize}
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
 \textbf{Objective: }\\ 
 \textbf{Time Stamp:} \\
 \textbf{Actions:} \\
@@ -1501,10 +1547,10 @@ Make sure that /usr/local/bin is in your \$PATH.\\
 \vspace{5mm}
 \textbf{Objective: Run build\textunderscore prod}\\ 
 \textbf{Time Stamp:} 7:50pm 9 October\\
-\textbf{Actions:} \\
+\textbf{Actions:} Still with the src folder as the working directory, I entered 'build\textunderscore prod \\
 \textbf{Results:} See Errors\\
 \textbf{Errors:} I received this message, 'make: *** No rule to make target `build\textunderscore prod'.  Stop.' I will go to consultation hours to get assistance in getting this to work.\\
-\textbf{Solutions/Notes:} \\
+\textbf{Solutions/Notes:} While waiting to speak to Brian at consultation hours before class, I tried running the command again, but with oTranscribe-master as a the working directory. This successfully created a 'dist' folder with a number of files included in it. The GitHub instructions say 'For a sourcemap and 'watch-for-changes', run make build\textunderscore dev', but I am yet to do this.\\
 \vspace{5mm}
 \textbf{Objective: Upload A Video File To The Online Version Of oTranscribe}\\ 
 \textbf{Time Stamp:} 8:14pm 10 October\\
@@ -1531,6 +1577,29 @@ Make sure that /usr/local/bin is in your \$PATH.\\
 \textbf{Results:} My previous transcript was imported successfully.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Install Jekyll}\\ 
+\textbf{Time Stamp:} 2:00pm to 5:00pm 11 October\\
+\textbf{Actions/Results/Errors:} The next step of the GitHub instructions for downloading and running oTranscribe say to 'Upload the files in the newly-generated dist folder to a server of your choice'. In order to achieve this next step, Brian suggested in consultation hours that I install Jekyll. To do this, I followed each of the instructions (up until Global Install) at \url{https://jekyllrb.com/docs/installation/macos/}. These are just some notes on where I encountered extra actions that needed to be completed or any errors:
+\begin{itemize}
+    \item Entering 'xcode-select --install' printed the message 'xcode-select: error: command line tools are already installed, use "Software Update" to install updates'. I continued to the next instruction.
+    \item When I ran the command to install Homebrew, I received a message about what folders would be created, and was asked to 'Press RETURN to continue or any other key to abort'. I pressed the return button, and then had to enter my computer password.
+    \item The warning 'You don't have /Users/Emily/.gem/ruby/2.3.0/bin in your PATH, gem executables will not run' appeared after running a number of commands. I will need to check whether this creates an issue in the future.
+    \item When I ran 'gem install --user-install bundler jekyll', it printed a lot of text which ended with 'ERROR:  Error installing jekyll:
+	jekyll-sass-converter requires Ruby version >= 2.4.0.'. Brian informed me this was because I skipped the steps for Installing Ruby With rbenv (I assumed I had to follow the instructions for either Homebrew or rbenv, but I had to do both). I then went back and followed the instructions for rbenv.
+    \item When I ran the command to check I had installed rbenv correctly, part of the text was in red, and said 'Checking for rbenv shims in PATH: not found'. It also said, 'Please run `rbenv init' and follow the instructions'. I ran 'rbenv init', and this printed, '\# Load rbenv automatically by appending; \# the following to ~/.bash\textunderscore profile:; eval "\$(rbenv init -)”'. I made the mistake of just entering the command 'eval "\$(rbenv init -)”', where I actually had to make a new file with this in it, which Brian helped me fix.
+\end{itemize}
+\textbf{Solutions/Notes:} Alternative instructions can be found at \url{https://github.com/rbenv/rbenv#homebrew-on-macos}.\\
+\vspace{5mm}
+\textbf{Resources:}\\ 
+These are some resources suggested to me by Brian during consultation hours for completing future work:
+\begin{itemize}
+    \item Setting up a GitHub Pages site with Jekyll - \url{https://help.github.com/en/articles/setting-up-a-github-pages-site-with-jekyll}
+    \item How to test my code does what I mean it to - \url{https://www.r-bloggers.com/unit-testing-with-r/}
+    \item Combining Rcode with text \url{https://uomresearchit.github.io/r-tidyverse-intro/07-notebooks/}
+    \item Also, make sure I write/save my code in an RNotebook.
+\end{itemize}
+
 
 \pagebreak
 
