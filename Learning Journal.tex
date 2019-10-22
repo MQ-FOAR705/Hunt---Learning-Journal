@@ -1599,7 +1599,24 @@ These are some resources suggested to me by Brian during consultation hours for 
     \item Combining Rcode with text \url{https://uomresearchit.github.io/r-tidyverse-intro/07-notebooks/}
     \item Also, make sure I write/save my code in an RNotebook.
 \end{itemize}
-
+\vspace{5mm}
+\textbf{Objective: Set Up A GitHub Pages Site With Jekyll}\\ 
+\textbf{Time Stamp: 11:00am 22 October} \\
+\textbf{Actions/Results/Errors:} When reading the instructions at \url{https://help.github.com/en/articles/setting-up-a-github-pages-site-with-jekyll}, I was unsure about how to upload the dist folder I had compiled to the site so I sent a message to Brian on Slack. We then scheduled a video chat, as the process I needed to follow wouldn't be listed anywhere, and these are the actions I took as instructed by Brian.
+\begin{itemize}
+    \item Firstly, I went to my Hunt-Exercises repository on GitHub and clicked the green 'Clone or download' button, and then clicked the clipboard icon to copy the link to the repository.
+    \item I then opened Terminal and made the Desktop my working directory. I then entered 'git clone' and pasted the link for the repository I had just copied and pressed Enter. This printed some text and created a Hunt-Exercises folder on my Desktop.
+    \item I then entered in Terminal 'mkdir docs' which created a folder called 'docs' on my desktop.
+    \item Through GUI I copied the contents of the dist folder into the new docs folder and then dragged and dropped the docs folder into the Hunt-Exercises folder.
+    \item In terminal I entered 'git add -A'. While I wasn't sure at the time what this did, I looked it up and this command 'add(s) all new and changed files to the staging area' (\url{https://github.com/joshnh/Git-Commands})
+    \item I then entered in Terminal 'git commit -am "Initial commit of folder for Git Pages”', and then 'git push' which committed the changes made to the Hunt-Exercises folder on my Desktop to the master in GitHub, with the commit message I had entered.
+    \item I then went into the Hunt-Exercises repository on GitHub and went to the Settings Tab. I scrolled down to the GitHub Pages section. Under Source, I clicked the drop down menu and selected 'master branch/docs folder'. However, when the link this produced was clicked, the page said 'There isn’t a GitHub pages site here'.
+    \item Brian said this was because GitHub was looking for a specific file and it couldn't find it, so he created it (file.md). Brian changed the site to run off the master branch rather than the 'branch/docs folder'.
+    \item Going to the link now (\url{https://mq-foar705.github.io/Hunt-Exercises/}) successfully displayed a site, with a link to open oTranscribe which opened and functioned successfully.
+    \item Brian said I could include my other documents on this static site. To edit it, I go to file.md. This information can help me with the formatting \url{https://mq-foar705.github.io/Hunt-Exercises/}
+\end{itemize}
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
 
 \pagebreak
 
