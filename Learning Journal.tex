@@ -1460,6 +1460,134 @@ Summary
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
+\textbf{Objective: Extract Data From A Data Frame (Indexing and Subsetting)}\\ 
+\textbf{Time Stamp: 3:53pm 27 October} \\
+\textbf{Actions/Results:} To extract information from a particular part of the data frame I need to 'specify the "coordinates"' I want in square brackets (with the row first and the column second). Firstly I entered 'interviews[1, 1]' (referring to the first row of the first column), which printed some text (A tibble: 1 x 1), the name of the column (key\textunderscore ID), its data type (dbl) and its content (1). Similarly, entering 'interviews[1, 6] printed the contents of the first row of the sixth column (muddaub), as well as its column name (respondent\textunderscore wall\textunderscore type) and its data type (chr). I then entered 'interviews[[1]]'. This printed all of the first column in a single block of text which Brian said in the week 10 lecture was a good way to subset columns for analysis.\\
+All three of these commands have specified the data I want as a vector, but they can also be specified as a data frame (structures the data differently for presentation). For example, I entered 'interviews[1]' which printed the first column of the data frame (same as the previous function), but as a list (only of the first 10 rows).\\
+The lesson also says that entering 'interviews[1:3, 7]' will print the 'first three elements in the 7th column (as a vector)'. I tried this, and it printed this information successfully. I then entered 'interviews[3, ]', (to print 'the 3rd row of the data frame (as a data.frame)'), which successfully this as it appears in the lesson.\\
+The final function the lesson says to enter is 'head\textunderscore interviews <- interviews[1:6, ]' (which the lesson says is the equivalent of 'head\textunderscore interviews \textless - head(interviews)). This created a new object in the data list in the environment tab in the top, right hand pane. When I clicked on it, this opened a new tab in the source pane with a table with the first six rows of the original data. The lesson says ': is a special function that creates numeric vectors of integers in increasing or decreasing order'. I initially thought this would order the rows numerically, but like the lesson said, I tried entering 'interviews[1:10, ]' which printed the first 10 rows of the data. I then entered 'interviews[10:1, ]' which still printed the first ten rows but in the reverse order. I then tried 'interviews[1:5, 4]' which printed the first 5 rows of the fourth column (no\textunderscore membrs), and then 'interviews[5:1, 4]' which printed the first 5 rows of the fourth column but in the reverse order.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Exclude Parts Of The Data Frame When Extracting Data}\\ 
+\textbf{Time Stamp:} 5:24pm 27 October\\
+\textbf{Actions/Results:} To exclude data when extracting it, I can use '-'. For example, the lesson says entering 'interviews[, -1]' extracts the whole first column, except for the first row. I tried this and it printed the results successfully as they appear in the lesson (i.e. without the first row). The lesson also said to try 'interviews[-c(7:131), ]', which printed only the first six rows of the data, excluding all the rest.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Subset Data Frames By Calling Column Names Directly}\\ 
+\textbf{Time Stamp:} 5:40pm 27 October\\
+\textbf{Actions:} The lesson says that 'data frames can subset by calling indices', as in the previous objective, or 'by calling their column names directly'. The lesson provides these four examples which I tried one after the other; 'interviews["village"]', 'interviews[, "village"]', 'interviews[["village"]]' and 'interviews\$village'.\\
+\textbf{Results:} As the lesson said they would, the first two printed the contents of the village column as a data frame (listing the first ten and then '... with 121 more rows'), and the second two printed the contents of the village column as a vector (a block of text with the entire contents of the column).\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise: Subsetting Data Frames}\\ 
+\begin{enumerate}
+    \item The first instruction says to 'create a data frame (interviews\textunderscore 100) containing only the data in row 100 of the interviews dataset'. To do this, I entered 'interviews\textunderscore 100 \textless - interviews[100, ]'. The solution said this was correct.
+    \item Firstly, I entered 'nrow(interviews)' to see how many rows are in the data frame. This printed '131'. I then entered 'interviews[131, ]' to see what this row of the data is, and then, as instructed, compared this to the last row when I entered 'tail(interviews)'. These both showed that the last row had key\textunderscore id 200, from the village Chirodzo. I wasn't really sure how to do the next step (pull out that last row using nrow() instead of the row number) so I had to refer to the solutions to help me. They said to do 'n\textunderscore rows \textless - nrow(interviews)' (to improve readability and reduce duplication), and then 'interviews\textunderscore last \textless - interviews[n\textunderscore rows, ]', which I then did. I understand why this was done now, as it saves you having to do the first two steps I did, and would prevent errors I think if extra rows were added to the table.
+    \item I also had to refer to the solution for this part of the exercise and while I knew the number of rows would have to be divided by 2 to get the middle row, I wasn't sure how to actually structure the function. The answer said, 'interviews\textunderscore middle \textless - interviews[(n\textunderscore rows / 2), ]', which I understood and entered. I then clicked on the the new interviews\textunderscore middle object, which showed me the row with key\textunderscore ID 65. While trying different combinations to attempt to complete this step, I had entered 'nrow(interviews)/2' which printed 65.5. When I looked at the row in the interviews\textunderscore middle object and compared it to the original data set, it is the 66th row. I think technically the middle row should actually be the 67th?
+    \item To try and achieve step four, I wrote head\textunderscore interviews2 \textless - interviews[-7:nrows(interviews), ]', checking this with the solutions before running it. I was really close but forgot I had created the n\textunderscore rows object and should have used that instead of 'nrows(interviews)', and also had to put that part of the function in brackets. The answer was, 'interviews\textunderscore head \textless - interviews[-(7:n\textunderscore rows), ]', which I ran.
+\end{enumerate}
+\vspace{5mm}
+\textbf{Objective: Create A Factor}\\ 
+\textbf{Time Stamp:} 11:25am 28 October\\
+\textbf{Actions:} The lesson says that factors are used to store categorical data as numerical data (which is associated with labels), which is valuable for 'creating plots or doing statistical analyses'. The lesson says to create this factor (with two levels) by entering 'respondent\textunderscore floor\textunderscore type \textless - factor(c("earth", "cement", "cement", "earth"))', which I did.\\
+\textbf{Results:} The lesson says 'R will assign 1 to the level "cement" and 2 to the level "earth" (alphabetically based). The success of this will be tested in the next objective.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: See The Levels Of A Function and The Number of Levels}\\ 
+\textbf{Time Stamp:} 11:34am 28 October\\
+\textbf{Actions/Results:} I entered 'levels(respondent\textunderscore floor\textunderscore type)' to see the levels in the factor created in the previous objective, which successfully printed '"cement" "earth"'. I then entered 'nlevels(respondent\textunderscore floor\textunderscore type)' to see the number of levels in the factor, which successfully printed '2'. These two steps demonstrate that the previous objective was successful.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Order The Levels In The Respondent\textunderscore Floor\textunderscore Type Factor}\\ 
+\textbf{Time Stamp:} 11:55am 28 October\\
+\textbf{Actions:} Firstly, I entered Respondent\textunderscore Floor\textunderscore Type to see the current order of the factor. This printed:\\
+'earth  cement cement earth\\ 
+Levels: cement earth'\\
+However, the lesson notes that sometimes you may want to order a factor in a way that is not alphabetically (e.g. low, medium, high). To reorder this particular factor (i.e. make earth a higher level than cement) I entered 'respondent\textunderscore floor\textunderscore type \textless - factor(respondent\textunderscore floor\textunderscore type, levels = c("earth", "cement"))'.\\
+\textbf{Results:} To check whether this worked, I ran 'respondent\textunderscore floor\textunderscore type' as instructed in the lesson. In the second line beginning with 'Levels:', this successfully printed 'earth' before 'cement'\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Rename 'Cement' in the Respondent\textunderscore Floor\textunderscore Type Factor 'Brick'}\\ 
+\textbf{Time Stamp:} 12:05pm 28 October\\
+\textbf{Actions:} Having reordered the levels in the last objective to have 'earth' first and then 'cement', 'cement' is now level 2. Therefore, to rename 'cement', 'brick' the lesson says to enter 'levels(respondent\textunderscore floor\textunderscore type)[2] \textless - "brick"', which I did. \\
+\textbf{Results:} To test this, I ran 'levels(respondent\textunderscore floor\textunderscore type)', which successfully printed '"earth" "brick"'. I then additionally ran 'respondent\textunderscore floor\textunderscore type', which successfully printed\\
+'[1] earth brick brick earth\\
+Levels: earth brick'\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Convert A Factor To A Character Vector}\\ 
+\textbf{Time Stamp:} 1:22pm 28 October\\
+\textbf{Actions:} As instructed in the lesson, to convert the respondent\textunderscore floor\textunderscore type factor to a character vector, I entered and ran 'as.character(respondent\textunderscore floor\textunderscore type)'.\\
+\textbf{Results:} This successfully printed '"earth" "brick" "brick" "earth"'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}  While I initially thought this objective was to change the actual factor itself, the objects list in the environments tab still had it listed as a 'factor w/ 2 levels', so I think it was only transformed for display here.\\
+\vspace{5mm}
+\textbf{Objective: Convert Factors Where the Levels Appear As Numbers To A Numeric Vector}\\ 
+\textbf{Time Stamp:} 1:37pm 28 October\\
+\textbf{Actions/Results:} Firstly, I created a years\textunderscore fct factor by entering 'year\textunderscore fct \textless - factor(c(1990, 1983, 1977, 1998, 1990))'. The lesson then lists a number of approaches to this objective, which I completed and got the same results as the lesson. They are:
+\begin{itemize}
+    \item The wrong approach: entering 'as.numeric(year\textunderscore fct)' prints '3 2 1 4 3'.
+    \item An approach that works: entering 'as.numeric(as.character(year\textunderscore fct))', prints '1990 1983 1977 1998 1990'.
+    \item The recommended approach: entering 'as.numeric(levels(year\textunderscore fct))[year\textunderscore fct]', prints '1990 1983 1977 1998 1990'.
+\end{itemize}
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} Refer to the lesson for an explanation of what each of the steps are in the recommended approach.\\
+\vspace{5mm}
+\textbf{Objective: Use The plot() Function to See A Graphical Representation Factor Levels}\\ 
+\textbf{Time Stamp:} 2:00pm 28 October\\
+\textbf{Actions:} The lesson lists a number of steps which I completed as follows\
+\begin{enumerate}
+    \item Create a vector from the data frame column "memb\textunderscore assoc" by entering 'memb\textunderscore assoc \textless - interviews\$memb\textunderscore assoc'.
+    \item Convert this vector into a factor by entering 'memb\textunderscore assoc <- as.factor(memb\textunderscore assoc)'
+    \item Observe the factor by entering 'memb\textunderscore assoc'. This printed a block of text comprising of no, yes and \textless NA\textgreater{}. At the bottom was 'Levels: no yes'.
+    \item To see a 'bar plot of the number of interview respondents who were members of an irrigation assocation' I entered 'plot(memb\textunderscore assoc'.
+\end{enumerate}
+\textbf{Results:} In the bottom right hand pane, under the plots tab, a column graph of the no and yes respondents was successfully produced.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Encode The \textless NA\textgreater{} Responses So They Appear In The memb\textunderscore assoc Factor Graph}\\ 
+\textbf{Time Stamp:} 2:13pm 28 October\\
+\textbf{Actions:} Again, I followed the steps as they are explained in the lesson. These were:
+\begin{enumerate}
+    \item Recreate the vector from the previous objective by entering 'memb\textunderscore assoc \textless - interviews\$memb\textunderscore assoc'
+    \item Re-encode the \textless NA\textgreater{} responses as "underdetermined" by entering 'memb\textunderscore assoc[is.na(memb\textunderscore assoc)] <- "undetermined"'
+    \item Convert the vector into a factor using 'memb\textunderscore assoc \textless - as.factor(memb\textunderscore assoc)'
+    \item Observe the factor by entering 'memb\textunderscore assoc'. This printed the same block of text as before, except all the \textless NA\textgreater{} responses were replaced with undetermined, and the final line was 'Levels: no undetermined yes'.
+    \item To produce the new bar plot, I entered 'plot(memb\textunderscore assoc)
+\end{enumerate}
+\textbf{Results:} This produced the same graph as the previous objective, but with a third column in the middle with the undetermined responses.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} I can navigate between the plots I have produced by clicking the left and right arrows in the top left hand corner of the pane.\\
+\vspace{5mm}
+\textbf{Exercise: Renaming The Levels In The memb\textunderscore assoc and Reording The Bar Plot}\\ 
+The first part of the activity says to 'rename the levels of the factor to have the first letter in uppercase: “No”,”Undetermined”, and “Yes”'. I initially approached this by referring to step 2 of the previous objective, but got a little stuck so referred to the answers. From a quick look, I realised this action was more like when I renamed 'cement' to 'brick' in the respondent\textunderscore floor\textunderscore type factor than step 2 from the previous objective, so I closed the solutions and using 'levels(respondent\textunderscore floor\textunderscore type)[2] \textless - "brick"' tried to write my answer. What I ended up with was 'levels(memb\textunderscore assoc) \textless - "No","Undetermined", "Yes"'. However, when I checked this, I realised I should have had 'c("No","Undetermined", "Yes")' as the second part of it (I had forgotten the c and the brackets).\\
+The second part of the activity says to 'recreate the barplot such that “Undetermined” is last (after “Yes”)?'. To complete this, I used 'respondent\textunderscore floor\textunderscore type \textless - factor(respondent\textunder floor\textunderscore type, levels = c("earth", "cement"))' as a reference. Using this I thought 'memb\textunderscore assoc \textless - factor(memb\textunderscore assoc, levels = c("No", "Yes", "Undetermined"))'. When I checked this with the answers, it was correct.\\
+To see the new graph, I ran 'plot(memb\textunderscore assoc)'. This successfully had No, Yes and Undetermined capitalised, and in that order.\\
+\vspace{5mm}
+\textbf{Objective: Format The Dates In The interview\textunderscore date Column}\\ 
+\textbf{Time Stamp:} 3:00pm 28 October\\
+\textbf{Actions:} The aim of this objective is to convert the dates in the interview\textunderscore date column into 'three separate columns'. These are the steps in the lesson I followed:
+\begin{itemize}
+    \item I ran 'str(interviews)' to see the current type of this column. It is listed as 'datetime'.
+    \item I then loaded the lubridate package by entering 'library(lubridate)' (this printed a little bit of red text, including 'attaching package: ‘lubridate’'.
+    \item I then extracted the interview\textunderscore date column by running 'dates \textless - interviews\$interview\textunderscore date', and then viewed this by entering 'str(dates)'. This printed  'POSIXct[1:131], format: "2016-11-17" "2016-11-17" ...'
+    \item To extract the day, month and year from the interview\textunderscore date column into new, separate columns I ran, 'interviews\$day <- day(dates)', 'interviews\$month <- month(dates)' and 
+    interviews\$year <- year(dates)'
+    \item 
+\end{itemize}
+\textbf{Results:} To confirm whether all of this was successful, I ran 'interviews'. This listed the first 10 columns of the first 3 columns, and at the end of the list of the 14 more variables, the new columns I had added were listed (day <int>, month <dbl>, year <dbl>).\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+
+\subsection{Introducing dplyr and tidyr}
 \textbf{Objective: }\\ 
 \textbf{Time Stamp:} \\
 \textbf{Actions:} \\
@@ -1467,10 +1595,13 @@ Summary
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Exercise: }\\ 
-text\\
-
-\subsection{Introducing dplyr and tidyr}
+\textbf{Objective: }\\ 
+\textbf{Time Stamp:} \\
+\textbf{Actions:} \\
+\textbf{Results:}\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
 \textbf{Objective: }\\ 
 \textbf{Time Stamp:} \\
 \textbf{Actions:} \\
