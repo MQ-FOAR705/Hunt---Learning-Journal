@@ -1569,7 +1569,7 @@ Levels: earth brick'\\
 \vspace{5mm}
 \textbf{Exercise: Renaming The Levels In The memb\textunderscore assoc and Reording The Bar Plot}\\ 
 The first part of the activity says to 'rename the levels of the factor to have the first letter in uppercase: “No”,”Undetermined”, and “Yes”'. I initially approached this by referring to step 2 of the previous objective, but got a little stuck so referred to the answers. From a quick look, I realised this action was more like when I renamed 'cement' to 'brick' in the respondent\textunderscore floor\textunderscore type factor than step 2 from the previous objective, so I closed the solutions and using 'levels(respondent\textunderscore floor\textunderscore type)[2] \textless - "brick"' tried to write my answer. What I ended up with was 'levels(memb\textunderscore assoc) \textless - "No","Undetermined", "Yes"'. However, when I checked this, I realised I should have had 'c("No","Undetermined", "Yes")' as the second part of it (I had forgotten the c and the brackets).\\
-The second part of the activity says to 'recreate the barplot such that “Undetermined” is last (after “Yes”)?'. To complete this, I used 'respondent\textunderscore floor\textunderscore type \textless - factor(respondent\textunder floor\textunderscore type, levels = c("earth", "cement"))' as a reference. Using this I thought 'memb\textunderscore assoc \textless - factor(memb\textunderscore assoc, levels = c("No", "Yes", "Undetermined"))'. When I checked this with the answers, it was correct.\\
+The second part of the activity says to 'recreate the barplot such that “Undetermined” is last (after “Yes”)'. To complete this, I used 'respondent\textunderscore floor\textunderscore type \textless - factor(respondent\textunderscore floor\textunderscore type, levels = c("earth", "cement"))' as a reference. Using this I thought 'memb\textunderscore assoc \textless - factor(memb\textunderscore assoc, levels = c("No", "Yes", "Undetermined"))'. When I checked this with the answers, it was correct.\\
 To see the new graph, I ran 'plot(memb\textunderscore assoc)'. This successfully had No, Yes and Undetermined capitalised, and in that order.\\
 \vspace{5mm}
 \textbf{Objective: Format The Dates In The interview\textunderscore date Column}\\ 
@@ -1588,21 +1588,107 @@ To see the new graph, I ran 'plot(memb\textunderscore assoc)'. This successfully
 \textbf{Solutions/Notes:}\\
 
 \subsection{Introducing dplyr and tidyr}
-\textbf{Objective: }\\ 
+There are some resources provided on the lesson site if I want more information about dplyr and tidyr. The lesson says before starting to load the tidyverse and the data set again and preview it, which I did.\\
+\vspace{5mm}
+\textbf{Objective: Select Columns From The Interview Dataset Using select()}\\ 
+\textbf{Time Stamp:} 7:46pm 28 October\\
+\textbf{Actions:} The lesson says 'to select columns of a data frame, use select(). The first argument to this function is the data frame (interviews), and the subsequent arguments are the columns to keep'. Therefore, to select the village, no\textunderscore membrs and years\textunderscore liv columns from the dataset, I entered 'select(interviews, village, no\textunderscore membrs, years\textunderscore liv)' as instructed.\\
+\textbf{Results:} This printed the first 10 rows of these three columns, and has a line at the end saying '... with 121 more rows'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Choose Specific Rows Using filter()}\\ 
+\textbf{Time Stamp:} 7:51pm 28 October\\
+\textbf{Actions:} To just see the rows which have 'God' as the entry in the village column, I entered 'filter(interviews, village == "God")'\\
+\textbf{Results:} This successfully printed the first 3 columns of the first 10 rows from the viallge 'God', with a final line noting their are '33 more rows' with 'God' as the village.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} At first I wasn't sure the difference between select() (used in the previous objective) and filter (used in this objective), but reviewing the start of the lesson again, it says select is used for columns and filter is used for rows (based on certain conditions).\\
+\vspace{5mm}
+\textbf{Objective: Filter and Select at the Same Time Using Pipes}\\ 
+\textbf{Time Stamp:} 8:02pm 28 October\\
+\textbf{Actions:} The lesson notes 'pipes let you take the output of one function and send it directly to the next'. The symbol for pipes is \%\textgreater\% which can be typed directly into R Studio by pressing command, shift and M at the same time. The best way to understand \%\textgreater\%  is to read it as 'then'. To use a pipe to get the no\textunderscore membrs and years\textunderscore live columns of the rows with God as the village, I entered,\\
+interviews\%\textgreater\% \\
+filter(village == "God") \%\textgreater\% \\
+select(no\textunderscore membrs, years\textunderscore liv)\\
+\textbf{Results:} When I wrote this in the source pane, I only had to run the first line. This successfully printed the first 10 rows of what I intended, and noted their were 33 more rows.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson notes this can also be achieved by using intermediate steps or nested functions, and provided examples of these. I read over these examples but thought I was better going straight to testing pipes and did not actually try them myself as I didn't want to confuse myself.\\
+\vspace{5mm}
+\textbf{Objective: Create A New Object Using The Pipe From The Previous Objective}\\ 
+\textbf{Time Stamp:} 8:20pm 28 October\\
+\textbf{Actions:} To complete this objective I added 'interviews\textunderscore god \textless -' to what I entered for the previous objective, so it looked like this:\\
+interviews\textunderscore god \textless -interviews\%\textgreater\% \\
+filter(village == "God") \%\textgreater\% \\
+select(no\textunderscore membrs, years\textunderscore liv)\\
+\textbf{Results:} To check whether this was successful, I entered 'interviews\textunderscore god' which successfully printed the contents of the created data frame with the contents as intended/as it appears in the lesson.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise: Subset The Interview Data To Include Only Members Of An Irrigation Association and the Columns affect\textunderscore conflicts, liv\textunderscore count and no\textunderscore meals}\\ 
+I was initially modelling my answer on the previous objective, but then realised this activity wasn't asking me to create a new object, so referred to the objective before. So using this, I think this would be the answer\\
+interviews \%\textgreater\%\\
+filter(memb\textunderscore assoc == "yes") \%\textgreater\% \\
+select(affect\textunderscore conflicts, liv\textunderscore count, no\textunderscore meals) \\
+interviews\%\textgreater\% \\
+filter(village == "God") \%\textgreater\% \\
+select(no\textunderscore membrs, years\textunderscore liv)\\
+The solution confirmed this was correct and when I ran it, it successfully printed the results as they appear in the lesson.\\
+\vspace{5mm}
+\textbf{Objective: Create A New Column Using mutate()}\\ 
+\textbf{Time Stamp:} 9:27pm 28 October\\
+\textbf{Actions:} The lesson says to create a new column (people\textunderscore per\textunderscore room) with the ratio of household members (no\textunderscore membrs) to rooms used for sleeping (rooms), I should use\\
+'interview \%\textless\%\\
+mutate(people\textunderscore per\textunderscore room = no\textunderscore membrs / rooms)'\\
+\textbf{Results:} Running this printed the text successfully as it appeared in the lesson, with the last variable listed being the one I added (people\textunderscore per\textunderscore room \textless dbl\textgreater).\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Remove Entries Where Respondents Didn't Answer If They Members Of An Irrigation Association From The Previous Objective}\\ 
+\textbf{Time Stamp:} 10:04pm 28 October\\
+\textbf{Actions:} The lesson states as an example, 'we may be interested in investigating whether being a member of an irrigation association had any effect on the ratio of household members to rooms'. To achieve this objective, as instructed, I entered:\\
+'interview \%\textless\%\\
+filter(!is.na(memb\textunderscore assoc))\%\textless\%\\
+mutate(people\textunderscore per\textunderscore room = no\textunderscore membrs / rooms)'\\
+\textbf{Results:} This successfully printed what appears in the lesson. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson notes 'the ! symbol negates the result, so we’re asking for every row where memb\textunderscore assoc is not missing.\\
+\vspace{5mm}
+\textbf{Exercise: Create A New Data Frame Meeting A Number of Criteria}\\ 
+The new data frame created has to have just the village column and a column called total\textunderscore meals which contains the average number of meals served in the household per day on average. Additionally, only the rows where total\textunderscore meals is greater than 20 should be shown. To meet this criteria, I think this should be entered:\\
+interviews \%\textless\%\\
+mutate(total\textunderscore meals = no\textunderscore membrs * no\textunderscore meals)\%\textless\%\\
+filter(total\textunderscore meals meals \textgreater{} 20)\%\textless\%\\
+select(village, total\textunderscore meals)\\
+I check the solution and the only thing I forgot was 'interviews\textunderscore total\textunderscore meals \textless -' at the start of the very first line. I was really happy that I was able to get this answer, and so far this lesson seems to be making a lot of sense. At first I was trying to put '== \textgreater 20' in the third line, but RStudio was alerting me this was incorrect and I was able to address it myself and just have \textgreater.\\
+\vspace{5mm}
+\textbf{Objective: Use group\textunderscore by and summarize() to Compute The Average Household Size By Village}\\ 
+\textbf{Time Stamp:} 10:26pm 28 October\\
+\textbf{Actions:} The lesson provides the explanation 'group\textunderscore by() is often used together with summarize(), which collapses each group into a single-row summary of that group. group\textunderscore by() takes as arguments the column names that contain the categorical variables for which you want to calculate the summary statistics'. To complete this objective I entered:\\
+interviews \%\textless\%\\
+group\textunderscore by(village) \%\textless\%\\
+summarize(mean\textunderscore no\textunderscore membrs = mean(no\textunderscore membrs))
+\textbf{Results:} This successfully printed the results as they appear in the lesson, with the three villages and the average number of people in each of its households (Chirodzo - 7.08, God - 6.86 and Ruaca - 7.57)\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Use group\textunderscore by() To Group By Multiple Columns}\\ 
+\textbf{Time Stamp:} 10:43pm 28 October\\
+\textbf{Actions:} To group by both the village and memb\textunderscore assoc columns I entered:\\
+interviews \%\textless\%\\
+group\textunderscore by(village, memb\textunderscore assoc) \%\textless\%\\
+summarize(mean\textunderscore no\textunderscore membrs = mean(no\textunderscore membrs))\\
+\textbf{Results:} This produced a data frame with each of the villages listed three times, with each of the response types (yes, no, NA), with the average household size for each pairing.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective:}\\ 
 \textbf{Time Stamp:} \\
 \textbf{Actions:} \\
 \textbf{Results:}\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Objective: }\\ 
-\textbf{Time Stamp:} \\
-\textbf{Actions:} \\
-\textbf{Results:}\\
-\textbf{Errors:} None.\\
-\textbf{Solutions/Notes:}\\
-\vspace{5mm}
-\textbf{Objective: }\\ 
+\textbf{Objective:}\\ 
 \textbf{Time Stamp:} \\
 \textbf{Actions:} \\
 \textbf{Results:}\\
