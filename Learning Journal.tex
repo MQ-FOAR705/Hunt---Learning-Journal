@@ -1681,22 +1681,130 @@ summarize(mean\textunderscore no\textunderscore membrs = mean(no\textunderscore 
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Objective:}\\ 
-\textbf{Time Stamp:} \\
-\textbf{Actions:} \\
-\textbf{Results:}\\
+\textbf{Objective: Add Various Filter Steps When Grouping By Two Columns}\\ 
+\textbf{Time Stamp:} 9:25am 29 October\\
+\textbf{Actions:} The lesson lists a number of filter steps I could add to the previous objective, each building on the previous one. Starting with the pipe in the previous objective, I completed each of these.
+\begin{itemize}
+    \item Remove 'respondents who did not specify whether they were a member of an irrigation association' from the previous objective: I added 'filter(!is.na(memb\textunderscore assoc))\%\textless\%' as the second line.
+    \item Summarise an additional variable: To add a column with the 'minimum household size for each village for each group', directly after 'mean(no\textunderscore membrs)' in the line beginning with 'summarize' I added ', min\textunderscore membrs = min(no\textunderscore membrs)'
+    \item Order the results: To sort the results from the house with the smallest minimum household size to largest, I added a \%\textless\% to the end of the line beginning with 'summarize', and then added as the last line 'arrange(min\textunderscore membrs).
+    \item Order the results (using desc()): To sort the minimum household size in descending order, I replaced the line in the previous dot point with 'arrange(desc(min\textunderscore membrs))'
+\end{itemize}
+\textbf{Results:} Each of these were successful, printing the intended results as they appear in the lesson.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Objective:}\\ 
-\textbf{Time Stamp:} \\
-\textbf{Actions:} \\
-\textbf{Results:}\\
+\textbf{Objective: Use Count ()}\\ 
+\textbf{Time Stamp:} 9:49pm 29 October\\
+\textbf{Actions/Results:} To 'count the number of rows of data for each village', I entered\\
+interviews \%\textless\%\\
+count(village)\\
+This informed me that Chirodzo had 39 rows, God had 43 and Ruaca had 49. These were listed in ascending order, but to list them in descending order, I entered\\
+interviews \%\textless\%\\
+count(village, sort = TRUE)\\
+This successfully ordered the results in descending order.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
-\textbf{Exercise: }\\ 
-text\\
+\textbf{Exercise: How Many Households Have An Average of Two Meals Per Day, Three Meals Per Day? Any Others?}\\ 
+To complete this exercise, I entered,\\
+'interviews \%\textless\%\\
+count(no\textunderscore meals)'\\
+This told me 52 households had an average of two meals per day, and 79 had an average of 3 meals per day. There were no other average numbers of meals besides 2 or 3. The solution confirmed this was correct.
+\vspace{5mm}
+\textbf{Exercise: Find The Mean, Min and Max Number of Household Members For Each Village}\\ 
+To complete this exercise, I thought this might be the best approach,
+interviews \%\textless\%\\
+group\textunderscore by(village) \%\textless\%\\
+summarize(mean\textunderscore no\textunderscore membrs = mean(no\textunderscore membrs), min\textunderscore no\textunderscore membrs = min(no\textunderscore membrs),
+max\textunderscore no\textunderscore membrs = max(no\textunderscore membrs))\\
+I wasn't sure how to add the number of observations using ?n so refered to the answers. This told me I should add ', n = n()' after 'max(no\textunderscore membrs)', but the rest of my answer was correct which I was thrilled with. The solution also showed me the benefit of putting each part of my summarize line on a new line for readability, as I had it all on one line initially. I ran my code once I had added the parts from the solution and it successfully printed the correct results from the lesson.\\
+\vspace{5mm}
+\textbf{Exercise: What Was The Largest Household Interviewed In Each Month?}\\ 
+Firstly, I went back and reran the lines from the previous lesson where I loaded the lubridate package and separated the interviews column into a day, month and year column. I then got a bit stuck (mainly because I misread the activity and thought I had to sort it by the number of interviews in each month), and read the solution. This was what was listed\\
+interviews \%\textless\%\\
+mutate(month = month(interview\textunderscore date),\\
+day = day(interview\textunderscore date),\\
+year = year(interview\textunderscore date)) \%\textless\%\\
+group\textunderscore by(year, month) \%\textless\%\\
+summarize(max\textunderscore no\textunderscore membrs = max(no\textunderscore membrs))\\
+As I had already separated the columns, I just ran the first and last two lines of the solution. This successfully printed the same results as the lesson. When I was trying to work out the problem, I didn't think of grouping by both year and month, but I understand now why you would do that.\\
+\vspace{5mm}
+\textbf{Objective: Reshaping The Data With spread()}\\ 
+\textbf{Time Stamp:} 8:13pm 29 October\\
+\textbf{Actions:} The lesson provides an in-depth explanation of what is being achieved in this objective, but essentially, we are making a new table where there is a separate column for each of the materials from the current respondent\textunderscore wall\textunderscore type column, and the cells are either TRUE or FALSE. The data is being 'reshaped . . . according to the obervations of interest'. This is the code that I copied from the lesson into RStudio and ran:\\
+'interviews\textunderscore spread \textless - interviews \%\textless\%\\
+mutate(wall\textunderscore type\textunderscore logical = TRUE) \%\textless\%\\
+spread(key = respondent\textunderscore wall\textunderscore type, value = wall\textunderscore type\textunderscore logical, fill = FALSE)'\\
+Refer to the lesson for an explanation on what each of these steps actually do.\\
+\textbf{Results:} This was successful. I checked this by running 'view(interviews\textunderscore spread)' which opened a new tab in the source pane with the table. Now, the respondent\textunderscore wall\textunderscore type column was gone, and there were four additional columns at the end of the table (burntbricks, cement, muddaub and sunbricks)(filled with either TRUE or FALSE)..\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The opposite of using spread() is gather(), which will be used in the next objective.\\
+\vspace{5mm}
+\textbf{Objective: Use gather() To Treat Column Names As Values Of Another Variable}\\ 
+\textbf{Time Stamp:} 10:08pm 29 October\\
+\textbf{Actions/Results:} This object is the reverse of the previous one, putting the information in the burntbricks, cement, muddaub and sunbricks columns, back into a respondent\textunderscore wall\textunderscore type column. This is the code provided in the lesson:\\
+'interviews\textunderscore gather \textless - interviews\textunderscore spread \%\textless\%\\
+gather(key = "respondent\textunderscore wall\textunderscore type", value = "wall\textunderscore type\textunderscore logical",burntbricks:sunbricks) \%\textless\%\\
+filter(wall\textunderscore type\textunderscore logical) \%\textless\%\\
+select(-wall\textunderscore type\textunderscore logical)'\\
+Refer to the lesson for an in depth explanation of how the code works. As suggested in the lesson, I ran the first two lines by themselves first. This created a table where there was a respondent\textunderscore wall\textunderscore type column and a wall\textunderscore type\textunderscore logical column. Each response had burntbricks listed in the wall type column and either TRUE or FALSE in the logical column, with then repeated for the three other wall types. I then ran the whole thing, with the last two lines deleting the rows where the logical column had FALSE, and then deleting the wall\textunderscore type\textunderscore logical column entirely.\\
+As the lesson notes, now all the responses with the same wall types are listed together.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Use spread() To Clean The Data By Moving Each Item Owned Into A Separate Column}\\ 
+\textbf{Time Stamp:} 10:40pm 29 October\\
+\textbf{Actions:} Again, the lesson provides an in-depth line by line explanation of how this objective is achieved. This was the code provided in the lesson which I ran:
+interviews\textunderscore items\textunderscore owned \textless - interviews \%\textless\%\\
+    separate\textunderscore rows(items\textunderscore owned, sep=";") \%\textless\%\\
+    mutate(items\textunderscore owned\textunderscore logical = TRUE) \%\textless\%\\
+    spread(key = items\textunderscore owned, value = items\textunderscore owned\textunderscore logical, fill = FALSE)\\
+\textbf{Results:} I viewed the new table, and it now had a column for each of the different items owned, with TRUE or FALSE listed for each response. The lesson also said it should have the same number of rows as the original data, which I confirmed by running 'nrow(interviews\textunderscore items\textunderscore owned)', which printed '131'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} The lesson provides lines of code to change the column for those who had no items from '\verb|\|' to '\textless NA\textgreater ', but my column was already named '\textless NA\textgreater ' so I skipped running this line of code.\\
+\vspace{5mm}
+\textbf{Objective: Use The New Individual Columns For Items Owned}\\ 
+\textbf{Time Stamp:} 11:00pm 29 October\\
+\textbf{Actions/Results:} The first thing listed by the lesson, was creating a 'table showing the number of respondents in each village who owned a particular item'. To do this, I ran\\
+interviews\textunderscore items\textunderscore owned \%\textless\%\\
+filter(bicycle) \%\textless\%\\
+group\textunderscore by(village) \%\textless\%\\
+count(bicycle)\\
+This successfully created a table showing how many bicycles are owned in each village (Chirodzo - 17, God - 23 and Ruaca - 20).\\
+The second thing was to 'calculate the average number of items from the list owned by respondents in each village'. To do this I ran:\\
+interviews\textunderscore items\textunderscore owned \%\textless\%\\
+mutate(number\textunderscore items = rowSums(select(., bicycle:television))) \%\textless\%\\
+group\textunderscore by(village) \%\textless\%\\
+summarize(mean\textunderscore items = mean(number\textunderscore items))\\
+This successfully printed the table as it appears in the lesson.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Exercise: Create A New Data Frame That Has One Column For Each Month And Records TRUE Or FALSE For Whether The Respondent Had Food That Month}\\ 
+To complete this activity, I copied the code from when I separated the items\textunderscore owned column into separate columns for each item, and replaced it with the appropriate column names etc. for this activity. As a result, I got this code\\
+interviews\textunderscore months\textunderscore lack\textunderscore food \textless - interviews \%\textless\%\\
+separate\textunderscore rows(months\textunderscore lack\textunderscore food, sep=";") \%\textless\%\\
+mutate(months\textunderscore lack\textunderscore food\textunderscore logical = TRUE) \%\textless\%\\
+spread(key = months\textunderscore lack\textunderscore food, value = months\textunderscore lack\textunderscore food\textunderscore logical, fill = FALSE)\\
+The solutions confirmed this was correct, and when I ran the code and then, 'view(interviews\textunderscore months\textunderscore lack\textunderscore food)', the new columns were created successfully. The new columns for each month were ordered alphabetically from left to right.\\
+\vspace{5mm}
+\textbf{Exercise: How many months (on average) were respondents without food if they did belong to an irrigation association? What about if they didn’t?}\\ 
+I was really unsure about how to complete this exercise, so had to look at the solution. This is what was listed\\
+interviews\textunderscore months\textunderscore lack\textunderscore food \%\textless\%\\
+mutate(number\textunderscore months = rowSums(select(., Apr:Sept))) \%\textless\%\\
+group\textunderscore by(memb\textunderscore assoc) \%\textless\%\\
+summarize(mean\textunderscore months = mean(number\textunderscore months))\\
+This solution sort of makes sense, but I don't think I would have been able to get it myself. I ran the code and got the result as it appears in the lesson.\\
+\vspace{5mm}
+\textbf{Objective: Export A Data Frame To the data\textunderscore output Directory}\\ 
+\textbf{Time Stamp:} 11:30pm 29 October\\
+\textbf{Actions/Results:} Firstly, the lesson says to run the provided code to create a data frame where the months\textunderscore lack\textunderscore food and items\textunderscore owned columns are expanded into multiple columns. Please refer to the lesson for this code.\\
+To export this data frame to the data\textunderscore output directory, I ran this code: 'write\textunderscore csv(interviews\textunderscore plotting, path = "data\textunderscore output/interviews\textunderscore plotting.csv")'.
+I confirmed this was successful by clicking on the  data\textunderscore output directory in the bottom right hand pane. The file successfully appeared in the directory.\\
+I also wanted to try this with one of the previously created data frames, so I ran 'write\textunderscore csv(interviews\textunderscore spread, path = "data\textunderscore output/interviews\textunderscore spread.csv")'. This was also successful. Clicking on either of the data sets in the directory, gave me the option to either view the file or import the dataset.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
 
 \pagebreak
 
