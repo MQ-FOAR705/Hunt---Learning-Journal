@@ -1840,6 +1840,9 @@ I spoke to Shawn in consultation hours after class in Week 7. He expressed conce
 \textbf{Results:} When I pasted this link into a new Chrome window, it opened my corpus successfully. I can also export individual tools by going to the top right hand corner of the tool and following the same process outlined above.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} Something I need to consider in the future is whether I need to re-export the link everytime I make changes (the answer to this is yes: I do, as I excluded a word for a tool and then re-entered the link above, and the change wasn't reflected).\\
+\vspace{5mm}
+I ultimately decided against using this tool, as my final project was dedicated to using software to record notes and then completing a very basic analysis of these using the unix shell.
+\vspace{5mm}
 
 \pagebreak
 
@@ -1938,10 +1941,110 @@ These are some resources suggested to me by Brian during consultation hours for 
     \item I then went into the Hunt-Exercises repository on GitHub and went to the Settings Tab. I scrolled down to the GitHub Pages section. Under Source, I clicked the drop down menu and selected 'master branch/docs folder'. However, when the link this produced was clicked, the page said 'There isn’t a GitHub pages site here'.
     \item Brian said this was because GitHub was looking for a specific file and it couldn't find it, so he created it (file.md). Brian changed the site to run off the master branch rather than the 'branch/docs folder'.
     \item Going to the link now (\url{https://mq-foar705.github.io/Hunt-Exercises/}) successfully displayed a site, with a link to open oTranscribe which opened and functioned successfully.
-    \item Brian said I could include my other documents on this static site. To edit it, I go to file.md. This information can help me with the formatting \url{https://mq-foar705.github.io/Hunt-Exercises/}
+    \item Brian said I could include my other documents on this static site. To edit it, I go to file.md. This information can help me with the formatting \url{https://guides.github.com/features/mastering-markdown/}
 \end{itemize}
 \textbf{Solutions/Notes:}\\
 \vspace{5mm}
+\textbf{Objective: Edit My Static Site (Add Headings)} 
+\textbf{Time Stamp:} 9:43am 1 November\\
+\textbf{Actions:} In my Hunt-Exercises Repository on GitHub, I clicked on the index.md file and clicked on the little pencil icon to edit the file. As instructed at the link included in the previous objective, I typed a '\#', a space, and then the text for my main heading (FOAR705 Proof of Concept). I also tried this with two '\#' for a subheading (Emily Hunt) and three '\#' for headings throughout the rest of the file.\\
+\textbf{Results:} When I clicked on the 'Preview Changes' tab, the headings I had created were successfully shown.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Edit My Static Site (Save Changes Made To index.md File)}\\ 
+\textbf{Time Stamp:} 9:54am 1 November\\
+\textbf{Actions:} At the bottom of the page in which I was editing the index.md file, under Commit changes, I added a commit message and description in the relevant boxes. I then clicked the green 'Commit changes' button. \\
+\textbf{Results:} This successfully saved the changes I had made and added to the commit to my history. When I went to my site using the link from a previous objective, the changes were successfully represented. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} When I tried to click on the link to the version of oTranscibe I was running from within the 'Preview changes' tab when editing the index.md file it said the page could not be found. However, after I saved my changes and went to the site, the link worked successfully.\\
+\vspace{5mm}
+\textbf{Objective: Edit My Static Site (Add A Link To Something In My Hunt-Exercises Repository)}\\ 
+\textbf{Time Stamp:} 10:06am 1 November\\
+\textbf{Actions:} I wanted to create a link to my Elaboration Document which is saved within a subdirectory in my Hunt-Exercises repository. To do this I added a line to the index.md document '[Elaboration Planning](/Hunt-Exercises/Hunt\textunderscore Elaboration\textunderscore 1\textunderscore Planning @ d4199f3)'. When I went to the 'Preview changes' tab however, this hadn't created a link, but this text was just appearing as it was typed. So, I went back to the 'Edit file' tab and removed '@ d4199f3'. When I previewed it again, this seemed to have created a link.\\
+I also wanted to create a link to a file saved in my repository, that wasn't saved in a subdirectory. So, I entered a line '
+[Scoping](/Hunt-Exercises/Hunt-Scoping Exercise.pdf)'. This did not appear as a link in the Preview tab. However, I realised this may be because of the space included in the file name. When I tested it again with a different file without a space, the link was successfully created. So, I replaced the line with \verb|[Scoping](https://github.com/MQ-FOAR705/Hunt-Exercises/blob/master/Hunt-Scoping%20Exercise.pdf)|, hoping the direct link would work. When I went to the preview tab, the link was successfully created.\\
+\textbf{Results:} I saved the changes, adding a commit message and description. While the link I had created using the site address worked, the first one didn't. I then solved this by also using the site address to create that link, which solved this issue.\\
+\textbf{Errors:} One of my links didn't work, but the way I addressed this is in Results.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Edit My Static Site (Add A Line Break)}\\ 
+\textbf{Time Stamp:} 10:20am 1 November\\
+\textbf{Actions:} I added '\textless br /\textgreater' where I wanted the line break. \\
+\textbf{Results:} This successfully created a line break where I insert it. Adding two together, put a break of two lines.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} I used this source to find the solution to this objective: \url{https://stackoverflow.com/questions/33191744/how-to-add-new-line-in-markdown-presentation}\\
+\vspace{5mm}
+\textbf{Objective: Edit My Static Site (Change Theme)}\\
+\textbf{Time Stamp:}\\
+\textbf{Actions:} \\
+\textbf{Results:} \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+
+\pagebreak
+
+\subsection{Duplicati}
+This software will be used for my disaster recovery, which I will demonstrate during office hours.\\
+\textbf{Objective: Download and Open Duplicati}\\
+\textbf{Time Stamp:} 1:45pm 1 November\\
+\textbf{Actions/Results:} I went to \url{https://www.duplicati.com} and selected the blue button 'Download Duplicati 2.0 (beta)'. This took me to a new page with links to download Duplicati for different operating system. I clicked on the button with the Apple logo and 'macOS / OSX 2.0.4.23', which began a download. Once the download was complete, I opened the file, and this prompted me to drag and drop the Duplicati icon to an icon which was a shortcut for my Applications folder. I then closed the file window and went to my applications folder where Duplicati successfully appeared. When I clicked the icon to open it, a pop-up appear saying 'Mono Framework 3.0 or later' was required. I was then automatically taken to the website from which to download mono (\url{https://www.mono-project.com/download/stable/#download-mac}). I clicked on the blue button to 'Download Mono 6.4.0 (Visual Studio channel), which began downloading. Once this was complete, I opened the file and followed the prompts to install Mono.\\
+\textbf{Results:} When I went back to the applications folder and clicked on the Duplicati icon, the application opened succesfully.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Set Up A Backup}\\
+\textbf{Time Stamp:} 1:50pm 1 November\\
+\textbf{Actions/Results:} These were the steps I followed at the various pages within Duplicati:
+\begin{itemize}
+    \item I opened Duplicati and in the menu on the left hand side selected '+ Add Backup'. In page that opened, I left 'Configure a new backup' selected, and clicked 'Next \textgreater'.
+    \item General Backup Settings page: Firstly I gave the backup a name. I called it 'FOAR702 Test' as I wanted to confirm how to use the software before setting up my main backup. I left the encryption as AES-256, and created a passphrase for this backup, then clicked 'Next \textgreater'.
+    \item Destination page: From the storage type drop down menu, I selected WebDAV and ticked the box for 'Use SSL'. In another tab, I then logged into Cloudstor and went to Settings (by clicking the cog icon in the top right hand corner of the page. I then went down to to the address under the WebDAV heading. I copied 'https://cloudstor.aarnet.edu.au' and pasted it into the 'Server and Port' text box in Duplicati. I then copied the remainder of the link from Cloudstor and pasted into the 'Path on Server' textbox in Duplicati, adding the name I wanted the folder this backup is in to be called to the end. From Cloudstor I then copied my username and pasted this into the username box in Duplicati. In Cloudstor, I went to the Security page of Settings (from the menu on the left hand side of the page). At the top of the page, Under 'App passwords', where it said 'App name' I entered Duplicati and clicked Create new app password. I then copied this and pasted it into the password text box in Duplicati. I then clicked the blue 'Test Connection' box. At first this was unsuccessful, but after I deleted 'https://' from the beginning of the Cloudstor link in Server and Port, it worked. A pop-up appeared saying the folder I had named in the Path in Server does not exist, create it now? I clicked Yes. A pop-up then appeared saying 'Success: Connection Worked!'. I clicked 'OK' and then 'Next \textgreater'.
+    \item Source Data: I nagivated to the folder I wanted to back up and selected its tick box and then clicked 'Next \textgreater'.
+    \item Schedule: I left all the backup options as they were and then clicked 'Next \textgreater'.
+    \item General Options: I left the Remote volume size as it was and from the Backup Retention dropdown menu, selected Smart Backup Retention. I then clicked 'Save'. A pop-up appeared asking as I had selected a strong phrase, if I would be able to make sure I knew what it was as if I lose it, the data cannot be recovered. I clicked 'Yes, I have stored the passphrase safely'.
+    \item I was then taken back to the home page of Duplicati, where the backup I had created appeared. Under its title, I clicked the 'Run now' blue text. The progress of the backup was shown at the top of the bar in a progress bar. When it had completed I recieved a message saying their was one warning (I was told this is ok, it is errors that are the problem). When I checked in Cloudstor, there was now a file with the name I had entered and it contained a number of files beginning with 'Duplicati'.
+    \item I then clicked the down arrow next to the backups name, and under 'Configuration', selected Export. I then selected 'Encrypt file', entered a passphrase. I then clicked Export and this downloaded a file. I then emailed this file to myself.
+\end{itemize}
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} With thanks to Georgia for her explanation of how to do this. I then repeated this process to create a backup for the copy of my Hunt-Exercises GitHub repository that I had saved on my computer. I used the same App password for the second backup that had been generated for Duplicati in Cloudstor for the first.\\
+\vspace{5mm}
+\textbf{Objective: Restore A File From A Backup}\\
+\textbf{Time Stamp:}\\
+\textbf{Actions:} \\
+\textbf{Results:} \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+
+\pagebreak
+
+\subsection{Testing}
+During consultation hours Brian suggested that the best way to complete testing would be to test the shell script I write.\\
+These were some recommended resources for testing generally:
+\begin{itemize}
+    \item \url{https://www.leadingagile.com/2018/10/unit-testing-shell-scriptspart-one/}
+    \item \url{https://www.digitalocean.com/community/tutorials/how-to-find-broken-links-on-your-website-using-wget-on-debian-7}
+\end{itemize}
+\vspace{5mm}
+\textbf{Objective: Install Bash Automated Testing System (BATS) For Testing}\\
+\textbf{Time Stamp:} Consultation hours before class 1 November\\
+\textbf{Actions:} At first BATS was attempted to be installed from this source: \url{https://github.com/sstephenson/bats}. However, it was then realised that this repository was lasted updated around 5 years ago. Therefore, this repository was used for installation \url{https://github.com/bats-core/bats-core#writing-tests}. As I had already installed Homebrew for my proof of concept, I just ran 'brew install bats-core' in terminal.\\
+\textbf{Results:} After some time, BATS was successfully installed. Running 'bats -v' printed 'Bats 1.1.0'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Create And Use a .bat File To Test A Unix Script}\\
+\textbf{Time Stamp:} Consultation hours before class 1 November\\
+\textbf{Actions/Results:} Firstly, I created a new file in TextWrangler and saved it as 'test.bats'. Using the example from the GitHub page I attempted to create a test file. At first when I ran it, using 'bats test.bats', it printed it had failed because there was 'no such file' as the one I was attempting to run it on (test\textunderscore notes.txt). So, I moved both test\textunderscore notes.txt and the bats file to the bats folder that had downloaded when I installed it. I then tried to run it again, trying a number of different ways to structure the test file, but it always failed because the command was not found or integer expression was expected. The final iteration I had, which still didn't work was:
+'\#!/usr/bin/env bats\\
+@test "word count" \verb|{|\\
+result="\$(wc test\textunderscore notes.txt)"\\
+echo \$result\\
+[ "\$result" \verb|==| "17 test\textunderscore notes.txt" ]\\
+\verb|}|\\
+\textbf{Errors:} I could not get the test to work and this still needs to be fixed.\\
+\textbf{Solutions/Notes:} This may be a useful resource: \url{https://tecadmin.net/tutorial/bash/examples/check-if-two-strings-are-equal/}\\
 
 \pagebreak
 
@@ -1952,7 +2055,7 @@ These are some resources suggested to me by Brian during consultation hours for 
 \autoref{sec:underfull} Underfull /hbox (badness ****) in paragraph at lines **\\
 \autoref{sec:logcommand} Log Command Has Changed\\
 \autoref{sec:description} Commit From Overleaf not Appearing in GitHub\\
-\autoref{sec:space} No Space in Text Behind Special Characters
+\autoref{sec:space} Issues From Using Characters Which Are Special and No Space in Text Behind Special Characters
 
 \subsubsection{Error: Overfull hbox (**pts too wide) in paragraph at lines **}
 \textbf{Errors:} This error keeps appearing down the left hand side of the document where the lines are shown.\\
@@ -1999,6 +2102,11 @@ Prior to attempting a solution, I asked advice from Brian on Slack.\\
 \subsubsection{Word Count Command Not Working}
 \textbf{Time Stamp:} N/A\\
 \textbf{Action:} As noted in the lesson, if you type 'wc' and click enter, you haven't added a file name so Terminal waits for you to provide input for it to process. To exit this, press control and 'c'.\\
+
+\subsection{RStudio}
+\subsubsection{Commands Not Working As Expected When Resuming Lesson}
+A common issue I had was that after I resumed a lesson, running commands would not print the intended result. I realised, at the beginning of every session, I would have to reload tidyverse and the data using 'library(tidyverse)' and 'interviews \textless - read\textunderscore csv("data/SAFI\textunderscore clean.csv", na = "NULL")'.
+
 
 \end{FlushLeft}
 
