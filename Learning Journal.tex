@@ -1846,7 +1846,7 @@ I ultimately decided against using this tool, as my final project was dedicated 
 
 \pagebreak
 
-\subsection{oTranscribe}
+\subsection{oTranscribe and Static Site}
 This is a tool I plan to use in my proof of concept which allows you to transcribe notes while watching a video. While there is an online version, you can also download it from GitHub (\url{https://github.com/oTranscribe/oTranscribe}).
 \vspace{5mm}
 \textbf{Objective: Download The Repository From GitHub}\\ 
@@ -1974,14 +1974,12 @@ I also wanted to create a link to a file saved in my repository, that wasn't sav
 \textbf{Results:} This successfully created a line break where I insert it. Adding two together, put a break of two lines.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} I used this source to find the solution to this objective: \url{https://stackoverflow.com/questions/33191744/how-to-add-new-line-in-markdown-presentation}\\
-\vspace{5mm}
-\textbf{Objective: Edit My Static Site (Change Theme)}\\
-\textbf{Time Stamp:}\\
-\textbf{Actions:} \\
-\textbf{Results:} \\
+\textbf{Objective: Edit My Static Site (Add An Unordered List)}\\ 
+\textbf{Time Stamp:} 10:25am 1 November\\
+\textbf{Actions:} I added '* Item 1', '* Item 2' and so on at the start of the lines where I wanted to create a list with dot points. \\
+\textbf{Results:} This successfully created list.\\
 \textbf{Errors:} None.\\
-\textbf{Solutions/Notes:}\\
-\vspace{5mm}
+\textbf{Solutions/Notes:} To create an ordered list, start the line with '1. Item 1', and so on. To create a sub list, use 'Item 1a', then Item 1b', using the number of the item you want it to be a sub list of.\\
 
 \pagebreak
 
@@ -2011,9 +2009,9 @@ This software will be used for my disaster recovery, which I will demonstrate du
 \textbf{Solutions/Notes:} With thanks to Georgia for her explanation of how to do this. I then repeated this process to create a backup for the copy of my Hunt-Exercises GitHub repository that I had saved on my computer. I used the same App password for the second backup that had been generated for Duplicati in Cloudstor for the first.\\
 \vspace{5mm}
 \textbf{Objective: Restore A File From A Backup}\\
-\textbf{Time Stamp:}\\
-\textbf{Actions:} \\
-\textbf{Results:} \\
+\textbf{Time Stamp:} 6:45pm 4 November\\
+\textbf{Actions:} Firstly, I downloaded the configuration file I had emailed to myself in the previous objective. Then, I opened Duplicati and selected Restore in the menu on the left hand side of the page. I selected 'Restore from configuration ...' and then clicked 'Next \textgreater'. I then clicked Choose file, navigated to my downloads folder, selected the configuration file and clicked Choose. I then entered my password and selected Import. In the page that opened (backup location with all the fields automatically filled with my backup's information), I selected the Test connection button. After I received a message saying the connection had worked, I clicked 'Next \textgreater'. In the next page (Encryption), I selected 'Connect'. I got four warnings which I dismissed. The dropdown files page had a dropdown menu (Restore from) from which I could select the date of the backup I wanted to restore from, and listed all the files from that backup (with the a search box available to find a specific file). I selected my backup from 3 November and selected my index.md file. I then clicked Continue. In the next page (Restore Options) I selected 'pick location' and chose a folder on my desktop. I then selected 'Save different versions with timestamp in file name' under 'How do you want to handle existing files?'. I then clicked Restore. \\
+\textbf{Results:} I received a message in Duplicati that 'Your files and folders have been restored successfully'. I clicked OK which took me back to the homepage. I then went to the folder I had selected to restore to in GUI, where the file successfully appeared and also opened succesfully.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:}\\
 
@@ -2041,10 +2039,44 @@ These were some recommended resources for testing generally:
 @test "word count" \verb|{|\\
 result="\$(wc test\textunderscore notes.txt)"\\
 echo \$result\\
-[ "\$result" \verb|==| "17 test\textunderscore notes.txt" ]\\
+[ "\$result" \verb|==| "17 test \textunderscore notes.txt" ]\\
 \verb|}|\\
 \textbf{Errors:} I could not get the test to work and this still needs to be fixed.\\
 \textbf{Solutions/Notes:} This may be a useful resource: \url{https://tecadmin.net/tutorial/bash/examples/check-if-two-strings-are-equal/}\\
+
+\pagebreak
+
+\subsection{Unix Shell Script}
+\textbf{Objective: Create a Shell Script That Puts Notes From An oTranscribe Export Into Separate Files Based On Their Use of Keywords}\\
+\textbf{Time Stamp:} 9:30pm 3 November\\
+\textbf{Actions/Results:} To complete this objective, I used the notes from oTranscribe I had previously created for my video of a parade. This was my process to create the shell script:
+\begin{itemize}
+    \item Firstly, I wanted to re familiarise myself with the unix shell and grep. So, I made the folder in which my txt notes were saved, and ran 'grep start test\textunderscore notes.txt'. This did not print anything and the prompt reappeared. I then check the notes file, and realised both of the starts within the text were capitalised. I realised I had to turn off the case sensitivity of the search, and referring to my learning journal, entered 'grep -i start test\textunderscore notes.txt \textgreater{} start.txt'. This successfully created a new txt file with all the lines from the notes containing start.
+    \item My next step was to create my script. I entered 'nano organise\textunderscore notes.sh' to open the nano text editor. I remembered a similar script in the unix lessons to find how many times the names of the main characters were mentioned in 'Little Women' so using this as the basis, I wrote and then saved\\
+    \#Script to sort notes in a txt file from oTranscribe into separate txt files on the basis of their mention of specific keywords\\
+    \#Run this script with the filename of the notes as the argument\\
+    \#Usage: bash organise\textunderscore notes.sh notesfile.txt\\
+    for keyword in parade start \# Edit these words to search for different terms\\
+    do\\
+    grep -i \$keyword \$1 \textgreater{} \$keyword.txt\\
+    done
+    \item To test my script, I ran 'bash nano organise\textunderscore notes.sh test\textunderscore notes.txt'. This successfully created two files (parade.txt and start.txt) which contained the appropriate lines from the notes.
+    \item I then replaced 'parade start' in the script with terms appropriate to film analysis ('colour lighting camera sound editing theme narrative character'). I later tested this on file with notes on a film, and the script performed as intended, creating a separate file for each of these terms with the correct lines.
+\end{itemize}
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Create a Code Ocean Account and New Capsule}\\
+\textbf{Time Stamp:} 5:40pm 3 November\\
+\textbf{Actions:} As recommended by Brian, I went to \url{https://codeocean.com/} and clicked Sign Up. I then entered my student email and selected next. I then followed the prompts to create my account, entering my name and a password, and then finished setting up my account by selecting the link in the activation email I received. From my dashboard, I selected the blue 'New Capsule' button, and clicked 'Create Blank Capsule', rather than 'Import Git Repository'.\\
+\textbf{Results:} My account and new capsule were successfully created. When the capsule opened, I selected 'Ubuntu Linux (18.04.3)' from the environment list. For what I did next, please see the next objective.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Upload My Script And Notes File To Code Ocean And Successfully Run The Script}\\
+\textbf{Time Stamp:} 7:45pm 4 November\\
+\textbf{Actions/Results/Errors:} Firstly, I clicked the Upload button in the left hand menu. I uploaded both my script (organise\textunderscore notes.sh) and notes I had written in oTranscribe on a film (Purl\textunderscore notes.txt), and then dragged and dropped them into the code and data folders respectively in the left hand menu. I then selected the blue 'Reproducible Run' button, and a pop-up informed me I had to indicate which file to run. So, I then clicked on the downwards arrow next to organise\textunderscore notes.sh, and from the drop down menu that appeared selected 'Set as file to run'. This created a new file, 'run', which opened in a new tab. I edited the line 'bash organise\textunderscore notes.sh' to read, 'bash organise\textunderscore notes.sh Purl\textunderscore Notes.txt'. I then clicked the blue 'Reproducible Run' button, and the text produced said Purl\textunderscore Notes.txt' could not be located. I then realised I hadn't specified the paths of my film notes file or the output. Using \url{https://help.codeocean.com/en/articles/1082877-paths} I tried different combinations, but ultimately what I had to do was change 'bash organise\textunderscore notes.sh' to 'bash organise\textunderscore notes.sh ../data/Purl\textunderscore Notes.txt', and in my script, put '../results/' before '\$keyword.txt'. The script worked successfully after I made these changes, creating the correct files with the correct contents.\\
+\textbf{Solutions/Notes:}\\
 
 \pagebreak
 
