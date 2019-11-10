@@ -4,6 +4,9 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{amssymb}
 
 
 \title{\textbf{LEARNING JOURNAL}}
@@ -175,6 +178,35 @@ To view on Overleaf \url{https://www.Overleaf.com/read/mbyzzhcjkmtv}
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} If I have coloured the sections/subsections etc in the preamble, colouring them within the actual document will override the colour specified in the preamble.
 
+\subsection{Objective: Create a Table}
+\textbf{Time Stamp:} 10:50pm 9 November\\
+\textbf{Actions/Results:} To complete this objective, I refered to \url{https://www.overleaf.com/learn/latex/Tables}. At first I used the code under the heading 'creating a simple table in LaTex'. I also added \verb|\hline| after each line so the rows would be divided by a line. However, when I began entering my text in place of the dummy text, the table went off the page as the text appeared all in one line. So I replaced the first line of the code after begin table with the one from 'tables with fixed length'. This addressed the issue and I played around with column widths until it fit on the page. I also added three extra columns by repeating 'm\verb|{1cm}| \textbar{} m\verb|{1cm}| \textbar{} m\verb|{1cm}| \textbar{}' to the first line after begin table, and '\& \& \&' to the end of the line for each row. This successfully created a table with five columns. When the table went over the bottom edge of the page, I just inserted a page break and created a new table.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} 
+
+\subsection{Objective: Make a Document Have a Landscape Orientation}
+\textbf{Time Stamp:} 11:00pm 9 November\\
+\textbf{Actions:} When creating the document for my Quality Assurance tests, I wanted to create a large table and consequently wanted my page orientation to be landscape. To do this I used this I refered to this resource, \url{https://www.overleaf.com/learn/latex/Page_size_and_margins}. I added \verb|\usepackage[landscape]{geometry}| to the preamble of the document. \\
+\textbf{Results:} This successfully gave the document a landscape orientation.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} 
+
+\subsection{Objective: Insert a Tick Mark}
+\textbf{Time Stamp:} 12:00pm 9 November\\
+\textbf{Actions:} Referring to this site \url{https://tex.stackexchange.com/questions/132783/how-to-write-checkmark-in-latex}, I chose one of the different tick mark styles from the answer by Gonzalo Medina. I then added \verb|\usepackage{amssymb}| to the preamble of the document, and then \verb|\checkmark|.\\
+\textbf{Results:} This successfully created a tick mark in the style I wished where I include \verb|\checkmark|.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} 
+
+\subsection{Objective: Make Only Specific Pages Have a Landscape Orientation}
+\textbf{Time Stamp:} 11:00am 10 November\\
+\textbf{Actions:} To achieve this objective, I refered to \url{https://tex.stackexchange.com/questions/337/how-to-change-certain-pages-into-landscape-portrait-mode}. Using this, firstly I added \verb|\usepackage{lscape}| to the preamble. Then before and after the text I wanted to be landscape, I added \verb|\begin{landscape}| and \verb|\end{landscape}|.\\
+\textbf{Results:} While the page remained in a portrait format like the rest of the document, the text around which I had put the codes was turned on its side (as opposed to making the page itself have a landscape orientation). Though this was not what I expected it to do, it still suited my aims.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} 
+
+
+
 \pagebreak
 
 \section{GitHub/Sourcetree}
@@ -207,6 +239,14 @@ I saw Brian in the consultation time before class, and he helped me set up a sub
 \textbf{Results:} The submodule was created in Sourcetree.\\
 \textbf{Errors:} The submodule was not visible in GitHub.\\
 \textbf{Solutions/Notes:} I had previously deleted two files in GitHub without having been into Sourcetree. The Pull icon was displaying a number two, and the Push icon was displaying a number one. I clicked Push and then OK and then Pull and then OK, and this addressed this issue.
+
+\subsection{Objective: Add a License to A Repository}
+\textbf{Time Stamp:} 9:00pm 9 November\\
+\textbf{Actions:} In my Hunt-Exercises GitHub Repository, I clicked the create a new file button. In the textbox to name my file, I typed 'LICENSE'. This created a button, 'Choose a license template' which I clicked. From the menu on the left hand side, I selected 'MIT License'. I read over the license and in the textbox on the right hand side for my Full name I entered 'Emily Hunt' (which was listed as MQ-FOAR705). I then clicked the green 'Review and submit button'. This then took me back to the page for editing my new file. At the bottom of the page, I added a commit description message and description, and clicked the green 'Commit new file' button.\\
+\textbf{Results:} The license successfully appeared in my repository and contained the license I had selected.\\
+\textbf{Errors:} \\
+\textbf{Solutions/Notes:} I used this resource when completing this objective \url{https://stackoverflow.com/questions/31639059/how-to-add-license-to-an-existing-github-project}
+
 
 \pagebreak
 
@@ -1974,12 +2014,19 @@ I also wanted to create a link to a file saved in my repository, that wasn't sav
 \textbf{Results:} This successfully created a line break where I insert it. Adding two together, put a break of two lines.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} I used this source to find the solution to this objective: \url{https://stackoverflow.com/questions/33191744/how-to-add-new-line-in-markdown-presentation}\\
-\textbf{Objective: Edit My Static Site (Add An Unordered List)}\\ 
+\vspace{5mm}
+\textbf{Objective: Edit My Static Site (Add An Unordered List)}\\
 \textbf{Time Stamp:} 10:25am 1 November\\
 \textbf{Actions:} I added '* Item 1', '* Item 2' and so on at the start of the lines where I wanted to create a list with dot points. \\
 \textbf{Results:} This successfully created list.\\
 \textbf{Errors:} None.\\
 \textbf{Solutions/Notes:} To create an ordered list, start the line with '1. Item 1', and so on. To create a sub list, use 'Item 1a', then Item 1b', using the number of the item you want it to be a sub list of.\\
+\vspace{5mm}
+\textbf{Objective: Create a Code Block in my README File}\\
+\textbf{Time Stamp:} 8:00am 10 November\\
+\textbf{Actions/Results:} I used this resource for this objective, \url{https://help.github.com/en/github/writing-on-github/creating-and-highlighting-code-blocks}. I put \verb|```| at the beginning and end of the code I wanted to be in a block. At first I tried using ''' but this didn't work so I copied the symbols directly from the examples on the website. This successfully created the code block. \\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
 
 \pagebreak
 
@@ -2017,35 +2064,6 @@ This software will be used for my disaster recovery, which I will demonstrate du
 
 \pagebreak
 
-\subsection{Testing}
-During consultation hours Brian suggested that the best way to complete testing would be to test the shell script I write.\\
-These were some recommended resources for testing generally:
-\begin{itemize}
-    \item \url{https://www.leadingagile.com/2018/10/unit-testing-shell-scriptspart-one/}
-    \item \url{https://www.digitalocean.com/community/tutorials/how-to-find-broken-links-on-your-website-using-wget-on-debian-7}
-\end{itemize}
-\vspace{5mm}
-\textbf{Objective: Install Bash Automated Testing System (BATS) For Testing}\\
-\textbf{Time Stamp:} Consultation hours before class 1 November\\
-\textbf{Actions:} At first BATS was attempted to be installed from this source: \url{https://github.com/sstephenson/bats}. However, it was then realised that this repository was lasted updated around 5 years ago. Therefore, this repository was used for installation \url{https://github.com/bats-core/bats-core#writing-tests}. As I had already installed Homebrew for my proof of concept, I just ran 'brew install bats-core' in terminal.\\
-\textbf{Results:} After some time, BATS was successfully installed. Running 'bats -v' printed 'Bats 1.1.0'.\\
-\textbf{Errors:} None.\\
-\textbf{Solutions/Notes:}\\
-\vspace{5mm}
-\textbf{Objective: Create And Use a .bat File To Test A Unix Script}\\
-\textbf{Time Stamp:} Consultation hours before class 1 November\\
-\textbf{Actions/Results:} Firstly, I created a new file in TextWrangler and saved it as 'test.bats'. Using the example from the GitHub page I attempted to create a test file. At first when I ran it, using 'bats test.bats', it printed it had failed because there was 'no such file' as the one I was attempting to run it on (test\textunderscore notes.txt). So, I moved both test\textunderscore notes.txt and the bats file to the bats folder that had downloaded when I installed it. I then tried to run it again, trying a number of different ways to structure the test file, but it always failed because the command was not found or integer expression was expected. The final iteration I had, which still didn't work was:
-'\#!/usr/bin/env bats\\
-@test "word count" \verb|{|\\
-result="\$(wc test\textunderscore notes.txt)"\\
-echo \$result\\
-[ "\$result" \verb|==| "17 test \textunderscore notes.txt" ]\\
-\verb|}|\\
-\textbf{Errors:} I could not get the test to work and this still needs to be fixed.\\
-\textbf{Solutions/Notes:} This may be a useful resource: \url{https://tecadmin.net/tutorial/bash/examples/check-if-two-strings-are-equal/}\\
-
-\pagebreak
-
 \subsection{Unix Shell Script}
 \textbf{Objective: Create a Shell Script That Puts Notes From An oTranscribe Export Into Separate Files Based On Their Use of Keywords}\\
 \textbf{Time Stamp:} 9:30pm 3 November\\
@@ -2079,6 +2097,186 @@ echo \$result\\
 \textbf{Solutions/Notes:}\\
 
 \pagebreak
+
+\subsection{Quality Assurance (Testing)}
+During consultation hours Brian suggested that the best way to automate testing would be to test the shell script I write.\\
+These were some recommended resources for testing generally:
+\begin{itemize}
+    \item \url{https://www.leadingagile.com/2018/10/unit-testing-shell-scriptspart-one/}
+    \item \url{https://www.digitalocean.com/community/tutorials/how-to-find-broken-links-on-your-website-using-wget-on-debian-7}
+\end{itemize}
+\vspace{5mm}
+\textbf{Objective: Install Bash Automated Testing System (BATS) For Testing}\\
+\textbf{Time Stamp:} Consultation hours before class 1 November\\
+\textbf{Actions:} At first BATS was attempted to be installed from this source: \url{https://github.com/sstephenson/bats}. However, it was then realised that this repository was lasted updated around 5 years ago. Therefore, this repository was used for installation \url{https://github.com/bats-core/bats-core#writing-tests}. As I had already installed Homebrew for my proof of concept, I just ran 'brew install bats-core' in terminal.\\
+\textbf{Results:} After some time, BATS was successfully installed. Running 'bats -v' printed 'Bats 1.1.0'.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:}\\
+\vspace{5mm}
+\textbf{Objective: Create And Use a .bat File To Test A Unix Script}\\
+\textbf{Time Stamp:} Consultation hours before class 1 November\\
+\textbf{Actions/Results:} At this stage I hadn't actually written my script, so was just trying to see if a word count command worked. Firstly, I created a new file in TextWrangler and saved it as 'test.bats'. Using the example from the GitHub page I attempted to create a test file. At first when I ran it, using 'bats test.bats', it printed it had failed because there was 'no such file' as the one I was attempting to run it on (test\textunderscore notes.txt). So, I moved both test\textunderscore notes.txt and the bats file to the bats folder that had downloaded when I installed it. I then tried to run it again, trying a number of different ways to structure the test file, but it always failed because the command was not found or integer expression was expected. The final iteration I had, which still didn't work was:
+'\#!/usr/bin/env bats\\
+@test "word count" \verb|{|\\
+result="\$(wc test\textunderscore notes.txt)"\\
+echo \$result\\
+[ "\$result" eq 17 test\textunderscore notes.txt" ]\\
+\verb|}|\\
+\textbf{Errors:} I could not get the test to work and this still needs to be fixed.\\
+\textbf{Solutions/Notes:} This may be a useful resource: \url{https://tecadmin.net/tutorial/bash/examples/check-if-two-strings-are-equal/}\\
+\vspace{5mm}
+\textbf{Objective: Create A Test To Ensure My Script Has A .txt File To Run On}\\
+\textbf{Time Stamp:} 10:30am-11:00am 5 November\\
+\textbf{Actions/Results:} When I attended this meeting I had now created my script to sort notes from a oTranscribe notes text file into separate files and run this in codeocean. Brian suggested I create a test to ensure my script has a text file to run on. These were the steps I followed to create it
+\begin{itemize}
+    \item Firstly, in my project's capsule I clicked Launch Cloud Workstation, and selected Terminal. I then installed bats by following the instructions at \url{https://github.com/bats-core/bats-core#writing-tests} under Install Bats from source.
+    \item I then created file for my test by enter 'nano test.bats'. In nano, I used the example from the bats-core repository to create a test. The one that eventually worked when I ran it using 'bats test.bats' in the Cloud Workstation was:\\
+    '#!/usr/bin/env bats\\
+    @test "making sure there is a file to start with" {\\
+    result="\$(ls -1 ../data/*.txt \textbar{} wc -l)"\\
+  [ "\$result" -gt 0 ]\\
+  }'\\
+  I had intially had 'eq \textgreater{}0' in the place of '-gt 0' which I was informed was incorrect.
+  \item To exit the Cloud Workstation, I pressed command and 'X', then 'y' to save and then enter.
+  \item I then added 'bats test.bats' to the start of the run file. However, when I ran did the reproducible run it failed. Brian then told me that I had to specify where the bats command could be found, so I added a path in the command which became '../code/bats-core/bin/bats test.bats'. The test was then successful.
+\end{itemize}
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} \\
+\vspace{5mm}
+\textbf{Objective: Create A Test To Ensure My Script Produces 8 .txt Files}\\ 
+\textbf{Time Stamp:} 11:50am 9 November\\
+\textbf{Actions/Results:} When I got home from my meeting with Brian, I realised I could make some slight adjustments to the test that had been created to make a second test which would ensure the script successfully produced 8 .txt files. I launched a Cloud Workstation and entered 'nano test2.bats'. In nano, I created a test that read:\\
+'#!/usr/bin/env bats\\
+@test "making sure eight files were produced" {\\
+  result="\$(ls -1 ../results/*.txt \textbar{} wc -l)"\\
+  [ "\$result" -eq 8 ]\\
+}'\\
+I then saved this and exited nano. When I tried to run the test using 'bats test2.bats', it said the test had failed. I thought this might have something to do with how the results folder works in ocean code which may require to run the script first before the test could work. I then exited the Cloud Workstation and added to the test file, '../code/bats-core/bin/bats test2.bats' after the line of code which sorted the notes. When I tried a Reproducible Run, the test was successful.\\
+\textbf{Errors:} None.\\
+\textbf{Solutions/Notes:} \\
+\vspace{20mm}
+\textbf{Quality Assurance Testing}\\
+\vspace{5mm}
+Over the next few pages please see the quality assurance tesing I completed for my Proof of Concept.\\
+\vspace{5mm}
+For a blank version of the table used for tesing without my results please see:\\
+\url{https://www.overleaf.com/read/rsdbqwsvsjnd}
+
+\pagebreak
+
+% This design for this table was based off the tesing process used for FAIMS which we were shown in class.
+% Used template from https://www.overleaf.com/learn/latex/Tables
+% For checkmark: https://tex.stackexchange.com/questions/132783/how-to-write-checkmark-in-latex
+
+\begin{landscape}
+
+\textbf{oTranscribe Tests}
+
+\begin{tabular}{ | m{0.4cm} | m{3.5cm} | m{6cm}| m{4cm} | m{1.2cm} | m{3.5cm} | } 
+\hline
+No. & PRECONDITIONS & TEST STEPS & EXPECTED RESULTS & RESULT (\checkmark or x) & COMMENTS\\ 
+\hline
+1 & Have https://mq-foar705.github.io/Hunt-Exercises/ open in a web browser & Select the link for the oTranscribe notes template. In the GitHub page that should open, select the green 'Clone or download' button and select Download zip & The zip file should download and be able to be unzipped to retrieve the oTranscribe format file & \checkmark &  The file automatically downloads when I click the link on the site, it doesn't take me to the repository (I think because I created the link with a file path)\\ 
+\hline
+2 & Have https://mq-foar705.github.io/Hunt-Exercises/ open in a web browser & Select the link to oTranscribe & Have the oTranscribe web application homepage open & - & I receive an error message (page not found) when I click this link while I am signed into my GitHub account, or when I click any of the links from the index.md file within my repository.\\ 
+\hline
+3 & Test 2 & In the oTranscribe web application select the blue ‘Start transcribing’ button & The oTranscribe notetaking page should open (which includes buttons to select a video and an area to enter text) & \checkmark & The notes from my last session also appeared. The 'open source' link doesn't work. \\ 
+\hline
+\end{tabular}
+
+\pagebreak
+
+
+\begin{tabular}{ | m{0.4cm} | m{3.5cm} | m{6cm}| m{4cm} | m{1.5cm} | m{3cm} | } 
+\hline
+No. & PRECONDITIONS & TEST STEPS & EXPECTED RESULTS & RESULT (\checkmark or x) & COMMENTS\\ 
+\hline
+4 & Tests 2 and 3 & In the oTranscribe notetaking page, select the blue button with an upward arrow and the text ‘Choose audio (or video) file’, navigate to the video file you wish to take notes on, select the file and select ‘Open’ (This file should be in an appropriate format for the browser you are using the application in) & The video file should open in a window in the top left hand corner of the page & \checkmark & \\ 
+\hline
+5 & Tests 2 and 3 & In the note taking page, select the blue button with the text ‘or YouTube video’, enter a working YouTube link, press your ‘enter’ key & The video should open in a window in the top left hand corner of the page & \checkmark & \\ 
+\hline
+6 & Test 1-3 & In the note taking page, click the Import icon on the right hand side of the note taking page. Navigate to where the notes template downloaded in test 1 is saved on your computer, select it and click 'Open' & The contents of the template should successfully appear in the text area of the notetaking page & \checkmark &\\ 
+\hline
+\end{tabular}
+
+\pagebreak
+
+\begin{tabular}{ | m{0.4cm} | m{3.5cm} | m{6cm}| m{4cm} | m{1.5cm} | m{3cm} | } 
+\hline
+No. & PRECONDITIONS & TEST STEPS & EXPECTED RESULTS & RESULT (\checkmark or x) & COMMENTS\\ 
+\hline
+7 & Test 1-3, 4 OR 5, and 6 & In the note taking page, click the play icon on the video window to play the video then the click the pause icon to pause it (or alternatively press the escape key on your keyboard). To add a note for this timestamp press the command and 'j' keys on your keyboard at the same time & The video should play and pause when you use either of the two approaches. A timestamp should appear in blue in the text entry space & \checkmark & The play and pause buttons for a video which has been uploaded are in the menu bar of the page and not in the video window. I will change my instructions in the README file to reflect this. \\ 
+\hline
+8 & Test 1-3, 4 OR 5, 6 and 7 & In the note taking page, place the text cursor on one of the lines of notes. Press the command and 'k' keys on your keyboard at the same time. & A pop up should open saying ‘Jump to time’ with the timestamp of the note the text cursor is in. Pressing the enter key should take you to that time in the video. & x &  I realised that I misread how this feature should be used. It is not for the note you are on but to allow you to enter a time to jump to. When I tried entering a time and pressing enter it worked. I will change my instructions in the README file.\\ 
+\hline
+9 & Tests 1-3, 4 OR 5, 6 and 7 & In the note taking page, click any of the timestamps in the notes & This should take you to that time in the video. & \checkmark &  \\ 
+\hline
+\end{tabular}
+
+\pagebreak
+
+
+\begin{tabular}{ | m{0.4cm} | m{3.5cm} | m{6cm}| m{4cm} | m{1.5cm} | m{3cm} | } 
+\hline
+No. & PRECONDITIONS & TEST STEPS & EXPECTED RESULTS & RESULT (\checkmark or x) & COMMENTS\\ 
+\hline
+10 & Tests 1-3, 4 OR 5 and 6 & In the note taking page, click on the cog icon in the page’s menu bar and try each of the shortcuts listed here to navigate through the video & Each of the shortcuts should work as intended & \checkmark & There are different shortcuts for people using different keyboards (e.g. a mac does not have an f1 key, so you can also press command and a number to skip backwards). \\ 
+\hline
+11 & Tests 1-3, 4 OR 5 and 6-7 & In the note taking page, select the Export icon on the right hand side of the page and select 'plain text (.txt)' & A text file named ‘Transcript exported Day, Date Time GMT.txt’ ('e.g.Transcript exported Sat, 09 Nov 2019 00\textunderscore 05\textunderscore 11 GMT.txt') should download to your computer & \checkmark & When exporting, the connect to Google Drive functionality does not work.\\ 
+\hline
+12 & Tests 1-3, 4 OR 5 and 6-7 & In the note taking page, select the Export icon on the right hand side of the page and select 'oTranscribe format (.otr)' & A text file named ‘Transcript exported Day, Date Time GMT.otr’ (e.g.'Transcript exported Sat, 09 Nov 2019 00\textunderscore 05\textunderscore 11 GMT.otr') should download to your computer & \checkmark & When exporting, the connect to Google Drive functionality does not work.\\ 
+\hline
+13 & Test 2-3, 12 & In the note taking page, click the Import icon on the right hand side of the note taking page. Navigate to where the .otr notes file downloaded in test 12 is saved on your computer, select it and click 'Open' & The contents of the file should successfully appear in the text area of the note taking page & \checkmark &  \\ 
+\hline
+\end{tabular}
+
+
+\pagebreak
+
+\textbf{Unix Script Tests}
+
+\begin{tabular}{ | m{0.4cm} | m{3.5cm} | m{6cm}| m{4cm} | m{1.5cm} | m{3cm} | } 
+\hline
+No. & PRECONDITIONS & TEST STEPS & EXPECTED RESULTS & RESULT (\checkmark or x) & COMMENTS\\ 
+\hline
+1 & Have my Hunt\textunderscore FOAR705\textunderscore Proof\textunderscore 
+
+Of\textunderscore Concept code ocean capsule open in a web browser after it has been shared with you & Click the blue Reproducible Run button in the top right hand corner of the page & In the run tab that opens at the bottom of the page, ok should be printed in front of the two tests. The timeline should should display the production of eight text files. When each one is clicked on, the relevant notes featuring the key term in the files name should be included & \checkmark & \\ 
+\hline
+\end{tabular}
+
+\vspace{30mm}
+
+OR
+
+\begin{tabular}{ | m{0.4cm} | m{3.5cm} | m{6cm}| m{4cm} | m{1.5cm} | m{3cm} | } 
+\hline
+No. & PRECONDITIONS & TEST STEPS & EXPECTED RESULTS & RESULT (\checkmark or x) & COMMENTS\\ 
+\hline
+2 & Have completed steps 1-6 of the Unix Script deployment instructions at https://github.com/
+
+MQ-FOAR705/Hunt-Exercises/blob/master/
+
+README.md & In the unix shell, make the main folder (which you named the film the notes were on) the working directory. Enter '/the direct path to where you have the bat-core folder/bats-core/bin/bats code/test.bats' & The response printed by the shell should include the name of the test with a tick mark and '1 test, 0 failures' & \checkmark & \\ 
+\hline
+3 & Have completed steps 1-6 of the Unix Script deployment instructions at https://github.com/
+
+MQ-FOAR705/Hunt-Exercises/blob/master/
+
+README.md and test 2 & With the same working directory as in test 2, enter in the unix shell 'bash code/organise\textunderscore notes.sh data/name\textunderscore of\textunderscore your\textunderscore notes\textunderscore file.txt' & Eight files with called camera.txt, character.txt, colour.txt, editing.txt, lighting.txt, narrative.txt, sound.txt and theme.txt should appear in the sorted\textunderscore notes folder. These files such contain the notes appropriate to their filename & \checkmark & \\ 
+\hline
+4 & Have completed steps 1-6 of the Unix Script deployment instructions at https://github.com/
+
+MQ-FOAR705/Hunt-Exercises/blob/master/
+
+README.md and tests 2-3 & With the main folder still as the working directory, enter in the unix shell '/the direct path to where you have the bat-core folder/bats-core/bin/bats code/test2.bats' & The response printed by the shell should include the name of the test with a tick mark and '1 test, 0 failures' & \checkmark & \\ 
+\hline
+\end{tabular}
+
+\pagebreak
+
+
+\end{landscape}
 
 \section{Errors}
 \subsection{Overleaf}
